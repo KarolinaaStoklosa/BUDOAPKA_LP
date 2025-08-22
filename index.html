@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budoapka - Landing Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position: absolute;">
+      <defs>
+        <clipPath id="hero-shape" clipPathUnits="objectBoundingBox">
+          <path d="M1,0 L1,1 L0.1,1 Q-0.15,0.5 0.1,0 Z" />
+        </clipPath>
+      </defs>
+    </svg>
+
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="header__logo--mobile">
+                <img src="assets/logo.svg" alt="Budoapka Logo">
+            </a>
+            
+            <div class="header__inner-box">
+                <a href="#" class="header__logo">
+                    <img src="assets/logo.svg" alt="Budoapka Logo">
+                </a>
+                <nav class="header__nav">
+                    <ul>
+                        <li><a href="#">Korzyści</a></li>
+                        <li><a href="#">Współpraca</a></li>
+                        <li><a href="#">Cennik</a></li>
+                        <li><a href="#">O nas</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <a href="#" class="btn btn--cta">Przejdź do Budoapki</a>
+            
+            <button class="header__mobile-toggle" aria-label="Otwórz menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <nav class="header__mobile-nav">
+             <ul>
+                <li><a href="#">Korzyści</a></li>
+                <li><a href="#">Współpraca</a></li>
+                <li><a href="#">Cennik</a></li>
+                <li><a href="#">O nas</a></li>
+            </ul>
+            <a href="#" class="btn btn--cta">Przejdź do Budoapki</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        <span class="hero__title-line">
+                            Zmień chaos w <span class="highlight-wrapper"><span class="highlight-text">zaufanie.</span></span>
+                        </span>
+                        <span class="hero__title-line">Narzędzie, które robi</span>
+                        <span class="hero__title-line">
+                            z Ciebie <span class="highlight-wrapper"><span class="highlight-text">partnera,</span></span>
+                        </span>
+                        <span class="hero__title-line">a nie tylko wykonawcę.</span>
+                    </h1>
+                    
+                    <p class="hero__subtitle">
+                        BUDOAPKA to jedyny system dla deweloperów i architektów, który automatyzuje pracę, eliminuje kosztowne błędy i oddaje Ci pełną kontrolę nad rentownością Twoich projektów.
+                    </p>
+                    
+                    <div class="hero__cta">
+                        <a href="#" class="btn btn--dark-cta">
+                            <span>Wypróbuj za Darmo (bez karty!)</span>
+                            <span class="arrow-icon"></span>
+                        </a>
+                    </div>
+                    
+                </div>
+                <div class="hero__image-wrapper">
+                    <img src="assets/budo_mockup.png" alt="Mockup aplikacji Budoapka na laptopie i telefonie" class="hero__mockup-img">
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-cards">
+            <div class="container">
+                <div class="stats-cards__grid">
+                    <div class="stat-card">
+                        <div class="stat-card__inner">
+                            <img src="assets/icon-stats.svg" alt="Ikona statystyk" class="stat-card__icon">
+                            <p class="stat-card__percent">30%</p>
+                            <p class="stat-card__description">mniej pracy<br>administracyjnej</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__inner">
+                            <img src="assets/icon-clock.svg" alt="Ikona zegara" class="stat-card__icon">
+                            <p class="stat-card__percent">90%</p>
+                            <p class="stat-card__description">mniej nieporozumień<br>w zespole</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__inner">
+                            <img src="assets/icon-house.svg" alt="Ikona domu" class="stat-card__icon">
+                            <p class="stat-card__percent">20%</p>
+                            <p class="stat-card__description">wzrostu<br>rentowności</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__inner">
+                            <img src="assets/icon-handshake.svg" alt="Ikona uścisku dłoni" class="stat-card__icon">
+                            <p class="stat-card__percent">100%</p>
+                            <p class="stat-card__description">zaufania<br>i transparentności</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stats-cards__cta">
+                    <a href="#video-section" class="btn btn--dark-cta">
+                        <span>Zobacz wideo (2 min)</span>
+                        <span class="arrow-icon"></span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="management-center">
+            <div class="management-center__box">
+                <img src="assets/logo-white.svg" alt="Budoapka Logo" class="management-center__logo">
+                <h2 class="management-center__title">to centrum zarządzania dla CAŁEJ BRANŻY</h2>
+                <div class="management-center__collage">
+                    <img src="assets/collage-1.png" alt="Zrzut ekranu aplikacji 1" class="collage-image collage-image--1">
+                    <img src="assets/collage-2.png" alt="Zrzut ekranu aplikacji 2" class="collage-image collage-image--2">
+                    <img src="assets/collage-3.png" alt="Zrzut ekranu aplikacji 3" class="collage-image collage-image--3">
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">Cicha rewolucja w branży już trwa.<br>Zobacz, kto jest na jej czele.</h2>
+                <div class="testimonial-slider__wrapper">
+                    <div class="testimonial-slider">
+                        <div class="testimonial-card">
+                            <div class="testimonial-card__stars">
+                                <img src="assets/icon-star.svg" alt="Gwiazdka">
+                                <img src="assets/icon-star.svg" alt="Gwiazdka">
+                                <img src="assets/icon-star.svg" alt="Gwiazdka">
+                                <img src="assets/icon-star.svg" alt="Gwiazdka">
+                                <img src="assets/icon-star.svg" alt="Gwiazdka">
+                            </div>
+                            <p class="testimonial-card__text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit enim orci, vitae facilisis risus fermentum nec. Etiam id consectetur justo.
+                            </p>
+                            <div class="testimonial-card__author">
+                                <img src="assets/avatar-anna.png" alt="Anna Mucha" class="author__avatar">
+                                <div class="author__info">
+                                    <p class="author__name">Anna Mucha</p>
+                                    <p class="author__title">Architekt Wnętrz</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-card__stars">
+                                <img src="assets/icon-star.svg" alt="Gwiazdka">
+                                <img src="assets/icon-star.svg" alt="Gwiazdka">
+                                <img src="assets/icon-star.svg" alt="Gwiazdka">
+                                <img src="assets/icon-star.svg" alt="Gwiazdka">
+                                <img src="assets/icon-star.svg" alt="Gwiazdka">
+                            </div>
+                            <p class="testimonial-card__text">
+                                To narzędzie zrewolucjonizowało sposób, w jaki prowadzę swoje projekty. Pełna kontrola i transparentność!
+                            </p>
+                            <div class="testimonial-card__author">
+                                <img src="assets/avatar-placeholder.svg" alt="Jan Kowalski" class="author__avatar">
+                                <div class="author__info">
+                                    <p class="author__name">Jan Kowalski</p>
+                                    <p class="author__title">Deweloper</p>
+                                </div>
+                         </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-card__stars">
+                                <img src="assets/icon-star.svg" alt="Gwiazdka">
+                                    <img src="assets/icon-star.svg" alt="Gwiazdka">
+                                <img src="assets/icon-star.svg" alt="Gwiazdka">
+                             <img src="assets/icon-star.svg" alt="Gwiazdka">
+                                <img src="assets/icon-star.svg" alt="Gwiazdka">
+                            </div>
+                                <p class="testimonial-card__text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit enim orci, vitae facilisis risus fermentum nec. Etiam id consectetur justo.
+                            </p>
+                            <div class="testimonial-card__author">
+                                <img src="assets/avatar-anna.png" alt="Anna Mucha" class="author__avatar">
+                                <div class="author__info">
+                                    <p class="author__name">Anna Mucha</p>
+                                    <p class="author__title">Architekt Wnętrz</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-card__stars">
+                                <img src="assets/icon-star.svg" alt="Gwiazdka">
+                                <img src="assets/icon-star.svg" alt="Gwiazdka">
+                                <img src="assets/icon-star.svg" alt="Gwiazdka">
+                                <img src="assets/icon-star.svg" alt="Gwiazdka">
+                                <img src="assets/icon-star.svg" alt="Gwiazdka">
+                            </div>
+                            <p class="testimonial-card__text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit enim orci, vitae facilisis risus fermentum nec. Etiam id consectetur justo.
+                            </p>
+                            <div class="testimonial-card__author">
+                                <img src="assets/avatar-anna.png" alt="Anna Mucha" class="author__avatar">
+                                <div class="author__info">
+                                 <p class="author__name">Anna Mucha</p>
+                                    <p class="author__title">Architekt Wnętrz</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-card__stars">
+                                <img src="assets/icon-star.svg" alt="Gwiazdka">
+                                <img src="assets/icon-star.svg" alt="Gwiazdka">
+                                <img src="assets/icon-star.svg" alt="Gwiazdka">
+                                <img src="assets/icon-star.svg" alt="Gwiazdka">
+                                <img src="assets/icon-star.svg" alt="Gwiazdka">
+                            </div>
+                            <p class="testimonial-card__text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit enim orci, vitae facilisis risus fermentum nec. Etiam id consectetur justo.
+                            </p>
+                            <div class="testimonial-card__author">
+                                <img src="assets/avatar-anna.png" alt="Anna Mucha" class="author__avatar">
+                                <div class="author__info">
+                                    <p class="author__name">Anna Mucha</p>
+                                    <p class="author__title">Architekt Wnętrz</p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    <button class="slider-btn slider-btn--prev" aria-label="Poprzednia opinia">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button class="slider-btn slider-btn--next" aria-label="Następna opinia">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+                </div>
+        </section>
+        <section id="video-section" class="video-section">
+            <div class="container text-center">
+                <h2 class="video-section__title">Zobacz, jak BudoApka zmieni Twój biznes!</h2>
+                <p class="video-section__subtitle">Jak to działa? To proste. Zastępujemy Twoje stare, nieefektywne narzędzia jednym, zintegrowanym systemem.</p>
+        
+                <div class="video-box">
+                    <video preload="metadata" autoplay loop muted playsinline>
+                        <source src="assets/budoapka-promo.mp4" type="video/mp4">
+                        Twoja przeglądarka nie obsługuje wideo.
+                    </video>
+                </div>
+
+                <div class="final-cta">
+                    <p class="final-cta__text-big">Nie jesteś jeszcze zdecydowany?</p>
+                    <p class="final-cta__text-small">Załóż konto i wypróbuj przez miesiąc - BEZ ZOBOWIĄZAŃ!</p>
+                    <a href="#" class="btn btn--dark-cta">
+                        <span>Wypróbuj przez miesiąc ZA DARMO</span>
+                        <span class="arrow-icon"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+<section class="comparison">
+            <div class="container">
+                <h2 class="section-title text-center">Niewidzialny podatek, który płacisz każdego dnia.</h2>
+                
+                <div class="comparison__headers">
+                    <h3>BEZ BUDOAPKI</h3>
+                    <h3 class="header-with-logo">
+                        <span>z </span>
+                        <img src="assets/logo.svg" alt="Budoapka Logo">
+                    </h3>
+                </div>
+                <div class="comparison__grid">
+                    <div class="comparison-row">
+                        <div class="comparison-card comparison-card--problem">
+                            <img src="assets/icon-cross.png" alt="Problem" class="comparison-card__icon_cross">
+                            <div class="comparison-card__content">
+                                <h4>CHAOS W DOKUMENTACJI</h4>
+                                <p>85% firm boryka się z niekompletną dokumentacją techniczną i brakiem centralnego systemu.</p>
+                            </div>
+                        </div>
+                        <div class="comparison-card comparison-card--solution">
+                             <img src="assets/icon-check.svg" alt="Rozwiązanie" class="comparison-card__icon">
+                            <div class="comparison-card__content">
+                                <h4>UPORZĄDKOWANE DOKUMENTY</h4>
+                                <p>Bezpieczne, cyfrowe archiwum na wszystkie plany, umowy i zdjęcia. Dostępne 24/7 z każdego miejsca, prosto z Twojego telefonu</p>
+                            
+                                <img src="assets/icon-comparison-1.svg" alt="" class="comparison-card__corner-icon">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comparison-row">
+                        <div class="comparison-card comparison-card--problem">
+                            <img src="assets/icon-cross.png" alt="Problem" class="comparison-card__icon_cross">
+                            <div class="comparison-card__content">
+                                <h4>PRZEKROCZENIE BUDŻETÓW I TERMINÓW</h4>
+                                <p>77% ankietowanych wskazało, że rzeczywiste koszty budowy okazały się wyższe niż planowane.</p>
+                            </div>
+                        </div>
+                        <div class="comparison-card comparison-card--solution">
+                             <img src="assets/icon-check.svg" alt="Rozwiązanie" class="comparison-card__icon">
+                            <div class="comparison-card__content">
+                                <h4>KONTROLA BUDŻETU I TERMINÓW</h4>
+                                <p>Monitoring kluczowych etapów i zadań z terminami daje Ci pełną kontrolę nad postępem prac. Reaguj na opóźnienia, zanim uderzą w Twoją marżę.</p>
+                            
+                                <img src="assets/icon-comparison-2.svg" alt="" class="comparison-card__corner-icon">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="comparison-card comparison-card--problem">
+                            <img src="assets/icon-cross.png" alt="Problem" class="comparison-card__icon_cross">
+                            <div class="comparison-card__content">
+                                <h4>TRUDNOŚCI W KOMUNIKACJI</h4>
+                                <p>75% firm ma problemy z koordynacją prac między różnymi specjalistami, podwykonawcami i klientami.</p>
+                            </div>
+                        </div>
+                        <div class="comparison-card comparison-card--solution">
+                             <img src="assets/icon-check.svg" alt="Rozwiązanie" class="comparison-card__icon">
+                            <div class="comparison-card__content">
+                                <h4>SPRAWNA KOMUNIKACJA I KOORDYNACJA</h4>
+                                <p>Jedno miejsce do rozmów, zadań i ustaleń. Koniec z niedomówieniami i szukaniem informacji na WhatsAppie czy w mailach.</p>
+                            
+                                <img src="assets/icon-comparison-3.svg" alt="" class="comparison-card__corner-icon">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comparison-row">
+                        <div class="comparison-card comparison-card--problem">
+                            <img src="assets/icon-cross.png" alt="Problem" class="comparison-card__icon_cross">
+                            <div class="comparison-card__content">
+                                <h4>BRAK PRZEJRZYSTOŚCI DLA KLIENTÓW</h4>
+                                <p>60% firm nie potrafi przedstawić klientom transparentnych raportów o postępach projektu.</p>
+                            </div>
+                        </div>
+                        <div class="comparison-card comparison-card--solution">
+                             <img src="assets/icon-check.svg" alt="Rozwiązanie" class="comparison-card__icon">
+                            <div class="comparison-card__content">
+                                <h4>PEŁNA PRZEJRZYSTOŚĆ DLA KLIENTÓW</h4>
+                                <p>Udostępniaj klientom dedykowany widok postępów projektu, budując zaufanie i wizerunek absolutnego profesjonalisty.</p>
+                            
+                            <img src="assets/icon-comparison-4.svg" alt="" class="comparison-card__corner-icon">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="comparison__footer-text">Pozwól sobie pomóc już dziś!</p>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <div class="background-ellipse ellipse-1"></div>
+            <div class="background-ellipse ellipse-2"></div>
+            <div class="background-ellipse ellipse-3"></div>
+            
+            <div class="container">
+                <h2 class="section-title text-center">Oto jak systematycznie eliminujemy chaos z Twojej pracy.</h2>
+                <div class="how-it-works__grid">
+                    <div class="how-it-works__card">
+                        <div class="card__header">
+                            <h3 class="card__title">CYFROWY <br>DZIENNIK INWESTYCJI</h3>
+                            <span class="card__number">1</span>
+                        </div>
+                        <p class="card__description">Zgodny z prawem dziennik, który porządkuje komunikację i dokumentuje każdy etap prac. Koniec z nieporozumieniami i szukaniem ustaleń "na słowo".</p>
+                    </div>
+                    <div class="how-it-works__card">
+                        <div class="card__header">
+                            <h3 class="card__title">PROJEKT,  <br>ZADANIA, WSPÓŁPRACA</h3>
+                            <span class="card__number">2</span>
+                        </div>
+                        <p class="card__description">Monitoring kluczowych etapów i system zadań dla całego zespołu. Każdy wie, co, gdzie i na kiedy ma być zrobione.</p>
+                    </div>
+                    <div class="how-it-works__card">
+                        <div class="card__header">
+                            <h3 class="card__title">ARCHIWUM  <br>DOKUMENTÓW I ZDJĘĆ</h3>
+                            <span class="card__number">3</span>
+                        </div>
+                        <p class="card__description">Bezpieczne, cyfrowe archiwum na wszystkie plany, umowy i faktury w jednym, bezpiecznym miejscu. Zapomnij o szukaniu maili.</p>
+                    </div>
+                    <div class="how-it-works__card">
+                        <div class="card__header">
+                            <h3 class="card__title">PEŁNA <br>MOBILNOŚĆ</h3>
+                            <span class="card__number">4</span>
+                        </div>
+                        <p class="card__description">Zarządzaj projektami z dowolnego miejsca. Budoapka działa na komputerze i telefonie, dając Ci pełną kontrolę prosto z placu budowy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="collaboration">
+            <div class="container">
+                <h2 class="section-title text-center">Możliwości skrojone dla Ciebie</h2>
+                <p class="section-subtitle text-center">
+                    Teoria to jedno. Rzeczywistość to drugie. Oto system stworzony dla Twojej codzienności.
+                </p>
+                <div class="collaboration__grid">
+                    <div class="collaboration-card">
+                        <h3>DLA FIRM WYKOŃCZENIOWYCH</h3>
+                        <p>Od "złotej rączki" do profesjonalnej firmy. Pokaż klientom, że jesteś ekspertem, a nie tylko wykonawcą – cyfrowa dokumentacja zmienia wszystko.</p>
+                        <a href="#" class="btn btn--secondary">Rozwiązanie dla Firm</a>
+                    </div>
+                    <div class="collaboration-card">
+                        <h3>DLA ARCHITEKTÓW</h3>
+                        <p>Dopilnuj, by Twoja wizja została zrealizowana w 100%. Nadzoruj wykonawców zdalnie i kontroluj każdy detal projektu bez ciągłych wyjazdów na budowę.</p>
+                        <a href="#" class="btn btn--secondary">Narzędzia dla Architektów</a>
+                    </div>
+                    <div class="collaboration-card">
+                        <h3>DLA STOLARZY</h3>
+                        <p>Pokaż klientowi jak powstają jego meble, dokumentując proces produkcji i na bieżąco prezentując postępy. Koniec z nieporozumieniami na etapie montażu.</p>
+                        <a href="#" class="btn btn--secondary">Funkcje dla Stolarzy</a>
+                    </div>
+                    <div class="collaboration-card">
+                        <h3>DLA MIKRODEWELOPERÓW</h3>
+                        <p>5 projektów. 12 ekip. Zero chaosu. Zarządzaj wszystkimi inwestycjami z jednej aplikacji i zapomnij o Excelu i WhatsAppie.</p>
+                        <a href="#" class="btn btn--secondary">System dla Deweloperów</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <div class="container">
+                <h2 class="section-title text-center">Konkretne wyniki, które osiągniesz z BUDOAPKĄ</h2>
+                <div class="benefits__grid">
+                    <div class="benefit-card">
+                        <div class="benefit-card__inner">
+                            <p class="benefit-card__percentage">30%</p>
+                            <p class="benefit-card__description">mniej czasu na administrację</p>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-card__inner">
+                            <p class="benefit-card__percentage">20%</p>
+                            <p class="benefit-card__description">wzrost rentowności projektów</p>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-card__inner">
+                            <p class="benefit-card__percentage">90%</p>
+                            <p class="benefit-card__description">Poprawa komunikacji w zespole</p>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-card__inner">
+                            <p class="benefit-card__percentage">100%</p>
+                            <p class="benefit-card__description">Kontrola nad każdym etapem projektu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    </head>
+<body>
+    <main>
+        <section class="pricing">
+            <div class="container text-center">
+                <h2 class="section-title">Prosty cennik. <br>Wybierz plan, który rośnie razem z Twoją firmą.</h2>
+                <p class="section-subtitle">Jesteśmy pewni tego, co zrobiliśmy. <br>Dlatego dajemy Ci 14 dni, byś sam przetestował Budoapkę w akcji.</p>
+                
+                <div class="pricing__toggle-wrapper">
+                    <button class="toggle-option active" data-period="monthly">Miesięcznie</button>
+                    <div class="toggle-option" data-period="yearly">
+                        <span>Rocznie</span>
+                        <span class="discount-badge">-20%</span>
+                    </div>
+                </div>
+
+                <div class="pricing__grid">
+                    <div class="pricing-card">
+                        <div class="pricing-card__header">
+                            <h3>SOLO</h3>
+                            <p>Idealny dla małych wykonawców i freelancerów.</p>
+                        </div>
+                        <div class="pricing-card__price-wrapper">
+                            <p class="price" data-monthly="149" data-yearly="1430">149</p>
+                            <p class="currency">zł <span class="period">/ miesiąc</span></p>
+                        </div>
+                        <a href="#" class="btn btn--secondary">Chcę spróbować sam</a>
+                        <hr class="pricing-card__divider">
+                        <div class="pricing-card__features">
+                            <ul>
+                                <li>1 główny wykonawca</li>
+                                <li>Nielimitowani inwestorzy (tylko wgląd)</li>
+                                <li>Wszystkie kluczowe funkcje Budoapki</li>
+                                <li>Wsparcie email (odpowiedź do 48h)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pricing-card pricing-card--featured">
+                        <div class="featured-badge">NAJPOPULARNIEJSZY</div>
+                        <div class="pricing-card__header">
+                            <h3>TEAM</h3>
+                            <p>Idealny dla małych firm budowlanych i projektów zespołowych.</p>
+                        </div>
+                        <div class="pricing-card__price-wrapper">
+                            <p class="price" data-monthly="299" data-yearly="2870">299</p>
+                            <p class="currency">zł <span class="period">/ miesiąc</span></p>
+                        </div>
+                        <a href="#" class="btn btn--secondary featured">To plan dla mojego zespołu</a>
+                        <hr class="pricing-card__divider">
+                        <div class="pricing-card__features">
+                            <ul>
+                                <li>1 główny wykonawca + 3 podwykonawców</li>
+                                <li>Wszystkie kluczowe funkcje Budoapki</li>
+                                <li>Priorytetowe wsparcie email (odpowiedź do 24h)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="pricing-card__header">
+                            <h3>BUSINESS</h3>
+                            <p>Idealny dla średnich firm, deweloperów i zarządzania wieloma ekipami.</p>
+                        </div>
+                        <div class="pricing-card__price-wrapper">
+                            <p class="price" data-monthly="599" data-yearly="5750">599</p>
+                            <p class="currency">zł <span class="period">/ miesiąc</span></p>
+                        </div>
+                        <a href="#" class="btn btn--secondary">Chcę skalować mój biznes</a>
+                        <hr class="pricing-card__divider">
+                        <div class="pricing-card__features">
+                            <ul>
+                                <li>1 główny wykonawca + 10 podwykonawców</li>
+                                <li>Dodatkowa przestrzeń na pliki i zdjęcia</li>
+                                <li>Priorytetowe wsparcie email (odpowiedź do 24h)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pricing-card">
+                         <div class="pricing-card__header">
+                            <h3>EMPIRE</h3>
+                            <p>Dla dużych firm deweloperskich i wymagających zespołów.</p>
+                        </div>
+                        <div class="pricing-card__price-wrapper-contact">
+                            <p class="price--contact">od 1299</p>
+                            <p class="currency--contact">zł <span class="period">/ miesiąc</span></p>
+                        </div>
+                        <a href="#" class="btn btn--secondary">Potrzebuję indywidualnego wsparcia</a>
+                        <hr class="pricing-card__divider">
+                        <div class="pricing-card__features">
+                            <ul>
+                                <li>1 główny wykonawca + nielimitowani podwykonawcy</li>
+                                <li>Personalizowane wdrożenie i szkolenie</li>
+                                <li>Wsparcie 24/7 (telefon, czat, email)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="pricing__cta">
+                    <a href="#" class="btn btn--dark-cta">
+                        <span>Wypróbuj przez miesiąc ZA DARMO</span>
+                        <span class="arrow-icon"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+        <script src="script.js" defer></script>
+
+</body>
+</html>
