@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1200px;;
     margin: 0 auto;
     padding: 0 2rem;
 }
@@ -89,7 +89,7 @@ body {
     display: grid;
     place-items: center;
     text-decoration: none;
-    width: 237px;
+    max-width: 237px;
     height: 55px;
     background: var(--primary-orange);
     border-radius: 12px;
@@ -280,21 +280,21 @@ body {
 @media (max-width: 992px) {
     .hero {
         padding-top: 40px;
-        padding-bottom: 40px;
+        padding-bottom: 5px;
         overflow: hidden;
+        margin:0;
     }
     .hero__title {
         margin-top: 0;
     }
     .hero__container {
-        grid-template-columns: 1fr;
-        gap: 4rem;
-        text-align: center;
+        grid: none;
         position: relative;
         z-index: 1;
     }
     .hero__image-wrapper {
-        min-height: 400px;
+        padding: 0;
+        min-height: 100px;
         width: 100%;
         margin: 0 auto;
         clip-path: none;
@@ -318,19 +318,28 @@ body {
 
     .hero__mockup-img {
         position: relative;
-        width: 100%;
-        max-width: 500px;
-        top: auto;
-        left: auto;
+        width: 130%;
+        top: 0%;
+        left: -15%;
         transform: none;
-        margin: 0 auto;
+        margin: auto;
     }
     .stats-cards__grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+           display: grid;
+        gap: 10px;
+        align-items: start;
     }
     .stat-card {
         transform: translateY(0) !important;
     }
+    .stats-cards {
+        padding: 30px 0 30px 0;
+    }
+
+    .section-title {
+    margin-bottom: 20px;
+    line-height: 1.2;
 }
 @media (max-width: 768px) {
     /* Ukrycie elementów desktopowych */
@@ -450,7 +459,7 @@ body {
 
 /* ======== SEKCJA CENTRUM ZARZĄDZANIA (POPRAWIONA) ======== */
 .management-center {
-    padding: 0 2rem;
+    padding: 0;
 
 }
 .management-center__box {
@@ -747,6 +756,12 @@ body {
         width: auto; /* Zapewnienie elastyczności na mniejszych ekranach */
         padding: 0 2rem; /* Dopasowanie paddingu */
     }
+    .video-section {
+    padding: 30px 0 0 0;
+    }
+    .final-cta{
+        margin-bottom: 20px;
+    }
 }
 
 /* ======== SEKCJA PORÓWNANIE ======== */
@@ -914,6 +929,9 @@ body {
 
 /* ======== RESPONSIVE FIXES ======== */
 @media (max-width: 992px) {
+    .comparison{
+        padding: 30px 0;
+    }
     /* ... (style dla tabletów bez zmian) ... */
 }
 
@@ -959,6 +977,8 @@ body {
 /* ======== SEKCJA "JAK TO DZIAŁA" (FINALNA WERSJA) ======== */
 .how-it-works {
     position: relative;
+        max-width: 1025px;
+    margin: 0 auto;
     padding: 100px 0;
     overflow: hidden;
     background: var(--light-gray-bg)
@@ -1080,7 +1100,13 @@ body {
     .how-it-works__grid {
         grid-template-columns: 1fr; /* Jedna kolumna na telefonie */
     }
-    /* ... (reszta stylów mobilnych bez zmian) ... */
+    .how-it-works{
+        padding: 30px 0 0 0;
+    }
+    .how-it-works .section-title {
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
 }
 
 /* ======== SEKCJA WSPÓŁPRACA (POPRAWIONA) ======== */
@@ -1181,9 +1207,22 @@ body {
 
 /* Responsywność dla tej sekcji */
 @media (max-width: 768px) {
+    .collaboration{
+        padding: 30px 0;
+    }
     .collaboration__grid {
         grid-template-columns: 1fr;
+        max-width: 100%;
     }
+
+    .collaboration-card p {
+        font-size: clamp(0.9rem, 1vw, 1.1rem);
+        margin-bottom: 2rem;
+    }
+    .collaboration-card h3 {
+        font-size: clamp(1.4rem, 1.3vw, 1.7rem);
+
+}
 }
 
 /* ======== SEKCJA KORZYŚCI (FINALNA WERSJA) ======== */
@@ -1298,7 +1337,7 @@ body {
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 1.3rem;
-    width: 200px;
+    max-width: 200px;
     transition: all 0.3s ease;
     position: relative;
 }
@@ -1484,6 +1523,9 @@ body {
 }
 
 @media (max-width: 768px) {
+    .pricing{
+        padding: 30px 0 ;
+    }
     .pricing__grid {
         grid-template-columns: 1fr; /* Jedna kolumna na telefonach */
     }
