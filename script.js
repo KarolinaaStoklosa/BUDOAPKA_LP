@@ -87,3 +87,24 @@ if (toggleWrapper) {
         });
     });
 }
+
+// Obsługa akordeonu FAQ
+const faqItems = document.querySelectorAll('.faq__item');
+if (faqItems) {
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq__question');
+        question.addEventListener('click', () => {
+            const wasActive = item.classList.contains('active');
+            
+            // Zamknij wszystkie inne otwarte odpowiedzi
+            faqItems.forEach(otherItem => {
+                otherItem.classList.remove('active');
+            });
+            
+            // Jeśli kliknięty element nie był aktywny, otwórz go
+            if (!wasActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+}
