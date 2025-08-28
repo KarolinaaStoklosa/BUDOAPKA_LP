@@ -6,7 +6,19 @@
     --light-gray-bg: #F2F2F2;
     --text-color: #202020;
     --text-color-light: #555;
+
+    /* Kolory dedykowane */
+    --architects-color: #005F6B; /* Turkus - profesjonalizm, precyzja */
+    --carpenters-color: #8B4513; /* Brąz - drewno, rzemiosło */
+    --developers-color: #1E3A8A; /* Granat - biznes, skala */
+    --contractors-color: #059669; /* Zieleń - budowa, wzrost */
 }
+/* Główne CTA pozostają pomarańczowe */
+.btn--primary { background: var(--primary-orange); }
+
+/* Ale akcenty używają koloru grupy */
+.section-title.architects { color: var(--architects-color); }
+.highlight-text.architects { background: linear-gradient(135deg, var(--architects-color), var(--primary-orange)); }
 
 * {
     box-sizing: border-box;
@@ -1531,6 +1543,103 @@ body {
     text-align: center;
     font-size: 0.9rem;
     color: #A0A0A0;
+}
+
+/* ======== STYLE DLA PODSTRON ======== */
+
+/* Strona Architektów - poprawione style */
+.architects .section-title {
+    color: var(--architects-color); /* Zamiast gradientu - czysty turkus */
+}
+
+/* Highlight text - turkusowy tekst i tło */
+.architects .highlight-text {
+    color: var(--architects-color); /* Tekst turkusowy zamiast pomarańczowego */
+}
+
+.architects .highlight-text::before {
+    background: linear-gradient(180deg, rgba(0, 95, 107, 0.15) 0%, rgba(0, 136, 152, 0.25) 100%);
+    border: 1px solid rgba(0, 95, 107, 0.3);
+}
+
+/* Hero layout - jedna kolumna */
+.architects .hero__container {
+    margin-top: 2rem;
+    display: block;
+    text-align: center;
+}
+
+.architects .hero__content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Border video dla architektów */
+.architects .video-box {
+    border: 3px solid var(--architects-color);
+    box-shadow: 0px 4px 54.6px -5px rgba(0, 95, 107, 0.7);
+}
+
+.architects .hero__image-wrapper {
+    display: none;
+}
+
+/* Przyciski secondary */
+.architects .btn--secondary {
+    border-color: var(--architects-color);
+    color: var(--architects-color);
+}
+
+.architects .btn--secondary:hover {
+    background: var(--architects-color);
+    color: white;
+}
+
+/* Sekcja wątpliwości */
+.architects .how-it-works {
+    background: linear-gradient(190deg, rgba(0, 95, 107, 0.9) 0%, var(--light-gray-bg) 70%);
+}
+
+.architects .how-it-works .section-title {
+    color: white; /* Biały na ciemnym tle */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.architects .how-it-works__card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+}
+
+.architects .card__number {
+    color: var(--architects-color);
+}
+
+.architects .card__title {
+    color: var(--architects-color);
+}
+
+/* Elipsy turkusowe */
+.architects .ellipse-1,
+.architects .ellipse-3 {
+    background: var(--architects-color);
+}
+
+/* Problemy */
+.architects .comparison-card__content h4 {
+    color: var(--architects-color);
+}
+
+/* Pricing */
+.architects .featured-badge {
+    background: var(--architects-color);
+}
+
+.architects .pricing-card--featured {
+    border-color: var(--architects-color);
+}
+
+.architects .pricing-card--featured .price {
+    color: var(--architects-color);
 }
 
 /* ======== KOMPLETNE STYLE MOBILE I TABLET ======== */

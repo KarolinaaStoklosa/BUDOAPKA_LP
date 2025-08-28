@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budoapka dla Deweloperów | Skaluj Biznes Bez Chaosu</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Jost:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --main-bg-light: #F7F8FA;
+            --main-text-dark: #1D2434;
+            --secondary-text-dark: #5A6474;
+            --header-bg-light: rgba(255, 255, 255, 0.85);
+            --card-border-color: #E0E5EC;
+            
+            /* Kolory Główne Marki */
+            --brand-orange: #EB5D0B;
+            --brand-gradient: linear-gradient(135deg, #EB5D0B, #FF7F4C);
+
+            /* --- DEDYKOWANY KOLOR DLA DEWELOPERÓW --- */
+            --developer-accent: #0D2149; /* Głęboki granat */
+            --developer-accent-light: #1E3A7B;
+            --developer-gradient: linear-gradient(135deg, var(--developer-accent), var(--developer-accent-light));
+            
+            --danger: #FF3547;
+            --success: #28CA42;
+            --text-light: #FFFFFF;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background: white; color: var(--main-text-dark); line-height: 1.6; overflow-x: hidden; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Jost', sans-serif; color: var(--main-text-dark); margin-bottom: 20px; text-align: center; }
+        h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 24px; text-align: center; }
+        h2 { font-size: 2.8em; margin-bottom: 50px; background: var(--developer-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2;}
+        h3 { font-size: 1.4em; margin-bottom: 15px; text-align: left; color: var(--main-text-dark); }
+        p { margin-bottom: 15px; color: var(--secondary-text-dark); font-size: 1.05rem; }
+        section { padding: 100px 0; border-bottom: 1px solid #EDEDED; }
+        
+        /* Header */
+        .header { position: fixed; top: 0; left: 0; right: 0; background: var(--header-bg-light); backdrop-filter: blur(10px); border-bottom: 1px solid #EDEDED; z-index: 1000; padding: 15px 0; }
+        .nav { display: flex; align-items: center; justify-content: space-between; }
+        .logo img { height: 40px; width: auto; }
+        .cta-header { background: var(--brand-orange); color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid var(--brand-orange); }
+        .cta-header:hover { background: transparent; color: var(--brand-orange); }
+        
+        /* Sekcja Hero VSL */
+        .hero { padding: 180px 0 120px; border-bottom: none; text-align: center; }
+        .hero .subtitle { font-size: 1.25rem; margin-top: -20px; margin-bottom: 40px; line-height: 1.7; font-weight: 400; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .video-wrapper { position: relative; width: 100%; max-width: 900px; margin-left: auto; margin-right: auto; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 16px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); border: 1px solid var(--card-border-color); }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+
+        /* Sekcja Problemów */
+        .problems-section { background: var(--main-bg-light); }
+        .problem-grid { display: grid; grid-template-columns: 1fr; gap: 40px; }
+        .problem-card { background: white; border-radius: 16px; padding: 40px; border: 1px solid var(--card-border-color); transition: all 0.3s ease; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02), 0 2px 4px -1px rgba(0,0,0,0.01); position: relative; }
+        .problem-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); }
+        .problem-card h3 { margin-bottom: 25px; color: var(--developer-accent); }
+        .problem-card .quote { font-style: normal; font-weight: 500; font-size: 1.1rem; color: var(--main-text-dark); padding-left: 50px; position: relative; }
+        .problem-card .quote::before { content: '“'; font-family: 'Jost', serif; font-size: 5rem; color: var(--developer-accent); opacity: 0.2; position: absolute; left: -10px; top: -20px; line-height: 1; }
+        
+        /* Sekcja Obiekcji */
+        .objections-section { background: white; }
+        .objections-section .container { max-width: 800px; }
+        .objection { border-bottom: 1px solid var(--card-border-color); padding-bottom: 25px; margin-bottom: 25px; }
+        .objection:last-child { border-bottom: none; }
+        .objection h3 { font-size: 1.2rem; display: flex; align-items: center; }
+        .objection h3::before { content: '›'; margin-right: 12px; font-weight: 700; color: var(--developer-accent); font-size: 1.5rem; }
+        .objection p { margin-top: 10px; padding-left: 28px; }
+
+        /* Sekcja CTA */
+        .cta-section { background: var(--main-bg-light); text-align: center; }
+        .cta-section .subtitle { text-align: center; max-width: 800px; margin: -30px auto 50px auto;}
+        .cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 900px; margin: 0 auto; }
+        .price-plan { background: white; padding: 40px; border-radius: 16px; border: 1px solid var(--card-border-color); text-align: left; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.02); display: flex; flex-direction: column; }
+        .price-plan:hover { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); }
+        .price-plan.recommended { border-width: 2px; border-color: var(--developer-accent); transform: scale(1.05); position: relative; overflow: hidden; }
+        .price-plan .tag { position: absolute; top: 18px; right: -45px; background: var(--developer-accent); color: white; padding: 6px 40px; font-weight: 700; font-size: 0.8rem; transform: rotate(45deg); }
+        .price-plan .price { font-size: 2.5rem; font-family: 'Jost'; font-weight: 700; color: var(--main-text-dark); }
+        .price-plan .description { flex-grow: 1; }
+        .bonus-box { margin-top: 50px; border: 1px solid var(--developer-accent); background: #F0F3F7; border-radius: 16px; padding: 30px; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .bonus-box h3 { color: var(--developer-accent); text-align: center; }
+        .btn { padding: 18px 36px; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; border: 2px solid transparent; text-align: center; display: inline-flex; align-items: center; justify-content: center; gap: 10px; }
+        .btn-primary { background: var(--developer-gradient); color: white; box-shadow: 0 8px 20px rgba(13, 33, 73, 0.2); }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 25px rgba(13, 33, 73, 0.3); }
+        .btn-secondary { background: transparent; color: var(--developer-accent); border: 2px solid var(--card-border-color); }
+        .btn-secondary:hover { border-color: var(--developer-accent); }
+
+        /* Stopka */
+        .footer { background: var(--main-text-dark); color: #A1A8B2; padding: 60px 0 40px; border-top: 4px solid var(--brand-orange); }
+        .footer-content { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-bottom: 40px; }
+        .footer-col h3 { color: var(--text-light); text-align: left; }
+        .footer-col ul { list-style: none; padding: 0; }
+        .footer-col ul li a { color: #A1A8B2; text-decoration: none; transition: color 0.3s ease; }
+        .footer-col ul li a:hover { color: var(--text-light); }
+        .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #3A4252; }
+        
+        /* Animacje */
+        .fade-in-up { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2.2rem; }
+            .problem-grid, .cta-grid { grid-template-columns: 1fr; }
+            .price-plan.recommended { transform: none; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="#" class="logo">
+                    <img src="https://placehold.co/150x40/EB590D/FFFFFF?text=BUDOAPKA" alt="BUDOAPKA Logo">
+                </a>
+                <a href="#cennik" class="cta-header">Zobacz Plany</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container fade-in-up">
+                <h1>5 projektów. 12 ekip. Zero chaosu.<br>Zacznij zarządzać jak duża firma.</h1>
+                <p class="subtitle">W tym 3-minutowym wideo zobaczysz system, który daje Ci pełną kontrolę nad wszystkimi inwestycjami jednocześnie – od budżetu, przez harmonogramy, po profesjonalne raporty dla inwestorów.</p>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=0000000000000000" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="problems-section">
+            <div class="container">
+                <h2 class="fade-in-up">"Chcę wziąć szósty projekt, ale boję się, że nie dam rady go ogarnąć organizacyjnie."</h2>
+                <div class="problem-grid">
+                    <div class="problem-card fade-in-up">
+                        <h3>CHAOS OPERACYJNY</h3>
+                        <p class="quote">Masz 4 grupy na WhatsAppie i 15 nieczytanych rozmów. Nie wiesz, który problem jest naprawdę pilny, a informacje giną w chaosie.</p>
+                    </div>
+                    <div class="problem-card fade-in-up">
+                        <h3>UTRATA KONTROLI NAD MARŻĄ</h3>
+                        <p class="quote">Dowiadujesz się o przekroczeniu budżetu, gdy księgowa robi zestawienie na koniec miesiąca. Jest już za późno na reakcję.</p>
+                    </div>
+                    <div class="problem-card fade-in-up">
+                        <h3>NIEPROFESJONALNY WIZERUNEK</h3>
+                        <p class="quote">Inwestor pyta o postępy, a Ty wysyłasz mu zdjęcie z telefonu i Excela z zeszłego tygodnia, wyglądając jak "mały gracz".</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="objections-section">
+            <div class="container fade-in-up">
+                <h2>Znamy Twoje wątpliwości. Odpowiedzmy na nie wprost.</h2>
+                <div class="objection">
+                    <h3>"Mój Excel działa wystarczająco dobrze."</h3>
+                    <p>Excel jest świetny, ale nie daje Ci podglądu na żywo i nie zarządza komunikacją. Budoapka to Twój system wczesnego ostrzegania, który chroni marżę, zanim Excel zdąży pokazać stratę.</p>
+                </div>
+                <div class="objection">
+                    <h3>"Potrzebuję zaawansowanych integracji."</h3>
+                    <p>Budoapka to solidny, niezawodny rdzeń do zarządzania budową. Celowo utrzymujemy prostotę, aby cały Twój zespół mógł z niej korzystać. Dla zaawansowanych potrzeb, planujemy otwarcie API.</p>
+                </div>
+                <div class="objection">
+                    <h3>"Mógłbym zbudować coś takiego sam."</h3>
+                    <p>Oczywiście. Pytanie brzmi: czy Twój czas nie jest więcej wart, gdy poświęcasz go na szukanie kolejnej działki? Budoapka to nie koszt, to inwestycja w Twój najważniejszy zasób – czas na skalowanie biznesu.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cennik" class="cta-section">
+            <div class="container fade-in-up">
+                <h2>Gotów, by przejąć pełną kontrolę i zacząć skalować zyski?</h2>
+                <p class="subtitle">Wybierz plan, który rośnie razem z Twoją firmą. Zacznij bez ryzyka – masz 14 dni na darmowe testy, bez podawania karty.</p>
+                <div class="cta-grid">
+                    <div class="price-plan">
+                        <h3>BUSINESS</h3>
+                        <p class="description">Dla rosnących firm zarządzających wieloma projektami (do 5 podwykonawców).</p>
+                        <div class="price">599 zł <span style="font-size: 1rem; color: var(--secondary-text-dark);">/ msc</span></div>
+                        <a href="#" class="btn btn-secondary" style="width: 100%; margin-top: 20px;">
+                            <i class="fas fa-briefcase"></i> Zarządzaj jak Lider
+                        </a>
+                    </div>
+                    <div class="price-plan recommended">
+                        <div class="tag">DO SKALOWANIA</div>
+                        <h3>EMPIRE</h3>
+                        <p class="description">Pełna moc bez limitów. Nielimitowani podwykonawcy i spersonalizowane wdrożenie.</p>
+                        <div class="price">od 1299 zł <span style="font-size: 1rem; color: var(--secondary-text-dark);">/ msc</span></div>
+                        <a href="#" class="btn btn-primary" style="width: 100%; margin-top: 20px;">
+                            <i class="fas fa-crown"></i> Zbuduj Imperium
+                        </a>
+                    </div>
+                </div>
+                <div class="bonus-box">
+                    <h3>Twoja 39-dniowa Gwarancja Spokoju</h3>
+                    <p>Pamiętaj, po rejestracji masz <strong>14 dni darmowych testów</strong>. Jeśli w tym czasie aktywnie założysz projekt, <strong>automatycznie przedłużymy Twój darmowy okres o dodatkowe 25 dni</strong>. To najuczciwsza oferta na rynku.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                 <div class="footer-col">
+                    <h3>O BUDOAPCE</h3>
+                    <p>Nowoczesne oprogramowanie do zarządzania projektami. Nasza misja: zakończyć erę "zarządzania przez WhatsApp".</p>
+                </div>
+                <div class="footer-col">
+                    <h3>PRODUKT</h3>
+                    <ul>
+                        <li><a href="#">Funkcje</a></li>
+                        <li><a href="#cennik">Cennik</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>WSPARCIE</h3>
+                    <ul>
+                        <li><a href="#">Centrum Pomocy</a></li>
+                        <li><a href="#">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>KONTAKT</h3>
+                    <p>Email: info@budoapka.pl<br>Telefon: +48 123 456 789</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 BUDOAPKA. Wszelkie prawa zastrzeżone.
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Skrypt do animacji na scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in-up').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
