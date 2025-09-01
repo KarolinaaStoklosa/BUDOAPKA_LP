@@ -242,7 +242,7 @@ body {
 .highlight-text::before {
     content: '';
     position: absolute;
-    left: -5px; top: -5px; right: -5px; bottom: -5px;
+    left: -0.5px; top: -0.5px; right: -0.5px; bottom: -0.5px;
     z-index: -1;
     background: linear-gradient(180deg, #F4DFD4 0%, #FCB895 100%);
     opacity: 0.38;
@@ -1640,6 +1640,304 @@ body {
 
 .architects .pricing-card--featured .price {
     color: var(--architects-color);
+}
+
+/* Strona Stolarzy - brązowe akcenty rzemieślnicze */
+.carpenters .section-title {
+    color: var(--carpenters-color);
+}
+
+/* Hero - brązowe tła dla highlight-text */
+.carpenters .highlight-text {
+    color: var(--carpenters-color);
+}
+
+.carpenters .highlight-text::before {
+    background: linear-gradient(180deg, rgba(139, 69, 19, 0.15) 0%, rgba(160, 82, 45, 0.25) 100%);
+    border: 1px solid rgba(139, 69, 19, 0.3);
+}
+
+/* Hero layout - jedna kolumna */
+.carpenters .hero__container {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.carpenters .hero__content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.carpenters .hero__image-wrapper {
+    display: none;
+}
+
+/* Video border */
+.carpenters .video-box {
+    border: 3px solid var(--carpenters-color);
+    box-shadow: 0px 4px 54.6px -5px rgba(139, 69, 19, 0.7);
+}
+
+/* Przyciski secondary */
+.carpenters .btn--secondary {
+    border-color: var(--carpenters-color);
+    color: var(--carpenters-color);
+}
+
+.carpenters .btn--secondary:hover {
+    background: var(--carpenters-color);
+    color: white;
+}
+
+/* Sekcja wątpliwości z brązowym tłem */
+.carpenters .how-it-works {
+    background: linear-gradient(190deg, rgba(139, 69, 19, 0.9) 0%, var(--light-gray-bg) 70%);
+}
+
+.carpenters .how-it-works .section-title {
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.carpenters .how-it-works__card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+}
+
+.carpenters .card__number {
+    color: var(--carpenters-color);
+}
+
+.carpenters .card__title {
+    color: var(--carpenters-color);
+}
+
+/* Elipsy brązowe */
+.carpenters .ellipse-1,
+.carpenters .ellipse-3 {
+    background: var(--carpenters-color);
+}
+
+/* Problemy */
+.carpenters .comparison-card__content h4 {
+    color: var(--carpenters-color);
+}
+
+/* Pricing */
+.carpenters .featured-badge {
+    background: var(--carpenters-color);
+}
+
+.carpenters .pricing-card--featured {
+    border-color: var(--carpenters-color);
+}
+
+.carpenters .pricing-card--featured .price {
+    color: var(--carpenters-color);
+}
+
+/* ======== STYLE DLA FIRM WYKOŃCZENIOWYCH ======== */
+
+/* Strona Firm Wykończeniowych - zielone akcenty wzrostu i stabilności */
+.contractors .section-title {
+    color: var(--contractors-color);
+}
+
+/* Highlight text - zielony tekst i tło */
+.contractors .highlight-text {
+    color: var(--contractors-color);
+}
+
+.contractors .highlight-text::before {
+    background: linear-gradient(180deg, rgba(5, 150, 105, 0.15) 0%, rgba(6, 182, 212, 0.25) 100%);
+    border: 1px solid rgba(5, 150, 105, 0.3);
+}
+
+/* Hero layout - jedna kolumna */
+.contractors .hero__container {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.contractors .hero__content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contractors .hero__image-wrapper {
+    display: none;
+}
+
+/* Video border */
+.contractors .video-box {
+    border: 3px solid var(--contractors-color);
+    box-shadow: 0px 4px 54.6px -5px rgba(5, 150, 105, 0.7);
+}
+
+/* Przyciski secondary */
+.contractors .btn--secondary {
+    border-color: var(--contractors-color);
+    color: var(--contractors-color);
+}
+
+.contractors .btn--secondary:hover {
+    background: var(--contractors-color);
+    color: white;
+}
+
+/* Sekcja wątpliwości z zielonym tłem */
+.contractors .how-it-works {
+    background: linear-gradient(190deg, rgba(5, 150, 105, 0.9) 0%, var(--light-gray-bg) 70%);
+}
+
+.contractors .how-it-works .section-title {
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.contractors .how-it-works__card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+}
+
+.contractors .card__number {
+    color: var(--contractors-color);
+}
+
+.contractors .card__title {
+    color: var(--contractors-color);
+}
+
+/* Elipsy zielone */
+.contractors .ellipse-1,
+.contractors .ellipse-3 {
+    background: var(--contractors-color);
+}
+
+/* Problemy */
+.contractors .comparison-card__content h4 {
+    color: var(--contractors-color);
+}
+
+/* Pricing */
+.contractors .featured-badge {
+    background: var(--contractors-color);
+}
+
+.contractors .pricing-card--featured {
+    border-color: var(--contractors-color);
+}
+
+.contractors .pricing-card--featured .price {
+    color: var(--contractors-color);
+}
+
+/* ======== STYLE DLA DEWELOPERÓW ======== */
+
+/* Strona Deweloperów - granatowe akcenty biznesu i skali */
+.developers .section-title {
+    color: var(--developers-color);
+}
+
+/* Highlight text - granatowy tekst i tło */
+.developers .highlight-text {
+    color: var(--developers-color);
+}
+
+.developers .highlight-text::before {
+    background: linear-gradient(180deg, rgba(30, 58, 138, 0.15) 0%, rgba(37, 99, 235, 0.25) 100%);
+    border: 1px solid rgba(30, 58, 138, 0.3);
+}
+
+/* Hero layout - jedna kolumna */
+.developers .hero__container {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.developers .hero__content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.developers .hero__image-wrapper {
+    display: none;
+}
+
+/* Video border */
+.developers .video-box {
+    border: 3px solid var(--developers-color);
+    box-shadow: 0px 4px 54.6px -5px rgba(30, 58, 138, 0.7);
+}
+
+/* Przyciski secondary */
+.developers .btn--secondary {
+    border-color: var(--developers-color);
+    color: var(--developers-color);
+}
+
+.developers .btn--secondary:hover {
+    background: var(--developers-color);
+    color: white;
+}
+
+/* Sekcja wątpliwości z granatowym tłem */
+.developers .how-it-works {
+    background: linear-gradient(190deg, rgba(30, 58, 138, 0.9) 0%, var(--light-gray-bg) 70%);
+}
+
+.developers .how-it-works .section-title {
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.developers .how-it-works__card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+}
+
+.developers .card__number {
+    color: var(--developers-color);
+}
+
+.developers .card__title {
+    color: var(--developers-color);
+}
+
+/* Elipsy granatowe */
+.developers .ellipse-1,
+.developers .ellipse-3 {
+    background: var(--developers-color);
+}
+
+/* Elipsa 2 dla deweloperów */
+.developers .ellipse-2 {
+    background: #1E40AF;
+}
+
+/* Problemy */
+.developers .comparison-card__content h4 {
+    color: var(--developers-color);
+}
+
+/* Pricing */
+.developers .featured-badge {
+    background: var(--developers-color);
+}
+
+.developers .pricing-card--featured {
+    border-color: var(--developers-color);
+}
+
+.developers .pricing-card--featured .price {
+    color: var(--developers-color);
+}
+
+.developers .pricing-card--featured .price--contact {
+    color: var(--developers-color);
 }
 
 /* ======== KOMPLETNE STYLE MOBILE I TABLET ======== */
