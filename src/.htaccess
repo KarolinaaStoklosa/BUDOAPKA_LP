@@ -1,0 +1,17 @@
+RewriteEngine On
+
+# Redirect .html URLs to non-.html URLs
+# This ensures that if someone accesses /stolarze.html, they get redirected to /stolarze
+RewriteCond %{THE_REQUEST} ^GET\ /[^?\s]+\.html
+RewriteRule ^(.*)\.html$ /$1 [R=301,L,NE]
+
+# Rewrite non-.html URLs to .html files
+# This makes /stolarze actually load /stolarze.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# Ensure index.html is served for root
+DirectoryIndex index.html
+

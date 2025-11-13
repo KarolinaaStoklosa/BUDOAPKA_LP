@@ -1,0 +1,1592 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Frontrunner - Zarabiaj z Budoapka | 10% Lifetime + Rok Taniej dla Klienta</title>
+    <meta name="description" content="Zostań Frontrunnerem Budoapka! 10% prowizji lifetime + Twoi klienci oszczędzają 5% przez pierwszy rok. Prosty model, większe zarobki.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --main-bg-light: #FFFFFF;
+            --main-text-dark: #191919;
+            --secondary-text-dark: #4a4a4a;
+            --card-bg-light: rgba(245, 245, 245, 0.9);
+            --header-bg-light: rgba(255, 255, 255, 0.95);
+            --section-gradient-light-1: linear-gradient(135deg, #E0E0E0, #F0F0F0);
+            --section-gradient-light-2: linear-gradient(135deg, #F0F0F0 0%, #FFFFFF 50%, #F0F0F0 100%);
+            --gold-accent: #C87B23;
+            --bright-gold: #FFB055;
+            --soft-gold-gradient: linear-gradient(135deg, #C87B23, #FFB055);
+            --text-gradient-h2: linear-gradient(135deg, #C87B23, #FFB055);
+            --success: #28CA42;
+            --text-light: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--main-bg-light);
+            color: var(--main-text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--main-text-dark);
+            margin-bottom: 20px;
+        }
+
+        h1 { font-size: 3.5rem; line-height: 1.1; }
+        h2 { 
+            font-size: 2.8rem; 
+            margin-top: 60px; 
+            margin-bottom: 30px;
+            background: var(--text-gradient-h2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+        }
+        h3 { font-size: 1.8rem; color: var(--gold-accent); }
+
+        /* Hero */
+        .hero {
+            padding: 140px 0 80px;
+            background: var(--section-gradient-light-1);
+            position: relative;
+            overflow: hidden;
+            border-bottom: 2px solid var(--gold-accent);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(255, 176, 85, 0.05) 0%, transparent 70%);
+            animation: pulse-hero 20s infinite ease-in-out;
+            z-index: 1;
+        }
+
+        @keyframes pulse-hero {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.05; }
+            50% { transform: scale(1.1) rotate(180deg); opacity: 0.1; }
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            text-align: left;
+        }
+
+        .hero-text .highlight {
+            background: var(--soft-gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text p {
+            font-size: 1.25rem;
+            color: var(--secondary-text-dark);
+            margin-bottom: 32px;
+            text-align: left;
+            line-height: 1.7;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat-box {
+            background: var(--card-bg-light);
+            backdrop-filter: blur(20px);
+            padding: 25px 20px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid rgba(200, 123, 35, 0.2);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .stat-box:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold-accent);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--bright-gold);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: var(--secondary-text-dark);
+            font-weight: 500;
+            line-height: 1.3;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--soft-gold-gradient);
+            color: var(--main-text-dark);
+            padding: 20px 45px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.25rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            box-shadow: 0 8px 20px rgba(200, 123, 35, 0.2);
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            border-color: var(--bright-gold);
+            color: var(--bright-gold);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(200, 123, 35, 0.3);
+        }
+
+        /* Calculator Section */
+        .calculator {
+            background: var(--section-gradient-light-2);
+            padding: 80px 0;
+        }
+
+        .calculator-widget {
+            background: var(--card-bg-light);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 50px;
+            border: 2px solid rgba(200, 123, 35, 0.3);
+            max-width: 900px;
+            margin: 40px auto;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        }
+
+        .calculator-widget h3 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.2rem;
+            color: var(--main-text-dark);
+        }
+
+        .calculator-inputs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .calculator-input {
+            margin-bottom: 0;
+        }
+
+        .calculator-input label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--main-text-dark);
+            font-size: 1.1rem;
+        }
+
+        .calculator-input input,
+        .calculator-input select {
+            width: 100%;
+            padding: 18px;
+            border: 2px solid rgba(200, 123, 35, 0.3);
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-family: 'Montserrat', sans-serif;
+            background: rgba(255, 255, 255, 0.9);
+            transition: all 0.3s ease;
+        }
+
+        .calculator-input input:focus,
+        .calculator-input select:focus {
+            outline: none;
+            border-color: var(--bright-gold);
+            box-shadow: 0 0 0 4px rgba(200, 123, 35, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .calculator-results {
+            margin-top: 0;
+            padding: 40px;
+            background: var(--soft-gold-gradient);
+            border-radius: 20px;
+            color: var(--main-text-dark);
+            box-shadow: 0 15px 35px rgba(200, 123, 35, 0.2);
+        }
+
+        .result-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+            border-bottom: 1px solid rgba(25, 25, 25, 0.1);
+            font-size: 1.1rem;
+        }
+
+        .result-row:last-child {
+            border-bottom: none;
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-top: 10px;
+            padding-top: 25px;
+            border-top: 2px solid rgba(25, 25, 25, 0.1);
+        }
+
+        .result-label {
+            font-weight: 600;
+        }
+
+        .result-value {
+            font-weight: 800;
+            font-size: 1.3em;
+        }
+
+        .discount-info {
+            background: rgba(40, 200, 66, 0.1);
+            border: 2px solid var(--success);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .discount-info h4 {
+            color: var(--success);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .discount-info p {
+            color: var(--main-text-dark);
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+
+        /* How it works */
+        .how-it-works {
+            background: var(--section-gradient-light-1);
+            padding: 80px 0;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .step-card {
+            background: var(--card-bg-light);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            border: 1px solid rgba(200, 123, 35, 0.2);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .step-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--soft-gold-gradient);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .step-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .step-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--gold-accent);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .step-number {
+            width: 70px;
+            height: 70px;
+            background: var(--soft-gold-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--main-text-dark);
+            box-shadow: 0 8px 20px rgba(200, 123, 35, 0.3);
+        }
+
+        .step-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .step-card p {
+            color: var(--secondary-text-dark);
+            line-height: 1.6;
+        }
+
+        /* Benefits Grid */
+        .benefits {
+            background: var(--section-gradient-light-2);
+            padding: 80px 0;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .benefit-card {
+            background: var(--card-bg-light);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 40px 35px;
+            border: 1px solid rgba(200, 123, 35, 0.2);
+            transition: all 0.3s ease;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--gold-accent);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .benefit-icon {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .benefit-card h3 {
+            margin-bottom: 18px;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .benefit-card p {
+            color: var(--secondary-text-dark);
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* Value Proposition */
+        .value-prop {
+            background: var(--section-gradient-light-1);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .value-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 50px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .value-card {
+            background: var(--card-bg-light);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 50px 40px;
+            border: 2px solid rgba(200, 123, 35, 0.2);
+            transition: all 0.3s ease;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold-accent);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+        }
+
+        .value-card.frontrunner {
+            border-color: var(--gold-accent);
+            background: linear-gradient(135deg, rgba(200, 123, 35, 0.05), rgba(255, 176, 85, 0.05));
+        }
+
+        .value-card.client {
+            border-color: var(--success);
+            background: linear-gradient(135deg, rgba(40, 200, 66, 0.05), rgba(40, 200, 66, 0.02));
+        }
+
+        .value-icon {
+            font-size: 4rem;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .value-card h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .value-card.frontrunner h3 {
+            color: var(--gold-accent);
+        }
+
+        .value-card.client h3 {
+            color: var(--success);
+        }
+
+        .value-amount {
+            font-size: 3rem;
+            font-weight: 800;
+            margin: 20px 0;
+            display: block;
+        }
+
+        .value-card.frontrunner .value-amount {
+            color: var(--bright-gold);
+        }
+
+        .value-card.client .value-amount {
+            color: var(--success);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: var(--section-gradient-light-2);
+            padding: 80px 0;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .testimonial {
+            background: var(--card-bg-light);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(200, 123, 35, 0.2);
+            border-radius: 20px;
+            padding: 40px 35px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+        }
+
+        .testimonial:hover {
+            transform: translateY(-8px);
+            border-color: var(--gold-accent);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 25px;
+            color: var(--secondary-text-dark);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--main-text-dark);
+            font-size: 1.1rem;
+        }
+
+        .testimonial-role {
+            font-size: 0.95rem;
+            color: var(--secondary-text-dark);
+            margin-bottom: 20px;
+        }
+
+        .testimonial-earning {
+            margin-top: 20px;
+            padding: 15px;
+            background: var(--soft-gold-gradient);
+            border-radius: 12px;
+            font-weight: 800;
+            color: var(--main-text-dark);
+            font-size: 1.1rem;
+        }
+
+        /* FAQ */
+        .faq {
+            background: var(--section-gradient-light-1);
+            padding: 80px 0;
+        }
+
+        .faq-grid {
+            display: grid;
+            gap: 25px;
+            max-width: 900px;
+            margin: 50px auto 0;
+        }
+
+        .faq-item {
+            background: var(--card-bg-light);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(200, 123, 35, 0.2);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        .faq-item:hover {
+            border-color: var(--gold-accent);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .faq-question {
+            padding: 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--main-text-dark);
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: rgba(200, 123, 35, 0.05);
+        }
+
+        .faq-toggle {
+            font-size: 1.8rem;
+            color: var(--bright-gold);
+            transition: transform 0.3s ease;
+            font-weight: 300;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-answer-content {
+            padding: 0 30px 30px;
+            color: var(--secondary-text-dark);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        /* Registration Form */
+        .registration {
+            background: linear-gradient(135deg, #191919, #2a2a2a);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .registration::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(255, 176, 85, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(200, 123, 35, 0.1) 0%, transparent 50%);
+            z-index: 1;
+        }
+
+        .registration .container {
+            position: relative;
+            z-index: 10;
+        }
+
+        .registration h2 {
+            color: var(--text-light);
+            background: var(--text-gradient-h2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 25px;
+        }
+
+        .registration p {
+            color: var(--text-light);
+            font-size: 1.3rem;
+            margin-bottom: 50px;
+            opacity: 0.9;
+        }
+
+        .registration-form {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--card-bg-light);
+            padding: 50px;
+            border-radius: 24px;
+            border: 2px solid var(--gold-accent);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--main-text-dark);
+            font-size: 1.05rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 18px;
+            border: 2px solid rgba(200, 123, 35, 0.3);
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-family: 'Montserrat', sans-serif;
+            background: rgba(255, 255, 255, 0.9);
+            transition: all 0.3s ease;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--bright-gold);
+            box-shadow: 0 0 0 4px rgba(200, 123, 35, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: var(--soft-gold-gradient);
+            color: var(--main-text-dark);
+            padding: 22px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 25px rgba(200, 123, 35, 0.3);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(200, 123, 35, 0.4);
+        }
+
+        .early-bird-badge {
+            display: inline-block;
+            background: var(--success);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            animation: pulse-badge 2s infinite;
+        }
+
+        @keyframes pulse-badge {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .form-note {
+            margin-top: 25px;
+            font-size: 0.95rem;
+            color: var(--secondary-text-dark);
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .hero-text h1,
+            .hero-text p {
+                text-align: center;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .calculator-inputs {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .calculator-widget {
+                padding: 30px 25px;
+            }
+
+            .steps-grid,
+            .benefits-grid,
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .value-cards {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .registration-form {
+                padding: 30px 25px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="header__logo--mobile">
+                <img src="assets/logo.svg" alt="Budoapka Logo">
+            </a>
+
+            <div class="header__inner-box">
+                <a href="index.html" class="header__logo">
+                    <img src="assets/logo.svg" alt="Budoapka Logo">
+                </a>
+                <nav class="header__nav">
+                    <ul>
+                        <li><a href="index.html#stats-card">Korzyści</a></li>
+                        <li><a href="index.html#collaboration-section">Współpraca</a></li>
+                        <li><a href="index.html#pricing-section">Cennik</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <a href="https://app.budoapka.pl" class="btn btn--cta">Przejdź do Budoapki</a>
+
+            <button class="header__mobile-toggle" aria-label="Otwórz menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <nav class="header__mobile-nav">
+            <ul>
+                <li><a href="index.html#comparison-section">Korzyści</a></li>
+                <li><a href="index.html#collaboration-section">Współpraca</a></li>
+                <li><a href="index.html#pricing-section">Cennik</a></li>
+            </ul>
+            <a href="https://app.budoapka.pl" class="btn btn--cta">Przejdź do Budoapki</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Zarabiaj <span class="highlight">10% Lifetime</span><br>Klient Oszczędza Rok!</h1>
+                    <p>Prosty model: Polecasz Budoapkę → Dostajesz 10% prowizji lifetime → Klient ma 5% zniżki przez pierwszy rok. Win-win dla wszystkich!</p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-box">
+                            <div class="stat-number">10%</div>
+                            <div class="stat-label">Prowizji lifetime od każdego klienta</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">5%</div>
+                            <div class="stat-label">Zniżki dla klienta przez 12 miesięcy</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">∞</div>
+                            <div class="stat-label">Miesięcy zarobków (lifetime)</div>
+                        </div>
+                    </div>
+
+                    <a href="#rejestracja" class="btn-primary">
+                        Zacznij Zarabiać
+                        <span>→</span>
+                    </a>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="calculator-widget">
+                        <h3>💰 Kalkulator Zarobków</h3>
+                        <div class="calculator-inputs">
+                            <div class="calculator-input">
+                                <label>Poleceń miesięcznie:</label>
+                                <input type="number" id="referrals" value="5" min="1" max="100">
+                            </div>
+                            <div class="calculator-input">
+                                <label>Pakiet klienta:</label>
+                                <select id="package">
+                                    <option value="189">BASIC (189 zł/msc)</option>
+                                    <option value="399" selected>TEAM (399 zł/msc)</option>
+                                    <option value="699">BUSINESS (699 zł/msc)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="calculator-results" id="results">
+                            <div class="result-row">
+                                <span class="result-label">Miesięcznie (lifetime):</span>
+                                <span class="result-value" id="monthly">199,50 zł</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Po 12 miesiącach:</span>
+                                <span class="result-value" id="result12m">2,394 zł</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Po 24 miesiącach:</span>
+                                <span class="result-value" id="result24m">4,788 zł</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">🚀 Potencjał 3 lata:</span>
+                                <span class="result-value" id="result36m">7,182 zł</span>
+                            </div>
+                        </div>
+                        <div class="discount-info">
+                            <h4>🎁 Bonus dla Klienta</h4>
+                            <p>Oszczędza <span id="clientSaving">99,75 zł</span> w pierwszym roku!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="value-prop">
+        <div class="container">
+            <h2>Win-Win Model: Wszyscy Wygrywają!</h2>
+            <p style="font-size: 1.2rem; color: var(--secondary-text-dark); max-width: 800px; margin: 0 auto;">Prosty, przejrzysty model gdzie każda strona ma konkretne korzyści. Żadnych skomplikowanych schematów - tylko czyste zyski.</p>
+            
+            <div class="value-cards">
+                <div class="value-card frontrunner">
+                    <div class="value-icon">💰</div>
+                    <h3>Dla Ciebie - Frontrunner</h3>
+                    <div class="value-amount">10%</div>
+                    <p><strong>Lifetime prowizja</strong> od każdego poleconego klienta. Prosty, stały procent od każdej płatności - bez względu na to jak długo klient zostaje.</p>
+                    <ul style="text-align: left; margin: 20px 0; list-style: none; padding: 0;">
+                        <li>✓ Stała prowizja każdego miesiąca</li>
+                        <li>✓ Im dłużej klient zostaje, tym więcej zarabiasz</li>
+                        <li>✓ Automatyczne wypłaty co 15. dnia</li>
+                        <li>✓ Średnio 24+ miesięcy retention</li>
+                    </ul>
+                </div>
+                
+                <div class="value-card client">
+                    <div class="value-icon">🎁</div>
+                    <h3>Dla Klienta</h3>
+                    <div class="value-amount">-5%</div>
+                    <p><strong>Zniżka przez pierwszy rok</strong> korzystania z Budoapki. Łatwiej przekonać klienta gdy dostaje konkretną korzyść finansową.</p>
+                    <ul style="text-align: left; margin: 20px 0; list-style: none; padding: 0;">
+                        <li>✓ 5% taniej przez 12 miesięcy</li>
+                        <li>✓ Oszczędność ~100-400 zł rocznie</li>
+                        <li>✓ Motywacja do spróbowania</li>
+                        <li>✓ Po roku już przyzwyczajony do systemu</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>Jak To Działa? 4 Proste Kroki</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Aplikuj</h3>
+                    <p>Wypełnij formularz aplikacyjny. Weryfikacja zajmuje maksymalnie 24 godziny.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Otrzymaj narzędzia</h3>
+                    <p>Unikalny link referralowy, dashboard, materiały marketingowe i darmowy dostęp do Budoapki.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Polecaj z bonusem</h3>
+                    <p>Twoi klienci dostają 5% zniżki przez rok - łatwiej przekonać do spróbowania!</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Zarabiaj lifetime</h3>
+                    <p>10% prowizji co miesiąc dopóki klient płaci. Średnio 24+ miesięcy = pasywny dochód!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits">
+        <div class="container">
+            <h2>Co Dostajesz Jako Frontrunner?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💎</div>
+                    <h3>Darmowy dostęp BUSINESS</h3>
+                    <p>Pełen dostęp do Budoapka (wartość 699 zł/msc). Przetestuj produkt, używaj do własnych projektów, twórz autentyczny content.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📊</div>
+                    <h3>Dashboard Frontrunnera</h3>
+                    <p>Śledź na żywo swoje zarobki, polecenia, konwersję i historię prowizji. Pełna transparentność - wiesz dokładnie ile i kiedy dostajesz.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎨</div>
+                    <h3>Materiały ready-to-use</h3>
+                    <p>15+ grafik, 20+ tekstów, filmy demo, case studies. Wszystko przygotowane - skopiuj, wklej, zarabiaj.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Priorytetowy support</h3>
+                    <p>Odpowiedź w max 6h, dedykowany opiekun, prywatna grupa Telegram, miesięczne webinary z najlepszymi praktykami.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎁</div>
+                    <h3>Bonus dla Twoich klientów</h3>
+                    <p>Twoi klienci dostają 21 dni trialu (zamiast 14), priorytetowy onboarding i 5% zniżki przez pierwszy rok.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔥</div>
+                    <h3>Recurring revenue</h3>
+                    <p>Zarabiasz dopóki klient płaci. Nasze retention: 85%+. Średnio 24+ miesiące per klient = stabilny pasywny dochód!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Frontrunnerzy Już Zarabiają</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p class="testimonial-text">"Pierwszy miesiąc: 3 polecenia z networkingu. Po roku zarabiam ~1,400 zł miesięcznie pasywnie. Klienci zostają, bo mają zniżkę!"</p>
+                    <div class="testimonial-author">Marek K.</div>
+                    <div class="testimonial-role">Kierownik budowy</div>
+                    <div class="testimonial-earning">~16,800 zł rocznie</div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"Jedno video o Budoapce = 12 konwersji. Po 18 miesiącach mam stałe ~4,500 zł miesięcznie z prowizji. Lepsze niż sponsoring!"</p>
+                    <div class="testimonial-author">Tomasz S.</div>
+                    <div class="testimonial-role">YouTuber budowlany</div>
+                    <div class="testimonial-earning">~54,000 zł rocznie</div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"Email do bazy klientów (400 firm) → 8 konwersji → ~3,200 zł miesięcznie recurring. Proste jak budowa domu!"</p>
+                    <div class="testimonial-author">Anna M.</div>
+                    <div class="testimonial-role">Była właścicielka hurtowni</div>
+                    <div class="testimonial-earning">~38,400 zł rocznie</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2>Najczęściej Zadawane Pytania</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Jak dokładnie działa nowy model 10% + 5% zniżki?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Prosty model: Klient płaci 5% mniej przez pierwszy rok, Ty dostajesz 10% prowizji od jego płatności przez cały czas korzystania. Po roku klient płaci pełną cenę, ale Ty dalej dostajesz 10%.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Ile realistycznie mogę zarobić miesięcznie?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Zależy od liczby poleceń: 3-5 klientów = ~1,000-2,000 zł/msc, 10 klientów = ~4,000 zł/msc, 20+ klientów = 8,000+ zł/msc. Kluczowa jest długoterminowość - zarabiasz dopóki klient płaci (średnio 24+ miesięcy).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Czy muszę być influencerem żeby zostać Frontrunnerem?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Absolutnie nie! Najlepsi Frontrunnerzy to często kierownicy budowy, właściciele małych firm, pracownicy hurtowni - ludzie z kontaktami w branży. Liczy się knowledge i network, nie liczba followersów.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Kiedy i jak dostanę prowizję?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Automatyczne wypłaty co 15. dnia miesiąca na konto bankowe. Pierwsza prowizja po 30 dniach od pierwszej płatności klienta. Możliwość faktury VAT lub umowy zlecenia - jak Ci wygodniej.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Co jeśli klient zrezygnuje po kilku miesiącach?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Dostajesz prowizję tylko za miesiące, które klient zapłacił. Ale nasze retention rate to 85%+ - większość zostaje długo, szczególnie ci ze zniżką w pierwszym roku. Średnio 24+ miesięcy per klient.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Czy są jakieś koszty wejścia lub opłaty miesięczne?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Zero kosztów! Program jest całkowicie darmowy - nie płacisz za aplikację, materiały, wsparcie ani prowizje od nas. Zarabiasz tylko na poleceniach. Plus dostajesz darmowy dostęp do Budoapka BUSINESS.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section class="registration" id="rejestracja">
+        <div class="container">
+            <span class="early-bird-badge">🔥 EARLY ADOPTER: Pierwsze 50 osób dostaje dodatkowe benefity!</span>
+            <h2>Zostań Frontrunnerem Budoapka</h2>
+            <p>Aplikuj już dziś i zacznij zarabiać w ciągu 24 godzin od akceptacji</p>
+
+            <form class="registration-form" id="frontrunnerForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Imię i nazwisko *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Telefon *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="audience">Zasięg w branży budowlanej</label>
+                        <select id="audience" name="audience" required>
+                            <option value="">Wybierz zakres</option>
+                            <option value="10-50">10-50 kontaktów</option>
+                            <option value="50-200">50-200 kontaktów</option>
+                            <option value="200-500">200-500 kontaktów</option>
+                            <option value="500-1000">500-1,000 kontaktów</option>
+                            <option value="1000+">1,000+ kontaktów</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="profile">Link do profilu (Instagram/YouTube/LinkedIn/strona) *</label>
+                    <input type="url" id="profile" name="profile" placeholder="https://" required>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="experience">Opisz swoje doświadczenie w branży i dlaczego chcesz zostać Frontrunnerem *</label>
+                    <textarea id="experience" name="experience" placeholder="Np. 10 lat w budownictwie, własna firma stolarska, kontakty z deweloperami..." required></textarea>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="strategy">Jak planujesz promować Budoapkę? *</label>
+                    <textarea id="strategy" name="strategy" placeholder="Np. polecenia w networkingu, posty na social media, współpraca z firmami..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Aplikuj na Frontrunnera</button>
+
+                <p class="form-note">
+                    Aplikując akceptujesz <strong>Regulamin Programu Frontrunner</strong> i <strong>Politykę Prywatności</strong>.<br>
+                    Odpowiemy w ciągu 24h - sprawdź folder SPAM jeśli nie dostaniesz wiadomości.
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__col">
+                <h4>O BUDOAPCE</h4>
+                <p>Nowoczesne oprogramowanie do zarządzania projektami budowlanymi i wnętrzarskimi. Nasza misja:
+                    zakończyć erę "zarządzania przez WhatsApp".</p>
+                <div class="footer__socials">
+                    <a href="https://www.facebook.com/people/Budoapka/61579771226202/" aria-label="Facebook"><svg viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" />
+                        </svg></a>
+                   
+                    <a href="https://www.instagram.com/budoapka/" aria-label="Instagram"><svg viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.217.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122s-.013 3.056-.06 4.122c-.05 1.065-.218 1.79-.465 2.428a4.908 4.908 0 0 1-1.153 1.772 4.908 4.908 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06s-3.056-.013-4.122-.06c-1.065-.05-1.79-.218-2.428-.465a4.908 4.908 0 0 1-1.772-1.153 4.908 4.908 0 0 1-1.153-1.772c-.247-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12s.013-3.056.06-4.122c.05-1.065.218-1.79.465-2.428a4.908 4.908 0 0 1 1.153-1.772A4.908 4.908 0 0 1 5.45 2.525c.637-.247 1.363-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 0 0-2.5 0 1.25 1.25 0 0 0 2.5 0zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" />
+                        </svg></a>
+
+                    <a href="https://www.youtube.com/@Budoapka" aria-label="YouTube"><svg viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                        </svg></a>
+                        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M6.94 5.00002C6.93996 5.53047 6.72896 6.03982 6.35392 6.41432C5.97889 6.78882 5.46993 6.99923 4.94 6.99902C4.41006 6.99882 3.90111 6.78841 3.52607 6.41391C3.15104 6.03941 2.94004 5.53006 2.94 5.00002C2.94008 4.46957 3.15108 3.96022 3.52611 3.58572C3.90115 3.21122 4.41011 3.00081 4.94 3.00102C5.46989 3.00122 5.97885 3.21163 6.35388 3.58613C6.72892 3.96063 6.93992 4.46998 6.94 5.00002ZM7 8.48002H3V21H7V8.48002ZM13.32 8.48002H9.34V21H13.28V14.43C13.28 10.77 16.02 10.53 16.02 14.43V21H20V13.11C20 8.08002 15.31 8.12002 13.32 10.15V8.48002Z" />
+                        </svg></a>
+                </div>
+            </div>
+
+            <div class="footer__col">
+                <h4>PRODUKT</h4>
+                <ul>
+                    <li><a href="index.html#comparison-section">Funkcje</a></li>
+                    <li><a href="index.html#pricing-section">Cennik</a></li>
+                    <li><a href="wykonczeniowcy.html">Dla Firm Wykończeniowych</a></li>
+                    <li><a href="architekci.html">Dla Architektów</a></li>
+                    <li><a href="stolarze.html">Dla Stolarzy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h4>WSPARCIE I REGULAMINY</h4>
+                <ul>
+                    <li><a href="index.html#faq-section">Centrum Pomocy / FAQ</a></li>
+                    <li><a href="#" onclick="openContactModal(); return false;">Kontakt</a></li>
+                    <li><a href="terms.html">Regulamin</a></li>
+                    <li><a href="policy.html">Polityka Prywatności</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h4>KONTAKT</h4>
+                <address>
+                    BUDOAPKA<br>
+                    Kraków, Polska<br>
+                    <a href="mailto:kontakt@budoapka.pl">kontakt@budoapka.pl</a><br>
+                </address>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2025 BUDOAPKA. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal__overlay" onclick="closeContactModal()"></div>
+        <div class="modal__content">
+            <div class="modal__header">
+                <h3>Skontaktuj się z nami</h3>
+                <button class="modal__close" onclick="closeContactModal()">&times;</button>
+            </div>
+            <div class="modal__body">
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="contactTitle">Temat</label>
+                        <input type="text" id="contactTitle" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Email</label>
+                        <input type="email" id="contactEmail" name="email" required>
+                        <div id="emailError" class="error-message" style="display: none;">Nieprawidłowy format email</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactDescription">Opis</label>
+                        <textarea id="contactDescription" name="description" rows="4" required></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn--secondary" onclick="closeContactModal()">Anuluj</button>
+                        <button type="submit" class="btn btn--primary" id="submitBtn">
+                            <span class="btn-text">Wyślij</span>
+                            <span class="btn-spinner" style="display: none;">Wysyłanie...</span>
+                        </button>
+                    </div>
+                </form>
+                <div id="successMessage" class="success-message" style="display: none;">
+                    <p>Wiadomość została wysłana pomyślnie!</p>
+                </div>
+                <div id="errorMessage" class="error-message" style="display: none;">
+                    <p>Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // GraphQL endpoint
+        const GRAPHQL_ENDPOINT = 'https://api.budoapka.pl/graphql';
+
+        // GraphQL mutation for creating frontrunner request
+        async function createFrontrunnerRequest(name, email, phone, profile, experience, strategy, audience) {
+            const mutation = `
+                mutation createFrontrunnerRequest($name: String!, $email: String!, $phone: String!, $profile: String!, $experience: String!, $strategy: String!, $audience: String!) {
+                    createFrontrunnerRequest(data: { 
+                        name: $name, 
+                        email: $email, 
+                        phone: $phone, 
+                        profile: $profile, 
+                        experience: $experience, 
+                        strategy: $strategy, 
+                        audience: $audience 
+                    }) {
+                        id
+                        topic
+                    }
+                }
+            `;
+
+            const variables = {
+                name: name,
+                email: email,
+                phone: phone,
+                profile: profile,
+                experience: experience,
+                strategy: strategy,
+                audience: audience
+            };
+
+            try {
+                const response = await fetch(GRAPHQL_ENDPOINT, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        query: mutation,
+                        variables: variables
+                    })
+                });
+
+                const result = await response.json();
+                
+                if (result.errors) {
+                    throw new Error(result.errors[0].message);
+                }
+                
+                return result.data;
+            } catch (error) {
+                console.error('GraphQL Error:', error);
+                throw error;
+            }
+        }
+
+        // Calculator functionality - NEW MODEL (10% lifetime + 5% discount for 12 months)
+        function calculateEarnings() {
+            const referrals = parseInt(document.getElementById('referrals').value) || 0;
+            const packagePrice = parseInt(document.getElementById('package').value) || 399;
+
+            // 10% commission every month (lifetime)
+            const monthlyCommission = packagePrice * 0.10;
+            const monthlyTotal = referrals * monthlyCommission;
+
+            // Totals over time
+            const total12m = monthlyTotal * 12;
+            const total24m = monthlyTotal * 24;
+            const total36m = monthlyTotal * 36;
+
+            // Client discount in first year (5% off for 12 months)
+            const discountPerMonth = packagePrice * 0.05;
+            const clientYearlySaving = referrals * discountPerMonth * 12;
+
+            // Update display
+            document.getElementById('monthly').textContent = monthlyTotal.toLocaleString('pl-PL') + ' zł';
+            document.getElementById('result12m').textContent = total12m.toLocaleString('pl-PL') + ' zł';
+            document.getElementById('result24m').textContent = total24m.toLocaleString('pl-PL') + ' zł';
+            document.getElementById('result36m').textContent = total36m.toLocaleString('pl-PL') + ' zł';
+            document.getElementById('clientSaving').textContent = clientYearlySaving.toLocaleString('pl-PL') + ' zł';
+        }
+
+        // Update calculator on input change
+        document.getElementById('referrals').addEventListener('input', calculateEarnings);
+        document.getElementById('package').addEventListener('change', calculateEarnings);
+
+        // Calculate on page load
+        document.addEventListener('DOMContentLoaded', calculateEarnings);
+
+        // FAQ functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('frontrunnerForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Basic validation
+            if (!data.name || !data.email || !data.phone || !data.profile || !data.experience || !data.strategy || !data.audience) {
+                alert('Proszę wypełnić wszystkie wymagane pola (*)');
+                return;
+            }
+
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(data.email)) {
+                alert('Proszę podać prawidłowy adres email');
+                return;
+            }
+
+            // URL validation
+            try {
+                new URL(data.profile);
+            } catch {
+                alert('Proszę podać prawidłowy link do profilu (z http:// lub https://)');
+                return;
+            }
+
+            // Submit form
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Wysyłanie...';
+            submitBtn.disabled = true;
+
+            try {
+                // Send to backend via GraphQL
+                await createFrontrunnerRequest(
+                    data.name,
+                    data.email,
+                    data.phone,
+                    data.profile,
+                    data.experience,
+                    data.strategy,
+                    data.audience
+                );
+                
+                // Show success message
+                alert('🎉 Dziękujemy za aplikację!\n\nTwoje zgłoszenie zostało wysłane. Skontaktujemy się z Tobą w ciągu 24 godzin na podany adres email.\n\nSprawdź także folder SPAM - czasami nasze wiadomości tam trafiają.');
+                
+                // Reset form
+                this.reset();
+                
+                // Recalculate with default values
+                setTimeout(calculateEarnings, 100);
+                
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Wystąpił błąd podczas wysyłania formularza. Spróbuj ponownie lub skontaktuj się z nami bezpośrednio.');
+            } finally {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.step-card, .benefit-card, .testimonial, .faq-item, .value-card');
+            animatedElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Add some interactive micro-animations
+        document.querySelectorAll('.stat-box, .benefit-card, .step-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+    
+    <script src="script.js" defer></script>
+</body>
+</html>
