@@ -2792,7 +2792,7 @@ body {
     }
     
     .stat-card__percent {
-        font-size: 32px;
+        font-size: 24px;
     }
     
     .stat-card__description {
@@ -2947,11 +2947,11 @@ body {
     }
     
     .stat-card__percent {
-        font-size: 28px;
+        font-size: 24px;
     }
     
     .management-center__title {
-        font-size: 18px;
+        font-size: 16px;
     }
     
     .card__title {
