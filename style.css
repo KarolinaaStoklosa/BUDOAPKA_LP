@@ -2786,14 +2786,29 @@ body {
         padding: 12px 8px;
         align-items: center;
     }
+
+    .stat-card__inner2{
+        height: 190px;
+    }
     
     .stat-card__icon {
         width: 70px;
     }
     
     .stat-card__percent {
-        font-size: 24px;
+        font-size: 21px;
     }
+
+    .stat-card__description {
+        font-size: 16px;
+    }
+
+    .stat-card__title { 
+    font-size: 17px; 
+}
+.stat-card__description2 { 
+    font-size: 13px; 
+}
     
     .stat-card__description {
         font-size: 16px;
@@ -2947,11 +2962,18 @@ body {
     }
     
     .stat-card__percent {
-        font-size: 24px;
+        font-size: 19px;
     }
+
+    .stat-card__title { 
+    font-size: 18px; 
+}
+.stat-card__description2 { 
+    font-size: 13px; 
+}
     
     .management-center__title {
-        font-size: 16px;
+        font-size: 15px;
     }
     
     .card__title {
