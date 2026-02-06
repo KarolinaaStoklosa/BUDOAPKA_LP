@@ -63,24 +63,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Obsługa przełącznika cennika
 const toggleWrapper = document.querySelector('.pricing__toggle-wrapper');
+
 if (toggleWrapper) {
     const options = toggleWrapper.querySelectorAll('.toggle-option');
     const allPrices = document.querySelectorAll('.price[data-monthly]');
+    const allOldPrices = document.querySelectorAll('.old-price[data-monthly]');
+    const allPricesBefore = document.querySelectorAll('.price-before[data-monthly]');
     const allPeriods = document.querySelectorAll('.yearly-info');
 
     options.forEach(option => {
         option.addEventListener('click', () => {
-            // Usuń klasę 'active' z obu opcji
+            const isYearly = option.dataset.period === 'yearly';
+            const period = option.dataset.period;
+
+            // Update active state
             options.forEach(opt => opt.classList.remove('active'));
-            // Dodaj klasę 'active' do klikniętej opcji
             option.classList.add('active');
 
-            const isYearly = option.dataset.period === 'yearly';
-
+            // Update prices
             allPrices.forEach(priceEl => {
                 priceEl.textContent = isYearly ? priceEl.dataset.yearly : priceEl.dataset.monthly;
             });
 
+            // Update old prices
+            allOldPrices.forEach(price => {
+                const newPrice = price.dataset[period];
+                price.textContent = `${newPrice} zł`;
+            });
+
+            // Update prices before promo code
+            allPricesBefore.forEach(priceBeforeEl => {
+                const priceValue = isYearly ? priceBeforeEl.dataset.yearly : priceBeforeEl.dataset.monthly;
+                priceBeforeEl.textContent = `${priceValue} zł Cena przed kodem`;
+            });
+
+            // Update payment period info
             allPeriods.forEach(periodEl => {
                 periodEl.textContent = isYearly ? 'Płatność z góry roczna - 20% zniżki' : 'Płatność miesięczna';
             });
@@ -538,73 +555,96 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Auto-open Early Access modal on page load
     // Add a small delay to ensure page is fully loaded
-    setTimeout(() => {
-        openEarlyAccessModal();
-    }, 1500); // 1.5 second delay after page load
+    // setTimeout(() => {
+    //     openEarlyAccessModal();
+    // }, 1500); // 1.5 second delay after page load
 });
 
+
 // ======== EARLY ACCESS MODAL FUNCTIONALITY ========
+document.addEventListener('DOMContentLoaded', () => {
+    const minimizedBanner = document.getElementById('earlyAccessMinimized');
+    
+    if (minimizedBanner) {
+        // Ukryj baner na starcie
+        minimizedBanner.classList.remove('show');
+        document.body.classList.remove('banner-visible');
+        
+        // Pokaż baner po scrollowaniu 300px
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                if (!minimizedBanner.classList.contains('show')) {
+                    minimizedBanner.classList.add('show');
+                    document.body.classList.add('banner-visible');
+                }
+            } else {
+                minimizedBanner.classList.remove('show');
+                document.body.classList.remove('banner-visible');
+            }
+        }, { passive: true });
+    }
+});
 
 // Global functions for Early Access modal
-function openEarlyAccessModal() {
-    const modal = document.getElementById('earlyAccessModal');
-    const minimized = document.getElementById('earlyAccessMinimized');
+// function openEarlyAccessModal() {
+//     const modal = document.getElementById('earlyAccessModal');
+//     const minimized = document.getElementById('earlyAccessMinimized');
     
-    if (modal) {
-        modal.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-    }
+//     if (modal) {
+//         modal.style.display = 'flex';
+//         document.body.style.overflow = 'hidden';
+//     }
     
-    if (minimized) {
-        minimized.classList.remove('show');
-        setTimeout(() => {
-            minimized.style.display = 'none';
-        }, 300);
-    }
-}
+//     if (minimized) {
+//         minimized.classList.remove('show');
+//         setTimeout(() => {
+//             minimized.style.display = 'none';
+//         }, 300);
+//     }
+// }
 
-function closeEarlyAccessModal() {
-    const modal = document.getElementById('earlyAccessModal');
+// function closeEarlyAccessModal() {
+//     const modal = document.getElementById('earlyAccessModal');
     
-    if (modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = '';
-    }
-}
+//     if (modal) {
+//         modal.style.display = 'none';
+//         document.body.style.overflow = '';
+//     }
+// }
 
-function minimizeEarlyAccessModal() {
-    const modal = document.getElementById('earlyAccessModal');
-    const minimized = document.getElementById('earlyAccessMinimized');
+// function minimizeEarlyAccessModal() {
+//     const modal = document.getElementById('earlyAccessModal');
+//     const minimized = document.getElementById('earlyAccessMinimized');
     
-    // Close the modal
-    if (modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = '';
-    }
+//     // Close the modal
+//     if (modal) {
+//         modal.style.display = 'none';
+//         document.body.style.overflow = '';
+//     }
     
-    // Show minimized banner
-    if (minimized) {
-        minimized.style.display = 'block';
-        setTimeout(() => {
-            minimized.classList.add('show');
-            // Add pulsing animation after the initial animation completes
-            setTimeout(() => {
-                minimized.classList.add('pulsing');
-            }, 1000); // 1 second delay to match slideInAndPulse duration
-        }, 50);
-    }
-}
+//     // Show minimized banner
+//     if (minimized) {
+//         minimized.style.display = 'block';
+//         setTimeout(() => {
+//             minimized.classList.add('show');
+//             // Add pulsing animation after the initial animation completes
+//             setTimeout(() => {
+//                 minimized.classList.add('pulsing');
+//             }, 1000); // 1 second delay to match slideInAndPulse duration
+//         }, 50);
+//     }
+// }
 
-function closeEarlyAccessMinimized() {
-    const minimized = document.getElementById('earlyAccessMinimized');
+// function closeEarlyAccessMinimized() {
+//     const minimized = document.getElementById('earlyAccessMinimized');
     
-    if (minimized) {
-        minimized.classList.remove('show');
-        setTimeout(() => {
-            minimized.style.display = 'none';
-        }, 300);
-    }
-}
+//     if (minimized) {
+//         minimized.classList.remove('show');
+//         setTimeout(() => {
+//             minimized.style.display = 'none';
+//         }, 300);
+//     }
+// }
 
 // Early Access form submission
 document.addEventListener('DOMContentLoaded', () => {
@@ -687,4 +727,47 @@ document.addEventListener('DOMContentLoaded', () => {
 function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
+}
+
+// Function to copy promo code to clipboard
+function copyPromoCode() {
+    const promoCodeElement = document.getElementById('promoCode');
+    const promoCodeText = promoCodeElement.textContent;
+    const copyButton = document.querySelector('.promo-code-copy');
+    
+    // Use the Clipboard API
+    navigator.clipboard.writeText(promoCodeText).then(() => {
+        // Change button text temporarily
+        const originalText = copyButton.textContent;
+        copyButton.textContent = 'Skopiowano!';
+        copyButton.style.color = '#16A34A'; // Green color
+        
+        // Reset after 2 seconds
+        setTimeout(() => {
+            copyButton.textContent = originalText;
+            copyButton.style.color = '';
+        }, 2000);
+    }).catch(err => {
+        console.error('Błąd podczas kopiowania:', err);
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = promoCodeText;
+        textArea.style.position = 'fixed';
+        textArea.style.left = '-999999px';
+        document.body.appendChild(textArea);
+        textArea.select();
+        try {
+            document.execCommand('copy');
+            const originalText = copyButton.textContent;
+            copyButton.textContent = 'Skopiowano!';
+            copyButton.style.color = '#16A34A';
+            setTimeout(() => {
+                copyButton.textContent = originalText;
+                copyButton.style.color = '';
+            }, 2000);
+        } catch (err) {
+            console.error('Fallback: Błąd podczas kopiowania:', err);
+        }
+        document.body.removeChild(textArea);
+    });
 }

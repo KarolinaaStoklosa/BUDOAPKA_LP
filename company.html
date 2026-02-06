@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Firmy - Budoapka</title>
+    <meta name="description" content="Zobacz profil firmy, portfolio i opinie klientów na Budoapka">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Profil Firmy - Budoapka">
+    <meta property="og:description" content="Zobacz profil firmy, portfolio i opinie klientów">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Profil Firmy - Budoapka">
+    <meta name="twitter:description" content="Zobacz profil firmy, portfolio i opinie klientów">
+    
+    <base href="/">
+
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-orange: #EB590D;
+            --dark-bg: #202020;
+            --white: #FFFFFF;
+            --light-gray-bg: #F2F2F2;
+            --rating-bg: #EEEEEE;
+            --text-color: #202020;
+            --text-color-light: #555;
+            --border-radius: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-color);
+            background-color: #D9D9D9;
+            min-height: 100vh;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        .top-nav {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-color-light);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .back-home:hover {
+            color: var(--primary-orange);
+        }
+
+        @media (min-width: 1182px) {
+            .top-nav {
+                max-width: 1182px;
+                margin: 0 auto;
+                text-align: left;
+            }
+        }
+
+        /* Main Container */
+        .page-wrapper {
+            width: 100%;
+            padding: 0;
+        }
+
+        .company-container {
+            width: 100%;
+            background: var(--light-gray-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 1182px) {
+            .page-wrapper {
+                padding: 40px 20px;
+            }
+            
+            .company-container {
+                max-width: 1182px;
+            }
+        }
+
+        /* Header Section */
+        .company-header {
+            position: relative;
+            padding-bottom: 40px;
+        }
+
+        .portfolio-background {
+            width: 100%;
+            height: 293px;
+            background-color: var(--primary-orange);
+            background-size: cover;
+            background-position: center;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            position: relative;
+        }
+
+        .company-logo-wrapper {
+            position: absolute;
+            top: 196px;
+            left: 45px;
+            width: 193px;
+            height: 193px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        .company-logo-wrapper img {
+            max-width: 100px;
+            max-height: 100px;
+            object-fit: contain;
+        }
+
+        .company-logo-wrapper .logo-placeholder {
+            width: 100px;
+            height: 100px;
+            background: var(--primary-orange);
+            border-radius: 8px;
+        }
+
+        @media (max-width: 1181px) {
+            .company-logo-wrapper {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Company Details Section */
+        .company-details {
+            padding: 0 20px 40px;
+        }
+
+        @media (min-width: 1182px) {
+            .company-details {
+                margin-left: 256px;
+                padding: 0 40px 40px 0;
+            }
+        }
+
+        @media (max-width: 1181px) {
+            .company-details {
+                margin-top: 100px;
+            }
+        }
+
+        .details-row {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        @media (min-width: 1182px) {
+            .details-row {
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 40px;
+            }
+        }
+
+        /* Left Side - Company Info */
+        .company-info {
+            flex: 1;
+        }
+
+        .company-name {
+            font-family: 'Jost', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-color);
+        }
+
+        .verified-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--primary-orange);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .company-description {
+            color: var(--text-color-light);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .city-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .city-pill {
+            background: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: var(--text-color);
+            border: 1px solid #E0E0E0;
+        }
+
+        .action-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: var(--dark-bg);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: var(--primary-orange);
+            transform: translateY(-2px);
+        }
+
+        .btn i {
+            font-size: 16px;
+        }
+
+        /* Right Side - Rating Info */
+        .rating-container {
+            background: var(--rating-bg);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            min-width: 280px;
+        }
+
+        .rating-circle {
+            width: 95px;
+            height: 95px;
+            background: var(--text-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+        }
+
+        .rating-value {
+            font-size: 40px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .rating-count {
+            text-align: center;
+            font-size: 14px;
+            color: var(--text-color-light);
+            margin-bottom: 16px;
+        }
+
+        .stars-display {
+            display: flex;
+            justify-content: center;
+            gap: 4px;
+            margin-bottom: 20px;
+        }
+
+        .star {
+            font-size: 20px;
+            color: #DDD;
+            position: relative;
+            display: inline-block;
+        }
+
+        .star.filled {
+            color: #FFB800;
+        }
+
+        .star.half-filled {
+            background: linear-gradient(90deg, #FFB800 50%, #DDD 50%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .company-address {
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .company-address div {
+            margin-bottom: 4px;
+        }
+
+        /* Portfolio Gallery */
+        .portfolio-section {
+            padding: 40px 20px;
+        }
+
+        .portfolio-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        @media (min-width: 768px) {
+            .portfolio-gallery {
+                flex-direction: row;
+                gap: 16px;
+            }
+        }
+
+        .gallery-column {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            flex: 1;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 188px;
+            background-color: var(--primary-orange);
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.02);
+        }
+
+        @media (min-width: 768px) {
+            .gallery-column-1 .gallery-image:first-child {
+                height: 252px;
+            }
+            
+            .gallery-column-1 .gallery-image:last-child {
+                height: 284px;
+            }
+
+            .gallery-column-2 .gallery-image:first-child {
+                height: 188px;
+            }
+            
+            .gallery-column-2 .gallery-image:last-child {
+                height: 347px;
+            }
+
+            .gallery-column-3 .gallery-image {
+                height: 548px;
+            }
+        }
+
+        /* Reviews Section */
+        .reviews-section {
+            padding: 40px 20px;
+            background: white;
+            border-radius: var(--border-radius);
+            margin: 0 20px 40px;
+        }
+
+        .reviews-title {
+            font-family: 'Jost', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .review-card {
+            border-bottom: 1px solid #E0E0E0;
+            padding: 24px 0;
+        }
+
+        .review-card:last-child {
+            border-bottom: none;
+        }
+
+        .review-header {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .review-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: #DDD;
+            object-fit: cover;
+        }
+
+        .review-info {
+            flex: 1;
+        }
+
+        .review-author {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .review-project {
+            font-size: 14px;
+            color: var(--text-color-light);
+            margin-bottom: 8px;
+        }
+
+        .review-stars {
+            display: flex;
+            gap: 2px;
+        }
+
+        .review-stars .star {
+            font-size: 16px;
+        }
+
+        .review-content {
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+
+        .review-images {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        .review-thumbnail {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            background-color: #F5F5F5;
+            background-size: cover;
+            background-position: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .review-thumbnail:hover {
+            transform: scale(1.05);
+        }
+
+        .review-comments {
+            margin-top: 16px;
+            padding-left: 64px;
+        }
+
+        .review-comment {
+            padding: 12px;
+            background: #F9F9F9;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .comment-author {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+
+        .lightbox-image {
+            max-width: 100%;
+            max-height: 90vh;
+            border-radius: 8px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1001;
+        }
+
+        .lightbox-close:hover {
+            background: var(--primary-orange);
+            color: white;
+        }
+
+        /* Loading State */
+        .loading {
+            text-align: center;
+            padding: 60px 20px;
+            font-size: 18px;
+            color: var(--text-color-light);
+        }
+
+        .error-message {
+            text-align: center;
+            padding: 60px 20px;
+            font-size: 18px;
+            color: #ff3547;
+        }
+
+        /* Loading Skeleton */
+        .skeleton {
+            animation: skeleton-loading 1s linear infinite alternate;
+        }
+
+        @keyframes skeleton-loading {
+            0% {
+                background-color: hsl(200, 20%, 80%);
+            }
+            100% {
+                background-color: hsl(200, 20%, 95%);
+            }
+        }
+
+        .skeleton-header {
+            width: 100%;
+            height: 293px;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+
+        .skeleton-circle {
+            width: 193px;
+            height: 193px;
+            border-radius: 50%;
+            margin: -96px auto 0;
+        }
+
+        .skeleton-text {
+            height: 20px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+
+        .skeleton-text.large {
+            height: 32px;
+        }
+
+        .skeleton-text.small {
+            width: 60%;
+        }
+
+        .loading-container {
+            padding: 20px;
+        }
+    </style>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QF6F8Z6MEK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QF6F8Z6MEK');
+    </script>
+</head>
+
+<body>
+    <nav class="top-nav">
+        <a href="/" class="back-home">
+            <i class="fas fa-arrow-left"></i>
+            Powrót do strony głównej
+        </a>
+    </nav>
+    
+    <div class="page-wrapper">
+        <div id="app" class="company-container">
+            <div class="skeleton skeleton-header"></div>
+            <div class="loading-container">
+                <div class="skeleton skeleton-circle"></div>
+                <div style="margin-top: 40px;">
+                    <div class="skeleton skeleton-text large"></div>
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-text small"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">×</button>
+        <div class="lightbox-content">
+            <img id="lightbox-image" class="lightbox-image" src="" alt="">
+        </div>
+    </div>
+
+    <script>
+        // Configuration
+        const API_ENDPOINT = 'https://api.budoapka.pl/graphql'; 
+        
+        // Get company ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const companyId = urlParams.get('id');
+
+        // GraphQL Query
+        const GET_COMPANY_QUERY = `
+            query GetCompany($identifier: String!) {
+                getCompanyByIdOrSlug(identifier: $identifier) {
+                    id
+                    name
+                    description
+                    taxId
+                    logo {
+                        filePath
+                    }
+                    portfolio {
+                        id
+                        filePath
+                    }
+                    address
+                    city
+                    postalCode
+                    country
+                    cityOperate
+                    phone
+                    email
+                    website
+                    facebook
+                    instagram
+                    tiktok
+                    reviews {
+                        id
+                        rating
+                        comment
+                        createdAt
+                        user {
+                            id
+                            name
+                            picture
+                        }
+                        project {
+                            id
+                            name
+                            address
+                        }
+                        uploadedFiles {
+                            id
+                            filePath
+                        }
+                        comments {
+                            id
+                            comment
+                            user {
+                                name
+                            }
+                        }
+                    }
+                }
+            }
+        `;
+
+        // Fetch company data
+        async function fetchCompanyData(identifier) {
+            try {
+                const response = await fetch(API_ENDPOINT, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        query: GET_COMPANY_QUERY,
+                        variables: { identifier }
+                    })
+                });
+
+                const result = await response.json();
+                
+                if (result.errors) {
+                    throw new Error(result.errors[0].message);
+                }
+
+                return result.data.getCompanyByIdOrSlug;
+            } catch (error) {
+                console.error('Error fetching company data:', error);
+                throw error;
+            }
+        }
+
+        // Calculate average rating
+        function calculateAverageRating(reviews) {
+            if (!reviews || reviews.length === 0) return 0;
+            const sum = reviews.reduce((acc, review) => acc + review.rating, 0);
+            return (sum / reviews.length).toFixed(1);
+        }
+
+        // Format date
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            return date.toLocaleDateString('pl-PL', options);
+        }
+
+        // Update page meta tags
+        function updateMetaTags(company) {
+            document.title = `${company.name} - Profil Firmy | Budoapka`;
+            
+            // Update meta description
+            const description = `${company.name} - ${company.description.substring(0, 150)}...`;
+            document.querySelector('meta[name="description"]').setAttribute('content', description);
+            
+            // Update Open Graph tags
+            document.querySelector('meta[property="og:title"]').setAttribute('content', `${company.name} - Budoapka`);
+            document.querySelector('meta[property="og:description"]').setAttribute('content', description);
+            
+            // Update Twitter tags
+            document.querySelector('meta[name="twitter:title"]').setAttribute('content', `${company.name} - Budoapka`);
+            document.querySelector('meta[name="twitter:description"]').setAttribute('content', description);
+            
+            // Add logo image if available
+            if (company.logo && company.logo.filePath) {
+                let ogImage = document.querySelector('meta[property="og:image"]');
+                if (!ogImage) {
+                    ogImage = document.createElement('meta');
+                    ogImage.setAttribute('property', 'og:image');
+                    document.head.appendChild(ogImage);
+                }
+                ogImage.setAttribute('content', company.logo.filePath);
+                
+                let twitterImage = document.querySelector('meta[name="twitter:image"]');
+                if (!twitterImage) {
+                    twitterImage = document.createElement('meta');
+                    twitterImage.setAttribute('name', 'twitter:image');
+                    document.head.appendChild(twitterImage);
+                }
+                twitterImage.setAttribute('content', company.logo.filePath);
+            }
+        }
+
+        // Render stars
+        function renderStars(rating) {
+            const fullStars = Math.floor(rating);
+            const hasHalfStar = rating % 1 >= 0.5;
+            let html = '';
+
+            for (let i = 0; i < 5; i++) {
+                if (i < fullStars) {
+                    html += '<span class="star filled">★</span>';
+                } else if (i === fullStars && hasHalfStar) {
+                    html += '<span class="star half-filled">★</span>';
+                } else {
+                    html += '<span class="star">★</span>';
+                }
+            }
+
+            return html;
+        }
+
+        // Render company page
+        function renderCompanyPage(company) {
+            // Update meta tags
+            updateMetaTags(company);
+            
+            const averageRating = calculateAverageRating(company.reviews);
+            const portfolioBackground = company.portfolio && company.portfolio.length > 0 
+                ? `background-image: url('${company.portfolio[0].filePath}')` 
+                : '';
+
+            const logoHtml = company.logo 
+                ? `<img src="${company.logo.filePath}" alt="${company.name}">` 
+                : '<div class="logo-placeholder"></div>';
+
+            // Prepare action buttons
+            let actionButtons = '';
+            if (company.phone) {
+                actionButtons += `<a href="tel:${company.phone}" class="btn"><i class="fas fa-phone"></i> Zadzwoń</a>`;
+            }
+            if (company.email) {
+                actionButtons += `<a href="mailto:${company.email}" class="btn"><i class="fas fa-envelope"></i> Napisz E-mail</a>`;
+            }
+            if (company.website) {
+                actionButtons += `<a href="${company.website}" target="_blank" class="btn"><i class="fas fa-globe"></i> Strona</a>`;
+            }
+            if (company.facebook) {
+                actionButtons += `<a href="${company.facebook}" target="_blank" class="btn"><i class="fab fa-facebook"></i></a>`;
+            }
+            if (company.instagram) {
+                actionButtons += `<a href="${company.instagram}" target="_blank" class="btn"><i class="fab fa-instagram"></i></a>`;
+            }
+            if (company.tiktok) {
+                actionButtons += `<a href="${company.tiktok}" target="_blank" class="btn"><i class="fab fa-tiktok"></i></a>`;
+            }
+
+            // City pills
+            const cityPills = company.cityOperate.map(city => 
+                `<span class="city-pill">${city}</span>`
+            ).join('');
+
+            // Portfolio gallery
+            const portfolioImages = company.portfolio || [];
+            const galleryHtml = renderPortfolioGallery(portfolioImages);
+
+            // Reviews
+            const reviewsHtml = renderReviews(company.reviews);
+
+            const html = `
+                <div class="company-header">
+                    <div class="portfolio-background" style="${portfolioBackground}"></div>
+                    <div class="company-logo-wrapper">
+                        ${logoHtml}
+                    </div>
+                </div>
+
+                <div class="company-details">
+                    <div class="details-row">
+                        <div class="company-info">
+                            <h1 class="company-name">${company.name}</h1>
+                            <div class="verified-badge">
+                                <i class="fas fa-check-circle"></i>
+                                Profil zweryfikowany
+                            </div>
+                            <p class="company-description">${company.description}</p>
+                            <div class="city-pills">
+                                ${cityPills}
+                            </div>
+                            <div class="action-buttons">
+                                ${actionButtons}
+                            </div>
+                        </div>
+
+                        <div class="rating-container">
+                            <div class="rating-circle">
+                                <span class="rating-value">${averageRating}</span>
+                            </div>
+                            <div class="rating-count">${company.reviews.length} ${company.reviews.length === 1 ? 'ocena' : 'ocen'}</div>
+                            <div class="stars-display">
+                                ${renderStars(parseFloat(averageRating))}
+                            </div>
+                            <div class="company-address">
+                                <div><strong>${company.city}${company.postalCode ? ', ' + company.postalCode : ''}</strong></div>
+                                <div>${company.address}</div>
+                                ${company.taxId ? `<div>NIP ${company.taxId}</div>` : ''}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                ${galleryHtml}
+
+                ${reviewsHtml}
+            `;
+
+            document.getElementById('app').innerHTML = html;
+        }
+
+        // Render portfolio gallery
+        function renderPortfolioGallery(portfolio) {
+            if (!portfolio || portfolio.length === 0) return '';
+
+            const images = [...portfolio];
+            
+            // For mobile
+            const mobileGallery = images.slice(1, 6).map(img => 
+                `<div class="gallery-image" style="background-image: url('${img.filePath}')" onclick="openLightbox('${img.filePath}')"></div>`
+            ).join('');
+
+            // For desktop - irregular layout
+            const column1Images = [];
+            const column2Images = [];
+            const column3Images = [];
+
+            // Skip first image (used as background) and distribute remaining
+            for (let i = 1; i < images.length && i < 6; i++) {
+                if (i === 1 || i === 2) {
+                    column1Images.push(images[i]);
+                } else if (i === 3 || i === 4) {
+                    column2Images.push(images[i]);
+                } else if (i === 5) {
+                    column3Images.push(images[i]);
+                }
+            }
+
+            // Fill with placeholders if needed
+            while (column1Images.length < 2) {
+                column1Images.push({ filePath: '', id: `placeholder-${column1Images.length}` });
+            }
+            while (column2Images.length < 2) {
+                column2Images.push({ filePath: '', id: `placeholder-${column2Images.length}` });
+            }
+            if (column3Images.length === 0) {
+                column3Images.push({ filePath: '', id: 'placeholder-3' });
+            }
+
+            return `
+                <div class="portfolio-section">
+                    <div class="portfolio-gallery">
+                        <div class="gallery-column gallery-column-1">
+                            ${column1Images.map(img => {
+                                const style = img.filePath ? `background-image: url('${img.filePath}')` : '';
+                                const onclick = img.filePath ? `onclick="openLightbox('${img.filePath}')"` : '';
+                                return `<div class="gallery-image" style="${style}" ${onclick}></div>`;
+                            }).join('')}
+                        </div>
+                        <div class="gallery-column gallery-column-2">
+                            ${column2Images.map(img => {
+                                const style = img.filePath ? `background-image: url('${img.filePath}')` : '';
+                                const onclick = img.filePath ? `onclick="openLightbox('${img.filePath}')"` : '';
+                                return `<div class="gallery-image" style="${style}" ${onclick}></div>`;
+                            }).join('')}
+                        </div>
+                        <div class="gallery-column gallery-column-3">
+                            ${column3Images.map(img => {
+                                const style = img.filePath ? `background-image: url('${img.filePath}')` : '';
+                                const onclick = img.filePath ? `onclick="openLightbox('${img.filePath}')"` : '';
+                                return `<div class="gallery-image" style="${style}" ${onclick}></div>`;
+                            }).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Render reviews
+        function renderReviews(reviews) {
+            if (!reviews || reviews.length === 0) return '';
+
+            const reviewsHtml = reviews.map(review => {
+                const avatarSrc = review.user.picture || '';
+                const avatarHtml = avatarSrc 
+                    ? `<img src="${avatarSrc}" class="review-avatar" alt="${review.user.name}">` 
+                    : '<div class="review-avatar"></div>';
+
+                const reviewImagesHtml = review.uploadedFiles.map(file => 
+                    `<div class="review-thumbnail" style="background-image: url('${file.filePath}')" onclick="openLightbox('${file.filePath}')"></div>`
+                ).join('');
+
+                const commentsHtml = review.comments.map(comment => `
+                    <div class="review-comment">
+                        <div class="comment-author">${comment.user.name}</div>
+                        <div>${comment.comment}</div>
+                    </div>
+                `).join('');
+
+                return `
+                    <div class="review-card">
+                        <div class="review-header">
+                            ${avatarHtml}
+                            <div class="review-info">
+                                <div class="review-author">${review.user.name}</div>
+                                <div class="review-project">Projekt: ${review.project.name} • ${formatDate(review.createdAt)}</div>
+                                <div class="review-stars">
+                                    ${renderStars(review.rating)}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-content">${review.comment}</div>
+                        ${reviewImagesHtml ? `<div class="review-images">${reviewImagesHtml}</div>` : ''}
+                        ${commentsHtml ? `<div class="review-comments">${commentsHtml}</div>` : ''}
+                    </div>
+                `;
+            }).join('');
+
+            return `
+                <div class="reviews-section">
+                    <h2 class="reviews-title">Opinie</h2>
+                    ${reviewsHtml}
+                </div>
+            `;
+        }
+
+        // Lightbox functions
+        function openLightbox(imageSrc) {
+            document.getElementById('lightbox-image').src = imageSrc;
+            document.getElementById('lightbox').classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        // Close lightbox on background click
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+
+        // Close lightbox on ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+
+        // Initialize
+        async function init() {
+            if (!companyId) {
+                document.getElementById('app').innerHTML = `
+                    <div class="error-message">
+                        <h2>⚠️ Brak identyfikatora firmy</h2>
+                        <p>Nie znaleziono parametru ID w URL.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            try {
+                const company = await fetchCompanyData(companyId);
+                renderCompanyPage(company);
+                
+                // Update URL without reloading
+                if (window.history && window.history.replaceState) {
+                    window.history.replaceState({}, document.title, '/company/' + companyId);
+                }
+
+                // Track with Google Analytics
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'company_view', {
+                        'company_id': companyId,
+                        'company_name': company.name
+                    });
+                }
+            } catch (error) {
+                document.getElementById('app').innerHTML = `
+                    <div class="error-message">
+                        <h2>❌ Błąd ładowania</h2>
+                        <p>${error.message}</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Run on page load
+        init();
+    </script>
+</body>
+
+</html>
+
