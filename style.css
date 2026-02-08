@@ -1,6 +1,6 @@
 /* ======== ZMIENNE I STYLE GLOBALNE ======== */
 :root {
-    --primary-orange: #EB590D;
+    --primary-orange: #FF3D00;
     --dark-bg: #202020;
     --white: #FFFFFF;
     --light-gray-bg: #F2F2F2;
@@ -75,7 +75,7 @@ body {
 .fab-main {
     width: 64px;
     height: 64px;
-    background: linear-gradient(135deg, #EB590D 0%, #FF7F4C 100%) !important;
+    background: linear-gradient(135deg, #FF3D00 0%, #FF7F4C 100%) !important;
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -432,8 +432,8 @@ body {
 }
 
 .stat-card__icon { position: absolute; top: 5%; left: 50%; transform: translateX(-50%); width: 130px; height: auto; z-index: 3; }
-.stat-card__percent { font-family: 'Jost', sans-serif; font-weight: 700; font-size: 28px; line-height:1.2; color: var(--text-color); margin-bottom: 5px; }
-.stat-card__description { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 22px; line-height: 1.2; color: #A3A3A3; }
+.stat-card__percent { font-family: 'Jost', sans-serif; font-weight: 700; font-size: 30px; line-height:1.2; color: var(--text-color); margin-bottom: 5px; white-space: nowrap; }
+.stat-card__description { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 18px; line-height: 1.2; color: #A3A3A3; }
 .stats-cards__cta { text-align: center; margin-top: 100px; }
 
 .stat-card__title { 
@@ -479,8 +479,8 @@ body {
     max-width: 1025px;
     margin: 0 auto;
     padding: 0 1rem 0 1rem;
-    background: linear-gradient(180deg, #EB590D 0%, #FB884C 100%);
-    border: 1px solid #EB590D;
+    background: linear-gradient(180deg, var(--primary-orange) 0%, #FB884C 100%);
+    border: 1px solid var(--primary-orange);
     border-radius: 52px;
     text-align: center;
     width: 100%;
@@ -507,6 +507,86 @@ body {
 .bottom_tittle{
     margin-TOP: 2REM;
     margin-bottom: 2rem;
+}
+
+/* ======== NOWE STYLE DLA SEKCJI WIDEO (KROK 3) ======== */
+
+/* Podtytuł pod wideo */
+.management-center__subtitle {
+    font-family: 'Inter', sans-serif; /* Twój font tekstowy */
+    font-size: 26px;
+    color: var(--white);
+    margin: 2rem auto;
+    padding: 0 1rem;
+    max-width: 800px;
+}
+
+/* Grid na 3 kolumny */
+.video-grid-text {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    text-align: left;
+    margin-top: 2rem;
+    padding: 0 2rem;
+    color: var(--white);
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Elementy grida */
+.video-grid-item h3 {
+    font-family: 'Jost', sans-serif; /* Twój font nagłówkowy */
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+}
+
+.video-grid-item p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9); /* Lekka przezroczystość dla czytelności */
+}
+
+/* Kontener na przycisk */
+.management-center__cta {
+    margin: 3rem 0 2rem 0;
+}
+
+/* Nowy styl przycisku (Biały na pomarańczowym tle) */
+.btn--white {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 32px;
+    background-color: var(--white);
+    color: var(--primary-orange);
+    border-radius: 12px; /* Zgodne z Twoim btn--cta */
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.btn--white:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    background-color: #f8f8f8;
+}
+
+/* Responsywność */
+@media (max-width: 900px) {
+    .video-grid-text {
+        grid-template-columns: 1fr; /* Jedna kolumna na mobile */
+        text-align: center;
+        gap: 2rem;
+    }
 }
 
 /* ======== SEKCJA OPINII ======== */
@@ -902,6 +982,74 @@ body {
     opacity: 1;
 }
 
+/* --- BOKS "WARTO WIEDZIEĆ" (PODSUMOWANIE PORÓWNANIA) --- */
+.worth-knowing-box {
+    background-color: var(--light-bg);
+    border: 1px solid var(--primary-orange);
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    max-width: 800px;
+    margin: 3rem auto 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.worth-knowing-icon {
+    background: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.worth-knowing-content h4 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    font-size: 20px; /* Spójność: PX zamiast REM */
+    color: var(--primary-orange);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+.worth-knowing-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px; /* Spójność: Standardowy tekst desktop */
+    line-height: 1.5;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.worth-knowing-content strong {
+    font-weight: 600;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .worth-knowing-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .worth-knowing-content h4 {
+        font-size: 18px; /* Mniejszy nagłówek na mobile */
+    }
+
+    .worth-knowing-content p {
+        font-size: 15px; /* Mniejszy tekst na mobile */
+    }
+}
+
 /* ======== SEKCJA "JAK TO DZIAŁA" ======== */
 .how-it-works {
     position: relative;
@@ -956,7 +1104,7 @@ body {
 
 .how-it-works .section-title {
     color: var(--primary-orange);
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     text-align: center;
 }
 
@@ -968,10 +1116,10 @@ body {
 }
 
 .how-it-works__card {
-    background: rgba(255, 255, 255, 0.47);
+    background: rgba(255, 255, 255, 0.57);
     box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.25);
     border-radius: 20px;
-    padding: 2rem 1.5rem 2.5rem 1.5rem;
+    padding: 2rem 1.5rem 1rem 1.5rem;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1026,7 +1174,8 @@ body {
     margin-bottom: 1rem;
 }
 
-/* ======== SEKCJA WSPÓŁPRACA ======== */
+/* ======== SEKCJA WSPÓŁPRACA (HYBRYDA + POPRAWIONE KOLORY MOBILE) ======== */
+
 .collaboration {
     padding: 2rem 1rem 5rem 1rem;
     overflow: hidden;
@@ -1038,7 +1187,6 @@ body {
     font-size: 20px;
     line-height: 1.6;
     color: var(--text-color-light);
-    word-wrap: break-word;
 }
 
 .collaboration__grid {
@@ -1046,9 +1194,11 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     width: 100%;
-    max-width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
+/* --- KARTA (BAZA) --- */
 .collaboration-card {
     border-radius: 24px;
     padding: 2.5rem 2rem;
@@ -1057,77 +1207,130 @@ body {
     flex-direction: column;
     transition: transform 0.3s ease;
     width: 100%;
-    max-width: 100%;
+    position: relative;
+    cursor: default; /* Desktop: brak łapki */
 }
 
 .collaboration-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
+}
+
+.card-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
 .collaboration-card h3 {
     font-family: 'Jost', sans-serif;
     font-weight: 700;
     font-size: 1.4rem;
-    margin-bottom: 1rem;
     color: var(--primary-orange);
-    text-align: center;
-    word-wrap: break-word;
+    margin: 0;
+    text-align: left;
+    line-height: 1.3;
 }
 
-.collaboration-card p {
-    font-size: clamp(0.9rem, 1vw, 1.1rem);
-    line-height: 1.6;
-    color: var(--text-color-light);
-    flex-grow: 1;
-    margin-bottom: 2rem;
-    word-wrap: break-word;
-}
-
+/* --- KOLORY DESKTOP (SZACHOWNICA) --- */
+/* 1 i 4 = Szare */
 .collaboration-card:nth-child(1),
 .collaboration-card:nth-child(4) {
     background: #E7E7E7;
 }
+.collaboration-card:nth-child(1) p,
+.collaboration-card:nth-child(4) p {
+    color: var(--text-color-light);
+}
 
+/* 2 i 3 = Czarne */
 .collaboration-card:nth-child(2),
 .collaboration-card:nth-child(3) {
     background: var(--dark-bg);
 }
-
 .collaboration-card:nth-child(2) p,
 .collaboration-card:nth-child(3) p {
     color: var(--white);
 }
 
-.btn--secondary {
-    display: inline-block;
-    padding: 8px 20px;
-    border-radius: 12px;
-    font-weight: 700;
-    font-family: 'Jost', sans-serif;
-    text-align: center;
-    text-decoration: none;
-    background: transparent;
-    border: 2px solid var(--primary-orange);
-    color: var(--primary-orange);
-    transition: all 0.3s ease;
-    font-size: 20px;
-    line-height: 1.3;
+/* --- TREŚĆ I IKONA (DESKTOP) --- */
+.card-hidden-content {
+    display: block;
+    opacity: 1;
+    max-height: none;
 }
 
-.btn--secondary-small {
-    font-size: 12px;
-    padding: 8px 16px;
+.card-hidden-content p {
+    font-size: clamp(0.9rem, 1vw, 1.1rem);
+    line-height: 1.6;
+    margin: 0;
 }
 
-.btn--secondary:hover {
-    background: var(--primary-orange);
-    color: var(--white);
+.toggle-icon {
+    display: none; /* Ukrywamy plusik na komputerze */
 }
 
-.collaboration-card:nth-child(2) .btn--secondary:hover,
-.collaboration-card:nth-child(3) .btn--secondary:hover {
-    background: var(--white);
-    color: var(--primary-orange);
+
+/* ======== MEDIA QUERY (MOBILE) ======== */
+@media (max-width: 992px) {
+    .collaboration__grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .collaboration-card {
+        padding: 1.5rem;
+        cursor: pointer; /* Łapka na mobile */
+    }
+
+    .card-header-flex {
+        margin-bottom: 0;
+    }
+
+    .toggle-icon {
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    /* Ukrywanie treści na mobile */
+    .card-hidden-content {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease;
+        margin-top: 0;
+    }
+
+    /* Stan aktywny */
+    .collaboration-card.active .card-hidden-content {
+        max-height: 500px;
+        opacity: 1;
+        margin-top: 1rem;
+    }
+
+    .collaboration-card.active .toggle-icon {
+        transform: rotate(45deg);
+    }
+
+    /* --- NAPRAWA KOLORÓW NA MOBILE (PRZEPLATANKA) --- */
+    /* Chcemy układ: Szary - Czarny - Szary - Czarny */
+    
+    /* Karty nieparzyste (1, 3) mają być SZARE */
+    .collaboration-card:nth-child(odd) {
+        background: #E7E7E7;
+    }
+    .collaboration-card:nth-child(odd) p {
+        color: var(--text-color-light);
+    }
+
+    /* Karty parzyste (2, 4) mają być CZARNE */
+    .collaboration-card:nth-child(even) {
+        background: var(--dark-bg);
+    }
+    .collaboration-card:nth-child(even) p {
+        color: var(--white);
+    }
 }
 
 /* ======== SEKCJA CENNIK ======== */
@@ -3904,7 +4107,7 @@ body {
     right: 0;
     background: #1a1a1a;
     border: none;
-    border-bottom: 2px solid #EB590D;
+    border-bottom: 2px solid var(--primary-orange);
     box-shadow: 0 8px 30px rgba(0,0,0,0.18);
     z-index: 1200; /* ponad header */
     transform: translateY(calc(-100% - 8px)) translateZ(0);
@@ -3978,7 +4181,7 @@ body.banner-visible {
 }
 
 .early-access-minimized__btn {
-    background: linear-gradient(135deg, #EB590D 0%, #FF7F4C 100%);
+    background: linear-gradient(135deg, var(--primary-orange) 0%, #FF7F4C 100%);
     color: white;
     border: none;
     padding: 10px 18px;
@@ -3993,7 +4196,7 @@ body.banner-visible {
 }
 
 .early-access-minimized__btn:hover {
-    background: linear-gradient(135deg, #FF7F4C 0%, #EB590D 100%);
+    background: linear-gradient(135deg, #FF7F4C 0%, var(--primary-orange) 100%);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(235, 89, 13, 0.6);
 }
@@ -4081,3 +4284,296 @@ body.banner-visible {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(5, 150, 105, 0.6);
 }
+
+
+
+
+
+/* ======== KROK 4: SEKCJA BŁĘDY (STYLES) ======== */
+
+.section-problems {
+    padding: 5rem 0;
+    background-color: var(--light-gray-bg); /* Spójne tło */
+}
+
+/* Grid kart */
+.problems-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+/* Wygląd karty problemu (Biała z cieniem - Twój styl) */
+.problem-card {
+    background: var(--white);
+    border-radius: 24px; /* Twoje zaokrąglenie */
+    padding: 1.5rem;
+    box-shadow: 0 6px 7px rgba(0, 0, 0, 0.09); /* Twój cień */
+    border-left: 6px solid var(--primary-orange); 
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.problem-card__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Treść zajmuje całe dostępne miejsce */
+}
+
+.problem-card:hover {
+    transform: translateY(-5px);
+}
+
+.problem-card__header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.problem-icon {
+    font-size: 32px;
+}
+
+.problem-card h3 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.3;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.problem-card__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.problem-card__content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px; /* Standardowy tekst desktop */
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    color: var(--text-color-light);
+}
+
+.problem-card__content strong {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+/* Wyróżnienie straty (Czerwone tło) */
+.problem-loss {
+    background: #ffebee;
+    color: var(--primary-orange); /* Ciemny czerwony dla kontrastu */
+    padding: 12px 15px;
+    border-radius: 12px;
+    font-size: 18px; /* Wyraźna cena */
+    font-weight: 700;
+    text-align: center;
+    margin-top: auto;
+}
+
+/* Box kalkulacji na dole */
+.calculation-box {
+    background: var(--white);
+    border: 2px solid var(--primary-orange);
+    border-radius: 24px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.calculation-box h3 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    color: var(--primary-orange);
+    font-size: 26px; /* Duży nagłówek */
+    margin-bottom: 1rem;
+}
+
+.calculation-box p {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Responsywność - Tablet */
+@media (max-width: 992px) {
+    .problems-grid {
+        grid-template-columns: 1fr; 
+        gap: 2rem;
+    }
+    
+    .problem-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Responsywność - Mobile (Dopasowanie do stylu innych sekcji) */
+@media (max-width: 768px) {
+    .section-problems {
+        padding: 30px 1rem; /* Zgodnie z .comparison */
+    }
+
+    .problems-grid {
+        gap: 1.5rem; 
+        margin-bottom: 2.5rem;
+    }
+
+    .problem-card {
+        padding: 1.25rem; /* Taki sam jak .comparison-card na mobile */
+    }
+
+    .problem-card h3 {
+        font-size: 19px; /* Zgodnie z .comparison-card__content h4 */
+    }
+
+    .problem-card__content p {
+        font-size: 15px; /* Zgodnie z resztą tekstów mobile */
+    }
+
+    .problem-loss {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .calculation-box {
+        padding: 1.5rem 1rem;
+    }
+
+    .calculation-box h3 {
+        font-size: 18px;
+    }
+
+    .calculation-box p {
+        font-size: 15px;
+    }
+}
+
+/* ======== KROK 5: SEKCJA WIZERUNEK + KLIENT ======== */
+
+.section-professional {
+    padding: 5rem 0;
+    background-color: var(--white);
+}
+
+/* --- GRID 3 KOLUMNY (DLA KART GÓRNYCH) --- */
+.grid-3-cols {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+    margin-bottom: 4rem; /* Odstęp od sekcji Klienta na dole */
+}
+
+/* Styl Czystej Karty (Calm) */
+.calm-card {
+    background: linear-gradient(180deg, #F1F1F1 0%, #F9F9F9 100%);
+    border-radius: 24px;
+    padding: 2rem;
+    height: 100%;
+    text-align: left;
+    transition: transform 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.calm-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.calm-card h3 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    font-size: 20px; /* Spójne z resztą */
+    line-height: 1.3;
+    color: var(--primary-orange);
+    margin-bottom: 1rem;
+}
+
+.calm-card p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color-light);
+}
+
+.calm-card strong {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+/* --- BOKS "TWÓJ KLIENT" (DÓŁ SEKCJI) --- */
+.client-focus-box {
+    background-color: var(--light-bg); /* Bardzo jasny pomarańczowy odcień */
+    border-radius: 24px;
+    padding: 3rem 2rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    border: 1px solid var(--primary-orange); /* Subtelna ramka */
+}
+
+.client-focus-content h3 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.client-focus-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.client-focus-content strong {
+    color: var(--primary-orange);
+    font-weight: 600;
+}
+
+/* Responsywność */
+@media (max-width: 992px) {
+    .grid-3-cols {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-professional {
+        padding: 3rem 0;
+    }
+    
+    .calm-card {
+        padding: 1.5rem;
+    }
+    
+    .client-focus-box {
+        padding: 2rem 1.5rem;
+    }
+    
+    .client-focus-content h3 {
+        font-size: 24px;
+    }
+    
+    .client-focus-content p {
+        font-size: 16px;
+    }
+}
+

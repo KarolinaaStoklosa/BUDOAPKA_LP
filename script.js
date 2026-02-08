@@ -771,3 +771,15 @@ function copyPromoCode() {
         document.body.removeChild(textArea);
     });
 }
+
+function toggleCard(card) {
+        // Opcjonalnie: Zamknij inne karty przy otwarciu nowej (tzw. Accordion mode)
+        // Jeśli chcesz, żeby można było mieć otwarte wszystkie naraz, usuń pętlę poniżej.
+        const allCards = document.querySelectorAll('.expand-card');
+        allCards.forEach(c => {
+            if (c !== card) c.classList.remove('active');
+        });
+
+        // Przełącz klasę active na klikniętej karcie
+        card.classList.toggle('active');
+    }
