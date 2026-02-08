@@ -605,7 +605,17 @@ body {
 
 .testimonials .section-title {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
+}
+
+.testimonials .section-subtitle {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem auto; /* 4rem odstępu od dołu (do slidera) */
+    font-size: 18px; /* Spójność z resztą strony */
+    line-height: 1.6;
+    color: var(--text-color-light);
+    padding: 0 1rem;
 }
 
 .testimonial-slider__wrapper {
@@ -1341,355 +1351,289 @@ body {
     }
 }
 
-/* ======== SEKCJA CENNIK ======== */
+/* =========================================
+   SEKCJA CENNIKA (SINGLE CARD)
+   ========================================= */
 .pricing {
-    padding: 2rem 1rem 5rem 1rem;
-    overflow: hidden;
+    padding: 5rem 0;
+    background-color: var(--light-gray-bg);
 }
 
-.pricing .section-subtitle {
-    margin: 1rem auto 2rem auto;
-    font-size: 20px;
-    line-height: 1.6;
-    color: var(--text-color-light);
-    word-wrap: break-word;
-}
-
-.pricing__toggle-wrapper {
-    display: inline-flex;
-    align-items: center;
-    padding: 4px;
-    background: var(--white);
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-    border-radius: 12px;
-    margin-bottom: 5rem;
-}
-
-.toggle-option {
-    cursor: pointer;
-    padding: 8px 10px;
-    border-radius: 14px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    font-size: 1rem;
-    max-width: 200px;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.toggle-option.active {
-    background: linear-gradient(180deg, #000000 0%, #2E2E2E 100%);
-    box-shadow: inset 0px 0px 2px 1px rgba(255, 255, 255, 0.25);
-    color: var(--white);
-}
-
-.discount-badge {
-    margin-left: 10px;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    background: var(--primary-orange);
-    color: var(--white);
-    font-weight: 700;
-    font-size: 1.1rem;
-    padding: 4px 8px;
-    border-radius: 14px;
-}
-
-.pricing__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    align-items: center;
-    width: 100%;
-    max-width: 100%;
-}
-
-.pricing__grid--single {
+.pricing-single-wrapper {
     display: flex;
     justify-content: center;
-}
-
-.pricing__grid--single .pricing-card {
-    max-width: 450px;
-}
-
-.pricing-card {
-    background: var(--white);
-    border: 1px solid #EAEAEA;
-    border-radius: 24px;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    height: 100%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
-    max-width: 100%;
-}
-
-.pricing-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.08);
 }
 
 .pricing-card--featured {
-    background: var(--dark-bg);
-    color: var(--white);
-    border-color: var(--dark-bg);
-    /* transform: scale(1.05); */
+    background: var(--white);
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.08); /* Miękki cień */
+    width: 100%;
+    max-width: 500px; /* Optymalna szerokość */
+    overflow: hidden;
     position: relative;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease;
 }
 
-.featured-badge {
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--primary-orange);
-    color: var(--white);
-    padding: 0.5rem 1rem;
-    border-radius: 99px;
-    font-size: 14px;
-    font-weight: 700;
+.pricing-card--featured:hover {
+    transform: translateY(-5px);
+    border-color: rgba(235, 89, 13, 0.1);
 }
 
-/* Coming Soon Styles */
-.pricing-card--coming-soon {
-    opacity: 0.5;
-    filter: grayscale(100%);
-    pointer-events: none;
-    position: relative;
-}
-
-.coming-soon-badge {
-    position: absolute;
-    top: 30px;
-    right: -35px;
-    background: var(--primary-orange);
-    color: var(--white);
-    padding: 0.5rem 2.5rem;
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    transform: rotate(45deg);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    z-index: 10;
-    letter-spacing: 1px;
-}
-
+/* --- Nagłówek Karty --- */
 .pricing-card__header {
-    min-height: 110px;
+    background: var(--dark-bg); /* Ciemne tło nagłówka */
+    color: var(--white);
+    padding: 2.5rem;
+    position: relative;
 }
 
 .pricing-card__header h3 {
     font-family: 'Jost', sans-serif;
-    font-weight: 700;
-    font-size: 1.75rem;
-    margin-bottom: 0.5rem;
-    word-wrap: break-word;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    color: rgba(255,255,255,0.7);
+    text-transform: uppercase;
 }
 
-.pricing-card__header p {
-    font-size: 15px;
-    line-height: 1.4;
-    color: var(--text-color-light);
-    word-wrap: break-word;
-}
-
-.pricing-card--featured .pricing-card__header p {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.pricing-card__price-wrapper {
+.price-box {
     display: flex;
-    align-items: baseline;
-    gap: 0.5rem;
-    margin: 1rem 0;
+    justify-content: center;
+    align-items: center; /* Centrowanie w pionie */
+    gap: 8px;
+    margin-bottom: 0.5rem;
 }
 
-.price {
+.price-box .amount {
     font-family: 'Jost', sans-serif;
+    font-size: 4.5rem;
     font-weight: 700;
-    font-size: 3rem;
     line-height: 1;
-}
-
-.price--contact {
-    font-family: 'Jost', sans-serif;
-    font-weight: 600;
-    font-size: 1.9rem;
-    line-height: 1;
-}
-
-.pricing-card--featured .price {
     color: var(--primary-orange);
 }
 
-.currency {
-    font-size: 15px;
+.price-box__details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.2;
 }
 
-.currency--contact {
-    font-size: 14px;
-}
-
-/* Promo Price Styles */
-.pricing-card__price-section {
-    margin: 1rem 0;
-}
-
-.price--promo {
-    color: #E63946;
+.price-box .currency {
+    font-size: 1.2rem;
     font-weight: 700;
 }
 
-.price-label {
-    font-size: 14px;
-    color: var(--text-color-light);
-    margin: 0.25rem 0 0.5rem 0;
+.price-box .period {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.6);
 }
 
-.price-before {
+.vat-info {
     font-size: 14px;
-    color: var(--text-color-light);
-    margin: 0.5rem 0 1rem 0;
+    color: rgba(255,255,255,0.5);
+    margin: 0;
 }
 
-.promo-code-box {
+/* --- Treść Karty --- */
+.pricing-card__body {
+    padding: 2.5rem;
+}
+
+.pricing-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2.5rem 0;
+}
+
+.pricing-features-list li {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 2px dashed #4A90E2;
-    border-radius: 8px;
-    padding: 0.75rem 1rem;
-    margin: 1rem 0;
-    background: #F8FBFF;
+    align-items: flex-start;
     gap: 1rem;
-}
-
-.promo-code-content {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    flex: 1;
-}
-
-.promo-code-label {
-    font-size: 14px;
+    margin-bottom: 1rem;
+    font-size: 16px; /* Spójność */
     color: var(--text-color);
-    font-weight: 600;
+    line-height: 1.5;
 }
 
-.promo-code-value {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--dark-bg);
-    letter-spacing: 0.5px;
+.check-icon {
+    width: 20px;
+    height: 20px;
+    color: var(--primary-orange);
+    flex-shrink: 0;
+    margin-top: 2px;
 }
 
-.promo-code-copy {
-    background: transparent;
-    border: none;
-    color: #4A90E2;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    padding: 0.25rem 0.5rem;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-}
-
-.promo-code-copy:hover {
-    color: #2563EB;
-    text-decoration: underline;
-}
-
-.promo-code-copy:active {
-    transform: scale(0.95);
-}
-
-.pricing-card__price-wrapper-contact {
-    display: flex;
-    align-items: baseline;
-    gap: 0.1rem;
-    margin: 2rem 0;
-}
-
-.pricing-card--featured .currency {
-    color: var(--white);
-}
-
-.pricing-card .btn--secondary {
-    width: 100%;
-    margin-top: 2rem;
-}
-
-.pricing-card__divider {
-    border: none;
-    height: 1px;
-    background-color: #EAEAEA;
-    margin: 2rem 0 1.5rem 0;
-}
-
-.pricing-card--featured .pricing-card__divider {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.pricing-card__features {
-    flex-grow: 1;
+/* --- Bonusy (Gratisy) --- */
+.pricing-bonuses {
+    background-color: #FFF8F0; /* Bardzo jasny pomarańcz */
+    border: 1px dashed var(--primary-orange);
+    border-radius: 12px;
+    padding: 1.5rem;
     margin-bottom: 2rem;
 }
 
-.pricing-card__features ul {
+.bonus-item {
+    margin-bottom: 1rem;
+}
+
+.bonus-item:last-child {
+    margin-bottom: 0;
+}
+
+.bonus-tag {
+    display: inline-block;
+    background: var(--primary-orange);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    font-family: 'Jost', sans-serif;
+}
+
+.bonus-item p {
+    font-size: 15px;
+    margin: 0;
+    color: var(--text-color);
+    line-height: 1.4;
+}
+
+.btn--large {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 18px;
+}
+
+.trial-note {
+    font-size: 13px;
+    color: #999;
+    margin-top: 1rem;
+}
+
+/* =========================================
+   SEKCJA GWARANCJI (POPRAWIONA)
+   ========================================= */
+.guarantee-section {
+    padding: 6rem 0 6rem 0; /* Więcej miejsca, żeby ikona wystawała */
+    background-color: var(--white);
+}
+
+.guarantee-container {
+    display: flex;
+    justify-content: center;
+}
+
+.guarantee-box {
+    background: var(--white);
+    border: 2px solid var(--primary-orange);
+    border-radius: 24px;
+    padding: 3.5rem 2.5rem 2.5rem 2.5rem; /* Więcej paddingu u góry na ikonę */
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(235, 89, 13, 0.08);
+    margin-top: 2rem;
+}
+
+/* Ikona wystająca poza ramkę */
+.guarantee-icon {
+    background: #FFF8F0;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--primary-orange);
+    /* Pozycjonowanie absolutne na górze ramki */
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.guarantee-title {
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+}
+
+.guarantee-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.guarantee-highlight {
+    font-family: 'Jost', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-orange);
+    margin-bottom: 1.5rem;
+}
+
+/* --- POPRAWIONA LISTA PUNKTOWANA --- */
+.guarantee-list {
     list-style: none;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    margin: 0 auto 2.5rem auto;
+    /* To sprawia, że blok jest na środku, ale tekst jest wyrównany do lewej */
+    display: inline-block;
+    text-align: left; 
 }
 
-.pricing-card__features li {
-    font-size: 15px;
-    padding-left: 24px;
+.guarantee-list li {
     position: relative;
-    line-height: 1.4;
-    word-wrap: break-word;
+    padding-left: 20px; /* Wcięcie na kropkę */
+    margin-bottom: 0.5rem;
+    font-size: 16px;
+    color: var(--text-color);
+    line-height: 1.5;
 }
 
-.pricing-card__features li::before {
-    content: '';
+/* Własna pomarańczowa kropka */
+.guarantee-list li::before {
+    content: "•";
+    color: var(--primary-orange);
+    font-weight: bold;
+    font-size: 1.5rem;
     position: absolute;
     left: 0;
-    top: 4px;
-    width: 16px;
-    height: 16px;
-    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.3332 4L5.99984 11.3333L2.6665 8' stroke='%23EB590D' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-    background-repeat: no-repeat;
+    top: -2px; /* Drobna korekta w pionie */
+    line-height: 1;
 }
 
-.pricing__guarantee{
-    margin-top: 2rem;
-}
+/* Responsywność */
+@media (max-width: 768px) {
+    .pricing-card__header {
+        padding: 1.5rem;
+    }
+    
+    .price-box .amount {
+        font-size: 3.5rem;
+    }
 
-.pricing-card--featured .pricing-card__features li::before {
-    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.3332 4L5.99984 11.3333L2.6665 8' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-}
+    .guarantee-box {
+        padding: 3rem 1.5rem 2rem 1.5rem;
+    }
 
-.pricing__cta {
-    margin-top: 2rem;
-    margin-left: auto;
-    margin-right: auto;
+    .guarantee-title {
+        font-size: 22px;
+    }
 }
-
-.pricing__guarantee .section-subtitle {
-    margin: 1rem auto 2rem auto;
-    font-size: 20px;
-    line-height: 1.6;
-    color: var(--text-color-light);
-    word-wrap: break-word;
-}
-
 /* ======== SEKCJA FAQ ======== */
 .faq {
     padding: 2rem 1rem;
@@ -2789,6 +2733,11 @@ body {
         flex: 0 0 280px;
         min-width: 280px;
         max-width: 280px;
+    }
+
+    .testimonials .section-subtitle {
+        font-size: 16px;
+        line-height: 1.4;
     }
     
     /* POPRAWIONE ROZMIARY CZCIONEK NA MOBILE */
@@ -4585,3 +4534,221 @@ body.banner-visible {
     }
 }
 
+
+/* ======== SEKCJA O NAS (3 FOUNDERÓW) ======== */
+.about-us {
+    padding: 5rem 0;
+    background-color: var(--white);
+}
+
+.founders-wrapper {
+    max-width: 1100px; /* Szerszy kontener, żeby zmieścić 3 osoby */
+    margin: 0 auto 5rem auto;
+}
+
+/* Zdjęcie (Placeholder) */
+.founders-photo {
+    width: 100%;
+    height: 450px;
+    background-color: var(--light-gray-bg); /* Twój szary */
+    border-radius: 24px;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+}
+
+.founders-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-placeholder {
+    color: var(--text-color-light);
+    font-size: 18px;
+    font-family: 'Jost', sans-serif;
+    border: 2px dashed #ccc;
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+/* Grid Biogramów (3 KOLUMNY) */
+.founders-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 równe kolumny */
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.founder-card h3 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    font-size: 22px; /* Spójne z h3 w innych sekcjach */
+    color: var(--text-color);
+    margin-bottom: 0.2rem;
+    line-height: 1.3;
+}
+
+.founder-role {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    color: var(--primary-orange);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.founder-card p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color-light);
+    margin: 0;
+}
+
+/* Cytat */
+.founders-quote {
+    background-color: var(--light-gray-bg); /* Spójne tło */
+    padding: 2.5rem;
+    border-radius: 24px;
+    border-left: 6px solid var(--primary-orange);
+    text-align: center;
+    margin-bottom: 2rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.founders-quote p {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.founders-note {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ======== TABELA PROCESU (BEZ NOWYCH KOLORÓW) ======== */
+.process-section {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.process-title {
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.process-header-row, 
+.process-row {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr 1.2fr 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+}
+
+.process-header-row {
+    background-color: var(--dark-bg); /* Twój czarny */
+    color: white;
+    border-radius: 12px 12px 0 0;
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.process-row:nth-child(even) {
+    background-color: var(--light-gray-bg); /* Twój szary */
+}
+
+.process-row p, 
+.process-row div {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+/* Wyróżnienie ostatniego wiersza (Spokój) */
+.process-row--highlight {
+    background-color: #FFF8F0 !important; /* Jedyny wyjątek - bardzo jasny brand */
+    border-bottom: none;
+    border-radius: 0 0 12px 12px;
+}
+
+.step-badge {
+    font-weight: 700;
+    color: var(--primary-orange);
+    font-family: 'Jost', sans-serif;
+}
+
+.col-result strong {
+    color: var(--primary-orange);
+    font-weight: 700;
+}
+
+/* ======== RESPONSYWNOŚĆ (MOBILE) ======== */
+@media (max-width: 992px) {
+    .founders-grid {
+        grid-template-columns: 1fr; /* Jeden pod drugim na tablecie/mobile */
+        gap: 2.5rem;
+        text-align: center; /* Centrujemy tekst na mobile dla lepszego wyglądu */
+    }
+    
+    .founders-photo {
+        height: 250px;
+    }
+
+    /* Transformacja Tabeli w Karty */
+    .process-header-row { display: none; }
+
+    .process-row {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        border: 1px solid #eee;
+        border-radius: 16px;
+        margin-bottom: 1rem;
+        padding: 1.5rem;
+        background: white !important; /* Reset tła */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    }
+
+    .process-row--highlight {
+        background-color: #FFF8F0 !important;
+        border: 1px solid rgba(235, 89, 13, 0.2);
+    }
+
+    /* Etykiety na mobile */
+    .col-you::before { content: attr(data-label); font-weight: 700; display: block; font-size: 12px; color: #999; margin-bottom: 2px; }
+    .col-app::before { content: attr(data-label); font-weight: 700; display: block; font-size: 12px; color: var(--primary-orange); margin-bottom: 2px; }
+    .col-result::before { content: attr(data-label); font-weight: 700; display: block; font-size: 12px; color: var(--text-color); margin-bottom: 2px; }
+    
+    .step-badge {
+        font-size: 18px;
+        display: block;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
