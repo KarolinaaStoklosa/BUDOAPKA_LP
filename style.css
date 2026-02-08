@@ -588,6 +588,14 @@ body {
         gap: 2rem;
     }
 }
+@media (max-width: 600px) {
+    .video-grid-item h3 {
+        font-size: 18px;
+    }
+        .video-grid-item p {
+        font-size: 14px;
+    }
+}
 
 /* ======== SEKCJA OPINII ======== */
 .testimonials {
