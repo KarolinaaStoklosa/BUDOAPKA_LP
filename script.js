@@ -3,11 +3,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // Obsługa menu mobilnego
     const mobileToggle = document.querySelector('.header__mobile-toggle');
     const header = document.querySelector('.header');
+    const mobileNav = document.querySelector('.header__mobile-nav');
     
     if (mobileToggle && header) {
         mobileToggle.addEventListener('click', () => {
             header.classList.toggle('nav-open');
         });
+        
+        // Zamykanie menu po kliknięciu na link
+        if (mobileNav) {
+            const navLinks = mobileNav.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    header.classList.remove('nav-open');
+                });
+            });
+        }
     }
 
     // ULEPSZONA OBSŁUGA SUWAKA OPINII
@@ -87,24 +98,17 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // --- FUNKCJA ROZWIJANIA KART (COLLABORATION) ---
-// Ta funkcja jest wywoływana z onclick w HTML
 function toggleCard(card) {
-    // 1. Znajdź wszystkie karty
     const allCards = document.querySelectorAll('.collaboration-card');
-    
-    // 2. Zamknij wszystkie inne karty oprócz klikniętej
     allCards.forEach(c => {
         if (c !== card) {
             c.classList.remove('active');
         }
     });
-
-    // 3. Przełącz klasę active na klikniętej karcie
     card.classList.toggle('active');
 }
 
 // --- FUNKCJE POMOCNICZE (MODALE, COOKIES) ---
-
 function openContactModal() {
     const modal = document.getElementById('contactModal');
     if (modal) modal.classList.add('active');
@@ -126,7 +130,6 @@ function closeDemoModal() {
 }
 
 function setupModals() {
-    // Zamykanie modali przyciskiem Escape
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape') {
             closeContactModal();
@@ -135,7 +138,6 @@ function setupModals() {
     });
 }
 
-// Cookies
 function showCookieBanner() {
     const banner = document.getElementById('cookieBanner');
     if (banner) banner.classList.add('show');
