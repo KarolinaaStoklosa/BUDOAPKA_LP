@@ -667,8 +667,17 @@
         const API_ENDPOINT = 'https://api.budoapka.pl/graphql'; 
         
         // Get company ID from URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const companyId = urlParams.get('id');
+        let companyId = null;
+        
+        // Try to get ID from path first (e.g., /view/company-slug)
+        const pathMatch = window.location.pathname.match(/\/view\/([a-zA-Z0-9_-]+)/);
+        if (pathMatch) {
+            companyId = pathMatch[1];
+        } else {
+            // Fallback to query parameter (e.g., /view.html?id=company-slug)
+            const urlParams = new URLSearchParams(window.location.search);
+            companyId = urlParams.get('id');
+        }
 
         // GraphQL Query
         const GET_COMPANY_QUERY = `

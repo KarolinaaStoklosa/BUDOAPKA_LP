@@ -1,1175 +1,2308 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budoapka | Aplikacja dla firm budowlanych i wykończeniowych</title>
-    <meta name="description" content="Odzyskaj kontrolę nad budową i wolne wieczory. Budoapka to prosta apka dla JDG: dokumentuj prace, pilnuj kosztów i skończ z chaosem na WhatsAppie. Testuj za darmo.">
-
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QF6F8Z6MEK"></script>
+  <head>
+    <!-- Google Tag Manager -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-QF6F8Z6MEK');
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-P2BG9RZX");
     </script>
-</head>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budoapka | Aplikacja dla firm budowlanych i wykończeniowych</title>
+    <meta
+      name="description"
+      content="Odzyskaj kontrolę nad budową i wolne wieczory. Budoapka to prosta apka dla JDG: dokumentuj prace, pilnuj kosztów i skończ z chaosem na WhatsAppie. Testuj za darmo."
+    />
 
-<body>
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-P2BG9RZX"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div id="earlyAccessMinimized" class="early-access-minimized">
-        <div class="early-access-minimized__content">
-            <span class="early-access-minimized__text">Dołącz do 100+ ekip, które nie tracą już czasu na WhatsApp.</span>
-            <a href="https://app.budoapka.pl/" class="btn btn--primary early-access-minimized__btn">
-                <span>Załóż darmowe konto</span>
-            </a>
-        </div>
+      <div class="early-access-minimized__content">
+        <span class="early-access-minimized__text"
+          >Dołącz do 100+ ekip, które nie tracą już czasu na WhatsApp.</span
+        >
+        <a
+          href="https://app.budoapka.pl/"
+          class="btn btn--primary early-access-minimized__btn"
+        >
+          <span>Załóż darmowe konto</span>
+        </a>
+      </div>
     </div>
 
     <header class="header">
-        <div class="container header__container">
-            <a href="#" class="header__logo--mobile">
-                <img src="assets/logo.svg" alt="Budoapka Logo">
-            </a>
+      <div class="container header__container">
+        <a href="#" class="header__logo--mobile">
+          <img src="assets/logo.svg" alt="Budoapka Logo" />
+        </a>
 
-            <div class="header__inner-box">
-                <a href="#" class="header__logo">
-                    <img src="assets/logo.svg" alt="Budoapka Logo">
-                </a>
-                <nav class="header__nav">
-                    <ul>
-                        <li><a href="#features">Czym jest Budoapka</a></li>
-                        <li><a href="#comparison-section">Porównanie</a></li>
-                        <li><a href="#pricing-section">Cennik</a></li>
-                        <li><a href="https://app.budoapka.pl/demo">Projekt pokazowy</a></li>
-                    </ul>
-                </nav>
-            </div>
-
-            <a href="https://app.budoapka.pl" class="btn btn--cta">PRZEJDŹ DO APLIKACJI</a>
-
-            <button class="header__mobile-toggle" aria-label="Otwórz menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+        <div class="header__inner-box">
+          <a href="#" class="header__logo">
+            <img src="assets/logo.svg" alt="Budoapka Logo" />
+          </a>
+          <nav class="header__nav">
+            <ul>
+              <li><a href="#features">Czym jest Budoapka</a></li>
+              <li><a href="#comparison-section">Porównanie</a></li>
+              <li><a href="#pricing-section">Cennik</a></li>
+              <li>
+                <a href="https://app.budoapka.pl/demo">Projekt pokazowy</a>
+              </li>
+              <li><a href="#first-steps-section">Pierwsze kroki</a></li>
+            </ul>
+          </nav>
         </div>
 
-        <nav class="header__mobile-nav">
-            <ul>
-                <li><a href="#features">Czym jest Budoapka</a></li>
-                <li><a href="#comparison-section">Porównanie</a></li>
-                <li><a href="#pricing-section">Cennik</a></li>
-                <li><a href="https://app.budoapka.pl">Projekt pokazowy</a></li>
-            </ul>
-            <a href="https://app.budoapka.pl" class="btn btn--cta">PRZEJDŹ DO APLIKACJI</a>
-        </nav>
+        <a href="https://app.budoapka.pl" class="btn btn--cta"
+          >PRZEJDŹ DO APLIKACJI</a
+        >
+
+        <button class="header__mobile-toggle" aria-label="Otwórz menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <nav class="header__mobile-nav">
+        <ul>
+          <li><a href="#features">Czym jest Budoapka</a></li>
+          <li><a href="#comparison-section">Porównanie</a></li>
+          <li><a href="#pricing-section">Cennik</a></li>
+          <li><a href="https://app.budoapka.pl">Projekt pokazowy</a></li>
+          <li><a href="#first-steps-section">Pierwsze kroki</a></li>
+        </ul>
+        <a href="https://app.budoapka.pl" class="btn btn--cta"
+          >PRZEJDŹ DO APLIKACJI</a
+        >
+      </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="container hero__container">
-                <div class="hero__content">
-                    <h1 class="hero__title">
-                        Prosta <span class="highlight-wrapper"><span class="highlight-text">aplikacja</span></span><br> do prowadzenia remontów i budów dla małych firm.
-                    </h1>
+      <section class="hero">
+        <div class="container hero__container">
+          <div class="hero__content">
+            <h1 class="hero__title">
+              Prosta
+              <span class="highlight-wrapper"
+                ><span class="highlight-text">aplikacja</span></span
+              ><br />
+              do prowadzenia remontów i budów dla małych firm.
+            </h1>
 
-                    <p class="hero__subtitle">
-                         Profesjonalne narzędzie dla JDG i małych ekip. Wszystkie zdjęcia, koszty i ustalenia z inwestorem w jednej, przejrzystej aplikacji. Buduj szybciej, zarabiaj więcej, stresuj się mniej.
-                    </p>
-                </div>
-            
-                <div class="hero__image-wrapper">
-                    <img src="assets/budo_mockup.png" alt="Aplikacja Budoapka" class="hero__mockup-img">
-                </div>
+            <p class="hero__subtitle">
+              Profesjonalne narzędzie dla JDG i małych ekip. Wszystkie zdjęcia,
+              koszty i ustalenia z inwestorem w jednej, przejrzystej aplikacji.
+              Buduj szybciej, zarabiaj więcej, stresuj się mniej.
+            </p>
+          </div>
 
-                <div class="hero__content">
-                    <div class="hero__cta">
-                        <a href="https://app.budoapka.pl/register" class="btn btn--dark-cta">
-                            <span>Załóż darmowe konto</span>
-                        </a>
-                    </div>
-                    
-                    <div class="hero__play-button-wrapper">
-                        <a href="https://apps.apple.com/us/app/budoapka/id6526482940" class="hero__play-button">
-                            <img src="assets/stores/pl/app_store.png" class="hero__play-button-img" alt="App Store">
-                        </a>
-                        <a href="https://play.google.com/store/apps/details?id=com.konradhopek.houstrac" class="hero__apple-button">
-                            <img src="assets/stores/pl/google_play.png" class="hero__apple-button-img" alt="Google Play">
-                        </a>
-                    </div>
-                </div>
+          <div class="hero__image-wrapper">
+            <img
+              src="assets/budo_mockup.png"
+              alt="Aplikacja Budoapka"
+              class="hero__mockup-img"
+            />
+          </div>
+
+          <div class="hero__content">
+            <div class="hero__cta">
+              <a
+                href="https://app.budoapka.pl/register"
+                class="btn btn--dark-cta"
+              >
+                <span>Załóż darmowe konto</span>
+              </a>
             </div>
-        </section>
 
-        <section class="stats-cards" id="stats-card">
-            <div class="container">
-                <div class="stats-cards__grid">
-                    <div class="stat-card">
-                        <div class="stat-card__inner">
-                            <img src="assets/icon-house.svg" alt="" class="stat-card__icon">
-                            <p class="stat-card__percent">30+ LAT</p>
-                            <p class="stat-card__description">wspólnego doświadczenia w budownictwie i wykończeniach</p>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-card__inner">
-                            <img src="assets/icon-clock.svg" alt="" class="stat-card__icon">
-                            <p class="stat-card__percent">5 GODZIN</p>
-                            <p class="stat-card__description">tygodniowo tyle średnio odzyskuje właściciel firmy z budoApką</p>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-card__inner">
-                            <img src="assets/icon-stats.svg" alt="" class="stat-card__icon">
-                            <p class="stat-card__percent">100%</p>
-                            <p class="stat-card__description">udokumentowanych prac dodatkowych za które zapłaci klient</p>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-card__inner">
-                            <img src="assets/icon-handshake.svg" alt="" class="stat-card__icon">
-                            <p class="stat-card__percent">1 000+</p>
-                            <p class="stat-card__description">projektów zakończonych sukcesem dzięki naszej aplikacji</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="hero__play-button-wrapper">
+              <a
+                href="https://apps.apple.com/us/app/budoapka/id6526482940"
+                class="hero__play-button"
+              >
+                <img
+                  src="assets/stores/pl/app_store.png"
+                  class="hero__play-button-img"
+                  alt="App Store"
+                />
+              </a>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.konradhopek.houstrac"
+                class="hero__apple-button"
+              >
+                <img
+                  src="assets/stores/pl/google_play.png"
+                  class="hero__apple-button-img"
+                  alt="Google Play"
+                />
+              </a>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section class="how-it-works" id="features">
-            <div class="container">
-                <h2 class="section-title text-center">
-                    Wszystko, czego potrzebujesz do prowadzenia budowy – w jednej, prostej aplikacji.
-                </h2>
-
-                <div class="how-it-works__grid">
-                    <div class="how-it-works__card">
-                        <div class="card__header">
-                            <h3 class="card__title">Dziennik Budowy w kieszeni</h3>
-                            <div class="card__number">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary-orange)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-                            </div>
-                        </div>
-                        <div class="card__description">
-                            <p style="margin-bottom: 0.5rem;"><strong style="color: var(--primary-orange);">Zaleta:</strong> Koniec z tysiącem zdjęć w galerii telefonu.</p>
-                            <p><strong>Konkret:</strong> Wszystkie zdjęcia, notatki i ustalenia są przypisane do konkretnego projektu. Znajdziesz dowód na wykonaną pracę w 5 sekund, nawet rok po zakończeniu zlecenia.</p>
-                        </div>
-                    </div>
-
-                    <div class="how-it-works__card">
-                        <div class="card__header">
-                            <h3 class="card__title">Koszty pod kontrolą</h3>
-                            <div class="card__number">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary-orange)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
-                            </div>
-                        </div>
-                        <div class="card__description">
-                            <p style="margin-bottom: 0.5rem;"><strong style="color: var(--primary-orange);">Zaleta:</strong> Już nigdy nie zapomnisz doliczyć materiału do faktury.</p>
-                            <p><strong>Konkret:</strong> Wpisujesz wydatki na bieżąco, na placu budowy lub w markecie budowlanym. Widzisz czarno na białym, czy na tym projekcie zarabiasz, czy tylko „kręcisz się wokół roboty”.</p>
-                        </div>
-                    </div>
-
-                    <div class="how-it-works__card">
-                        <div class="card__header">
-                            <h3 class="card__title">Ustalenia z Inwestorem</h3>
-                            <div class="card__number">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary-orange)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-                            </div>
-                        </div>
-                        <div class="card__description">
-                            <p style="margin-bottom: 0.5rem;"><strong style="color: var(--primary-orange);">Zaleta:</strong> Stop z „ja tego nie zamawiałem” i telefonami po 18:00.</p>
-                            <p><strong>Konkret:</strong> Klient ma wgląd w postępy (widzi tylko to, co mu udostępnisz). Akceptuje zmiany i dodatkowe koszty jednym kliknięciem w swoim telefonie. Masz podkładkę na wszystko.</p>
-                        </div>
-                    </div>
-
-                    <div class="how-it-works__card">
-                        <div class="card__header">
-                            <h3 class="card__title">Twoja firma w wersji "Premium"</h3>
-                            <div class="card__number">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary-orange)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                            </div>
-                        </div>
-                        <div class="card__description">
-                            <p style="margin-bottom: 0.5rem;"><strong style="color: var(--primary-orange);">Zaleta:</strong> Wygrywasz z konkurencją profesjonalizmem, a nie najniższą ceną.</p>
-                            <p><strong>Konkret:</strong> Inwestor widzi, że współpracuje z nowoczesną firmą, co pozwala Ci budować markę godną zaufania i wyższych stawek.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="text-center" style="margin-top: 3rem;">
-                    <p class="section-subtitle">
-                        <strong>Budoapka nie wymaga szkolenia. Jeśli potrafisz wysłać wiadomość na WhatsAppie, potrafisz obsłużyć tę aplikację.</strong>
-                    </p>
-                </div>
-            </div>
-        </section>
-        
-        <section class="management-center">
-            <div class="management-center__box">
-                <h2 class="management-center__title">Twoja budowa pod kontrolą w mniej niż 2 minuty</h2>
-
-                <div class="management-center__video-wrapper">
-                    <video autoplay loop muted playsinline preload="metadata" poster="assets/video_poster.jpg" class="management-center__video" aria-label="Prezentacja aplikacji Budoapka">
-                        <source src="assets/budoapka_film.mp4" type="video/mp4">
-                    </video>
-                </div>
-
-                <p class="management-center__subtitle">
-                    Obsługa tak prosta, że poradzisz sobie z nią na drabinie.
+      <section class="stats-cards" id="stats-card">
+        <div class="container">
+          <div class="stats-cards__grid">
+            <div class="stat-card">
+              <div class="stat-card__inner">
+                <img
+                  src="assets/icon-house.svg"
+                  alt=""
+                  class="stat-card__icon"
+                />
+                <p class="stat-card__percent">30+ LAT</p>
+                <p class="stat-card__description">
+                  wspólnego doświadczenia w budownictwie i wykończeniach
                 </p>
-
-                <div class="video-grid-text">
-                    <div class="video-grid-item">
-                        <h3>Wszystko z poziomu kciuka</h3>
-                        <p>Nie potrzebujesz komputera ani biura. Dokumentujesz postępy tam, gdzie pracujesz.</p>
-                    </div>
-                    <div class="video-grid-item">
-                        <h3>Inwestor widzi postępy</h3>
-                        <p>Klient widzi raporty, kiedy Ty tego chcesz. Koniec z dopytywaniem „a co zostało zrobione?”.</p>
-                    </div>
-                    <div class="video-grid-item">
-                        <h3>Dowód w 5 sekund</h3>
-                        <p>Każde zdjęcie i ustalenie ma datę i miejsce. Masz „czarno na białym”, co i kiedy zostało wykonane.</p>
-                    </div>
-                </div>
-
-                <div class="management-center__cta">
-                    <a href="https://app.budoapka.pl/register" class="btn btn--white">Załóż darmowe konto</a>
-                </div>
+              </div>
             </div>
-        </section>
-
-        <section id="problems" class="section-problems">
-            <div class="container">
-                <div class="text-center" style="margin-bottom: 4rem;">
-                    <h2 class="section-title">
-                        Jeden błąd na budowie kosztuje więcej <br>
-                        niż miesiąc używania BudoApki.
-                    </h2>
-                    <p class="section-subtitle">
-                        Na czym tracą wykonawcy?
-                    </p>
-                </div>
-
-                <div class="problems-grid">
-                    <div class="problem-card">
-                        <div class="problem-card__header">
-                            <span class="problem-icon">⚠️</span>
-                            <h3>„Zrobimy to przy okazji”</h3>
-                        </div>
-                        <div class="problem-card__content">
-                            <p><strong>Sytuacja:</strong> Inwestor prosi o dodatkową gładź „przy okazji”. Nie spisujesz tego w ferworze walki.</p>
-                            <p><strong>Koszt:</strong> Przy rozliczeniu Inwestor mówi: „Myślałem, że to w cenie”. Tracisz materiał i 4 godziny pracy.</p>
-                            <div class="problem-loss">Twoja strata: ~600 PLN</div>
-                        </div>
-                    </div>
-
-                    <div class="problem-card">
-                        <div class="problem-card__header">
-                            <span class="problem-icon">⚡</span>
-                            <h3>„Gdzie był ten kabel?”</h3>
-                        </div>
-                        <div class="problem-card__content">
-                            <p><strong>Sytuacja:</strong> Brak zdjęcia instalacji. Montażysta wierci w ścianie i trafia w przewód.</p>
-                            <p><strong>Koszt:</strong> Kucie, naprawa, stres, utrata reputacji i pretensje klienta.</p>
-                            <div class="problem-loss">Twoja strata: ~2 500 PLN</div>
-                        </div>
-                    </div>
-
-                    <div class="problem-card">
-                        <div class="problem-card__header">
-                            <span class="problem-icon">💬</span>
-                            <h3>„Przecież ja mówiłem...”</h3>
-                        </div>
-                        <div class="problem-card__content">
-                            <p><strong>Sytuacja:</strong> Wycena ginie na WhatsAppie. Klient twierdzi, że nie widział ceny.</p>
-                            <p><strong>Koszt:</strong> Spór przy finalnej fakturze. Inwestor wstrzymuje ostatnią transzę.</p>
-                            <div class="problem-loss">Twoja strata: Płynność i nerwy</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="calculation-box">
-                    <h3>Kalkulacja</h3>
-                    <p>
-                        Rachunek jest prosty: Budoapka kosztuje <strong>6 zł dziennie</strong>. To mniej niż jeden litr paliwa. 
-                        Jeśli dzięki niej unikniesz choćby jednego z tych błędów, aplikacja zarabia na siebie z nawiązką.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-professional">
-            <div class="container">
-                <div class="text-center" style="margin-bottom: 4rem;">
-                    <h2 class="section-title">
-                        Profesjonalny sprzęt to nie tylko wiertarka. To wizerunek, za który klient płaci więcej.
-                    </h2>
-                    <p class="section-subtitle">
-                        Inwestujesz w najlepsze maszyny i materiały, bo wiesz, że jakość kosztuje. Czas na narzędzie, które pokaże tę jakość Twojemu klientowi. <br>
-                        Większość ekip na rynku wciąż „dogaduje się” na gębę, gubi zdjęcia i przesyła rozliczenia wymięte w kieszeni. Ty możesz grać w innej lidze.
-                    </p>
-                </div>
-
-                <div class="grid-3-cols">
-                    <div class="calm-card">
-                        <h3>ZYSKAJ PRZEWAGĘ NA STARCIE</h3>
-                        <p>Prowadzenie budowy w aplikacji to dla inwestora jasny sygnał: <strong>„Tu nie ma fuszery, tu jest system”</strong>. To buduje zaufanie, które pozwala Ci dyktować wyższe stawki.</p>
-                    </div>
-
-                    <div class="calm-card">
-                        <h3>ODRÓŻNIJ SIĘ OD „PRACY NA CZARNO”</h3>
-                        <p>Pokaż, że Twoja firma to profesjonalny biznes. Proste raporty i poukładana dokumentacja to <strong>standard premium</strong>, za który klienci chętnie dopłacą dla własnego świętego spokoju.</p>
-                    </div>
-
-                    <div class="calm-card">
-                        <h3>SPRZEDAWAJ BEZ WALKI O CENĘ</h3>
-                        <p>Kiedy klient widzi, że panujesz nad każdym detalem projektu, przestaje porównywać Cię z najtańszą konkurencją. Wybierze Ciebie, bo u Ciebie <strong>czuje się bezpiecznie</strong>.</p>
-                    </div>
-                </div>
-
-                <div class="client-focus-box">
-                    <div class="client-focus-content">
-                        <h3>Twój klient już tu jest</h3>
-                        <p>
-                            Dzisiejszy klient to 30-40 latek, który wszystko załatwia telefonem. 
-                            Klika paczkomaty w InPoście, płaci Revolutem i zamawia jedzenie przez apkę.
-                        </p>
-                        <p>
-                            Kiedy wchodzi w proces budowy domu za setki tysięcy złotych, oczekuje tego samego standardu. 
-                            Jeśli dasz mu dostęp do BudoApki, poczuje, że kontroluje proces i jest w bezpiecznych rękach. 
-                            <strong>Dostosuj się do standardów swojego klienta, zanim zrobi to Twoja konkurencja.</strong>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="video-section" class="video-section">
-            <div class="video-section__box">
-                <h2 class="video-section__title">Zobacz, jak Budoapka odmieni Twój biznes!</h2>
-                <p class="video-section__subtitle">Zastępujemy Twoje stare, nieefektywne
-                    narzędzia jednym, zintegrowanym systemem.</p>
-
-                <a href="https://app.budoapka.pl/demo">
-                    <div class="video-box">
-                        <img src="assets/budoapka-demo.png" alt="Budoapka Demo" class="video-box__image" height="600px">
-                    </div>
-                </a>
-
-                <div class="video-section__cta">
-                    <a href="https://app.budoapka.pl/register" class="btn btn--white">Załóż darmowe konto</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="comparison" id="comparison-section">
-            <div class="container">
-                <h2 class="section-title text-center">"Ustalaliśmy przecież coś innego..." <br>Znasz to uczucie? Czas to zmienić.</h2>
-
-                <div class="comparison__headers">
-                    <h3>BEZ BUDOAPKI</h3>
-                    <h3 class="header-with-logo">
-                        <span>z </span>
-                        <img src="assets/logo.svg" alt="Budoapka Logo">
-                    </h3>
-                </div>
-                
-                <div class="comparison__grid">
-                    <div class="comparison-row">
-                        <div class="comparison-card comparison-card--problem">
-                            <img src="assets/icon-cross.png" alt="Problem" class="comparison-card__icon_cross">
-                            <div class="comparison-card__content">
-                                <h4>ROBOTY DODATKOWE</h4>
-                                <p>„Dogadane” na budowie. Inwestor zapomina o nich przy płaceniu faktury.</p>
-                            </div>
-                        </div>
-                        <div class="comparison-card comparison-card--solution">
-                            <img src="assets/icon-check.svg" alt="Rozwiązanie" class="comparison-card__icon">
-                            <div class="comparison-card__content">
-                                <h4>ROBOTY DODATKOWE</h4>
-                                <p>Zapisane w 10 sekund. Klient akceptuje koszt w swojej aplikacji. Masz podkładkę.</p>
-                                <img src="assets/icon-comparison-2.svg" alt="" class="comparison-card__corner-icon">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="comparison-row">
-                        <div class="comparison-card comparison-card--problem">
-                            <img src="assets/icon-cross.png" alt="Problem" class="comparison-card__icon_cross">
-                            <div class="comparison-card__content">
-                                <h4>ZDJĘCIA INSTALACJI</h4>
-                                <p>Rozrzucone w galerii telefonu między zdjęciami z wakacji. Nie do znalezienia po miesiącu.</p>
-                            </div>
-                        </div>
-                        <div class="comparison-card comparison-card--solution">
-                            <img src="assets/icon-check.svg" alt="Rozwiązanie" class="comparison-card__icon">
-                            <div class="comparison-card__content">
-                                <h4>ZDJĘCIA INSTALACJI</h4>
-                                <p>Automatycznie przypisane do projektu. Masz dowód, gdzie idą rury, zanim wejdzie tynkarz.</p>
-                                <img src="assets/icon-comparison-4.svg" alt="" class="comparison-card__corner-icon">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="comparison-row">
-                        <div class="comparison-card comparison-card--problem">
-                            <img src="assets/icon-cross.png" alt="Problem" class="comparison-card__icon_cross">
-                            <div class="comparison-card__content">
-                                <h4>SPÓR O JAKOŚĆ</h4>
-                                <p>Twoje słowo przeciwko „wydawało mi się” klienta. Stres i groźba wstrzymania kasy.</p>
-                            </div>
-                        </div>
-                        <div class="comparison-card comparison-card--solution">
-                            <img src="assets/icon-check.svg" alt="Rozwiązanie" class="comparison-card__icon">
-                            <div class="comparison-card__content">
-                                <h4>SPÓR O JAKOŚĆ</h4>
-                                <p>Niepodważalna historia postępów i raporty PDF. Zamykasz dyskusję w 30 sekund.</p>
-                                <img src="assets/icon-comparison-3.svg" alt="" class="comparison-card__corner-icon">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="comparison-row">
-                        <div class="comparison-card comparison-card--problem">
-                            <img src="assets/icon-cross.png" alt="Problem" class="comparison-card__icon_cross">
-                            <div class="comparison-card__content">
-                                <h4>CZAS PO PRACY</h4>
-                                <p>Wieczorne telefony i odpisywanie na WhatsAppie: „Panie, a co tam dzisiaj zrobione?”.</p>
-                            </div>
-                        </div>
-                        <div class="comparison-card comparison-card--solution">
-                            <img src="assets/icon-check.svg" alt="Rozwiązanie" class="comparison-card__icon">
-                            <div class="comparison-card__content">
-                                <h4>CZAS PO PRACY</h4>
-                                <p>Święty spokój. Klient sam zagląda do aplikacji i widzi postępy, które mu udostępniłeś.</p>
-                                <img src="assets/icon-comparison-1.svg" alt="" class="comparison-card__corner-icon">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="comparison-row">
-                        <div class="comparison-card comparison-card--problem">
-                            <img src="assets/icon-cross.png" alt="Problem" class="comparison-card__icon_cross">
-                            <div class="comparison-card__content">
-                                <h4>ROZLICZENIE MATERIAŁÓW</h4>
-                                <p>Paragony wymięte w kieszeni lub zgubione. Kłótnie: „Czemu tyle tego poszło?”.</p>
-                            </div>
-                        </div>
-                        <div class="comparison-card comparison-card--solution">
-                            <img src="assets/icon-check.svg" alt="Rozwiązanie" class="comparison-card__icon">
-                            <div class="comparison-card__content">
-                                <h4>ROZLICZENIE MATERIAŁÓW</h4>
-                                <p>Zdjęcie paragonu i dostawy od razu w apce, skanowanie za pomocą AI. Pełna jasność, zero pytań przy rozliczeniu.</p>
-                                <img src="assets/icon-scan.svg" alt="Skanowanie AI" class="comparison-card__corner-icon">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="worth-knowing-box">
-                    <div class="worth-knowing-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#EB590D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2z"></path><path d="M18 13c0-3.3-2.7-6-6-6s-6 2.7-6 6c0 2.2 1.2 4.1 3 5.2V17c0 .6.4 1 1 1h4c.6 0 1-.4 1-1v-2.8c1.8-1.1 3-3 3-5.2z"></path></svg>
-                    </div>
-                    <div class="worth-knowing-content">
-                        <h4>Warto wiedzieć:</h4>
-                        <p>
-                            90% sporów na budowie wynika z braku komunikacji. 
-                            <strong>Budoapka rozwiązuje ten problem za Ciebie,</strong> zanim zdąży on uderzyć Cię po kieszeni.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="collaboration" id="collaboration-section">
-            <div class="container">
-                <div class="text-center" style="margin-bottom: 3rem;">
-                    <h2 class="section-title">Niezależnie od tego, co budujesz – <br>robisz to u nas prościej.</h2>
-                </div>
-
-                <div class="collaboration__grid">
-                    <div class="collaboration-card" onclick="toggleCard(this)">
-                        <div class="card-header-flex">
-                            <h3>Ekipy wykończeniowe i remontowe</h3>
-                            <div class="toggle-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EB590D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                            </div>
-                        </div>
-                        <div class="card-hidden-content">
-                            <p>Koniec z robieniem prezentów klientowi. W BudoApce każda zmiana koloru gładzi czy dodatkowa zabudowa jest od razu odnotowana i zaakceptowana. Ty skupiasz się na jakości, my pilnujemy, żebyś dostał zapłatę za każdy metr kwadratowy Twojej pracy.</p>
-                        </div>
-                    </div>
-
-                    <div class="collaboration-card" onclick="toggleCard(this)">
-                        <div class="card-header-flex">
-                            <h3>Stolarze i montażyści mebli</h3>
-                            <div class="toggle-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EB590D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                            </div>
-                        </div>
-                        <div class="card-hidden-content">
-                            <p>Wszystkie rysunki, pomiary, ustalenia kolorystyczne i akceptacje materiałów masz w jednym folderze projektu. Klient zatwierdza wybór frontów w aplikacji, Ty masz pewność, że montujesz dokładnie to, co zostało zamówione. Zero pomyłek, zero strat materiału.</p>
-                        </div>
-                    </div>
-
-                    <div class="collaboration-card" onclick="toggleCard(this)">
-                        <div class="card-header-flex">
-                            <h3>Elektrycy, hydraulicy i inni specjaliści</h3>
-                            <div class="toggle-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EB590D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                            </div>
-                        </div>
-                        <div class="card-hidden-content">
-                            <p>„Twoja najlepsza polisa ubezpieczeniowa. Robisz zdjęcia kabli i rur przed tynkowaniem, a apka przypisuje je do lokalizacji. Jeśli inna ekipa coś przewierci, Ty masz dowód, że Twoja robota była wykonana zgodnie ze sztuką. Szybkie raporty dla klienta budują Twój profesjonalizm”.</p>
-                        </div>
-                    </div>
-
-                    <div class="collaboration-card" onclick="toggleCard(this)">
-                        <div class="card-header-flex">
-                            <h3>Biura architektoniczne i generalni wykonawcy</h3>
-                            <div class="toggle-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EB590D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                            </div>
-                        </div>
-                        <div class="card-hidden-content">
-                            <p>„Zarządzaj nadzorem bez tracenia czasu na dojazdy. Widzisz postępy prac w czasie rzeczywistym dzięki zdjęciom od wykonawców. Możesz błyskawicznie odpowiadać na pytania z placu budowy i akceptować etapy, zachowując pełną historię decyzji w jednym miejscu”.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="about-us" id="about-us">
-            <div class="container">
-                <div class="text-center" style="margin-bottom: 3rem;">
-                    <h2 class="section-title">Stworzona przez praktyków. <br>Dla tych, którzy budują.</h2>
-                    <p class="section-subtitle">
-                        Budoapka nie powstała w sterylnym biurze. Powstała z frustracji chaosem, jaki towarzyszy każdej polskiej budowie.
-                    </p>
-                </div>
-
-                <div class="founders-wrapper">
-                    <div class="founders-photo">
-          
-                            <img src="assets/founders.png" alt="Założyciele BudoApka" class="founders-image">
-                    
-                    </div>
-
-                    <div class="founders-grid">
-                        <div class="founder-card">
-                            <h3>Michał Kędzior</h3>
-                            <p class="founder-role">Produkt & UX</p>
-                            <p>Od lat buduje produkty cyfrowe, które mają jeden cel: upraszczać życie. W BudoApce dba o to, by system był tak prosty, byś mógł go obsługiwać jedną ręką, stojąc na drabinie. Żadnych zbędnych funkcji, tylko to, co faktycznie pomaga w robocie.</p>
-                        </div>
-
-                        <div class="founder-card">
-                            <h3>Bartek Stokłosa</h3>
-                            <p class="founder-role">Branża & Wdrożenia</p>
-                            <p>Projekt, realizacja i każdy trudny moment pomiędzy, Bartek zna branżę budowlaną od podszewki. Przeszedł przez setki inwestycji i tysiące trudnych rozmów z klientami. Budoapka to jego odpowiedź na pytanie: „Jak prowadzić budowę, żeby nie oszaleć i na tym zarobić?”.</p>
-                        </div>
-
-                        <div class="founder-card">
-                            <h3>Konrad Hopek</h3>
-                            <p class="founder-role">Technologia & Kod</p>
-                            <p>Mózg operacji. To on zamienia nasze pomysły w działający kod. Dba o to, żeby aplikacja działała błyskawicznie i stabilnie, nawet gdy masz słaby zasięg na budowie. Bezpieczeństwo Twoich danych to jego priorytet.</p>
-                        </div>
-                    </div>
-
-                    <div class="founders-quote">
-                        <p>„Mieliśmy dość patrzenia jak nasi fachowcy, którzy robią świetną robotę, tracą pieniądze i nerwy przez brak jednego zdjęcia czy zapomniane ustalenie. Postanowiliśmy to naprawić. Osobiście dbamy o to, by Budoapka była Twoim najlepszym wsparciem.”</p>
-                    </div>
-                    
-                    <p class="founders-note">
-                        Zakładając konto, nie zostajesz sam z instrukcją obsługi. Jeden z nas (lub naszych ekspertów) zadzwoni do Ciebie, żeby pomóc Ci skonfigurować pierwszy projekt. <strong>Pomagamy sobie po męsku.</strong>
-                    </p>
-                </div>
-
-                <div class="process-section">
-                    
-                    <div class="process-header-row">
-                        <div class="col-step">Krok</div>
-                        <div class="col-you" data-label="Co robisz Ty?">Co robisz Ty?</div>
-                        <div class="col-app" data-label="Co robi Budoapka?">Co robi Budoapka?</div>
-                        <div class="col-result" data-label="Wynik">Wynik</div>
-                    </div>
-
-                    <div class="process-row">
-                        <div class="col-step"><span class="step-badge">Start (30 sekund)</span></div>
-                        <div class="col-you" data-label="TY:">Zakładasz darmowe konto (tylko imię i telefon).</div>
-                        <div class="col-app" data-label="BUDOAPKA:">Aktywujemy Twój dostęp do pełnej wersji trial.</div>
-                        <div class="col-result" data-label="WYNIK:"><strong>Masz własne centrum dowodzenia.</strong></div>
-                    </div>
-
-                    <div class="process-row">
-                        <div class="col-step"><span class="step-badge">Wdrożenie i pomoc</span></div>
-                        <div class="col-you" data-label="TY:">Odbierasz telefon od Michała lub Bartka.</div>
-                        <div class="col-app" data-label="BUDOAPKA:">Pomagamy Ci zaimportować dane i ustawić pierwszy, realny projekt.</div>
-                        <div class="col-result" data-label="WYNIK:"><strong>Twoja budowa jest już w systemie.</strong></div>
-                    </div>
-
-                    <div class="process-row process-row--highlight">
-                        <div class="col-step"><span class="step-badge">Spokój</span></div>
-                        <div class="col-you" data-label="TY:">Pracujesz na budowie jak zwykle.</div>
-                        <div class="col-app" data-label="BUDOAPKA:">Budoapka pilnuje Twoich pieniędzy, zdjęć i kontaktu z klientem.</div>
-                        <div class="col-result" data-label="WYNIK:"><strong>Masz porządek i święty spokój po 17:00.</strong></div>
-                    </div>
-                </div>
-
-                <div class="text-center" style="margin-top: 4rem;">
-                    <a href="https://app.budoapka.pl/register" class="btn btn--dark-cta">
-                        <span>Załóż darmowe konto</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="testimonials">
-            <div class="container">
-                <h2 class="section-title">Sprawdź, jak inni fachowcy odzyskali swoje wieczory.</h2>
-                <p class="section-subtitle">
-                    Nie musisz wierzyć nam na słowo. Zobacz, co o pracy z Budoapką mówią właściciele firm, którzy jeszcze niedawno byli w tym samym miejscu co Ty.
+            <div class="stat-card">
+              <div class="stat-card__inner">
+                <img
+                  src="assets/icon-clock.svg"
+                  alt=""
+                  class="stat-card__icon"
+                />
+                <p class="stat-card__percent">5 GODZIN</p>
+                <p class="stat-card__description">
+                  tygodniowo tyle średnio odzyskuje właściciel firmy z budoApką
                 </p>
-                <div class="testimonial-slider__wrapper">
-                    <div class="testimonial-slider">
-                        
-                        <div class="testimonial-card">
-                            <div>
-                                <div class="testimonial-card__stars">
-                                    <img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka">
-                                </div>
-                                <p class="testimonial-card__text">
-                                    "Klientka dzwoniła do mnie po 5 razy dziennie z pytaniami co tam u nas słychać.
-                                    Teraz wchodzi sobie do tej aplikacji i sama wszystko widzi. Ja robię swoją robotę,
-                                    ona nie dzwoni. Wszyscy zadowoleni. A myślałem że to będzie jakieś rocket science, a
-                                    okazało się że łatwiej niż Facebooka obsłużyć."
-                                </p>
-                            </div>
-                            <div class="testimonial-card__author">
-                                <div class="author__info">
-                                    <p class="author__name">Michał</p>
-                                    <p class="author__title">Firma Wykończeniowa "BANO", Kraków</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="testimonial-card">
-                            <div class="testimonial-card__stars">
-                                <img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka">
-                            </div>
-                            <p class="testimonial-card__text">
-                                "Koniec z tym Excelem co się zawiesza i WhatsAppem gdzie wszystko ginie. Mam wszystko w
-                                jednym miejscu - fotki, papiery, gadanie z klientem. Klient widzi że nie obiję się i nie ma już
-                                tych głupich przepychanek o to że czegoś nie zrobiłem."
-                            </p>
-                            <div class="testimonial-card__author">
-                                <div class="author__info">
-                                    <p class="author__name">Szymon</p>
-                                    <p class="author__title">Stolarnia "Akanat Wnętrza", Katowice</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="testimonial-card">
-                            <div class="testimonial-card__stars">
-                                <img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka">
-                            </div>
-                            <p class="testimonial-card__text">
-                                "Robię 4 domy naraz i wcześniej to był totalny chaos. Excel tu, WhatsApp tam, papiery
-                                gdzieś. Teraz każdy inwestor ma swój projekt online i przestali do mnie wydzwaniać co 5
-                                minut. Czas na biurokrację spadł mi o połowę, mogę więcej zarabiać."
-                            </p>
-                            <div class="testimonial-card__author">
-                                <div class="author__info">
-                                    <p class="author__name">Roman</p>
-                                    <p class="author__title">Firma Stolarska "Stolarz w formie", Trójmiasto</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="testimonial-card">
-                            <div class="testimonial-card__stars">
-                                <img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka">
-                            </div>
-                            <p class="testimonial-card__text">
-                                "Wreszcie wiem ile wydaję w czasie rzeczywistym. Nie jak wcześniej że na koniec okazuje
-                                się że jestem 50 tysięcy na minusie. Ostatni dom skończyłem 30 koła poniżej budżetu -
-                                pierwszy raz w życiu! To samo w sobie się zwraca."
-                            </p>
-                            <div class="testimonial-card__author">
-                                <div class="author__info">
-                                    <p class="author__name">Janek</p>
-                                    <p class="author__title">Firma Wykończeniowa "Dąb Concept", Warszawa</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="testimonial-card">
-                            <div class="testimonial-card__stars">
-                                <img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka">
-                            </div>
-                            <p class="testimonial-card__text">
-                                "Wykonawca musi robić zdjęcia postępów więc widzę czy robi tak jak narysowałam.
-                                Wcześniej przyjeżdżałam a tam zonk - zrobione na odwal się. Teraz kontroluję na bieżąco
-                                a klientka też jest szczęśliwa że widzi co się dzieje."
-                            </p>
-                            <div class="testimonial-card__author">
-                                <div class="author__info">
-                                    <p class="author__name">Kasia</p>
-                                    <p class="author__title">Architekt Wnętrz "Azyl Studio", Wrocław</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="testimonial-card">
-                            <div class="testimonial-card__stars">
-                                <img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka">
-                            </div>
-                            <p class="testimonial-card__text">
-                                "Klienci są pod wrażeniem że nie muszą wszystkiego wyciągać ze mnie kleszczami. Wchodzą,
-                                patrzą, wiedzą co się dzieje. To podnosi wartość mojej roboty - mogę brać więcej kasy za
-                                lepszą obsługę niż janusze z OLX."
-                            </p>
-                            <div class="testimonial-card__author">
-                                <div class="author__info">
-                                    <p class="author__name">Przemek</p>
-                                    <p class="author__title">Firma Stolarska "HammerWood", Warszawa</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="testimonial-card">
-                            <div class="testimonial-card__stars">
-                                <img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka">
-                            </div>
-                            <p class="testimonial-card__text">
-                                "Nie ma już tego cyrku że elektryk nie wie kiedy skończę, malarz przychodzi za wcześnie.
-                                Wszyscy widzą kiedy co robię i mogą się przygotować. Budowa idzie sprawniej, każdy robi
-                                swoje bez wchodzenia sobie w drogę."
-                            </p>
-                            <div class="testimonial-card__author">
-                                <div class="author__info">
-                                    <p class="author__name">Sebastian</p>
-                                    <p class="author__title">Stolarnia "Gepetto", Bochnia</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="testimonial-card">
-                            <div class="testimonial-card__stars">
-                                <img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka"><img src="assets/icon-star.svg" alt="Gwiazdka">
-                            </div>
-                            <p class="testimonial-card__text">
-                                "Pierwszy raz buduję dom i bałem się że coś pójdzie nie tak. W Budoapce widzę każdy dzień
-                                roboty, każdy wydany grosz, mogę pisać uwagi jak mi się coś nie podoba. Czuję się
-                                bezpiecznie z moją największą inwestycją w życiu. Każdy kto buduje powinien tego wymagać
-                                od wykonawcy."
-                            </p>
-                            <div class="testimonial-card__author">
-                                <div class="author__info">
-                                    <p class="author__name">Mariusz T.</p>
-                                    <p class="author__title">inwestor budujący dom, Rzeszów</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <button class="slider-btn slider-btn--prev" aria-label="Poprzednia opinia">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                    </button>
-                    <button class="slider-btn slider-btn--next" aria-label="Następna opinia">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                    </button>
-                </div>
+              </div>
             </div>
-        </section>
+            <div class="stat-card">
+              <div class="stat-card__inner">
+                <img
+                  src="assets/icon-stats.svg"
+                  alt=""
+                  class="stat-card__icon"
+                />
+                <p class="stat-card__percent">100%</p>
+                <p class="stat-card__description">
+                  udokumentowanych prac dodatkowych za które zapłaci klient
+                </p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__inner">
+                <img
+                  src="assets/icon-handshake.svg"
+                  alt=""
+                  class="stat-card__icon"
+                />
+                <p class="stat-card__percent">1 000+</p>
+                <p class="stat-card__description">
+                  projektów zakończonych sukcesem dzięki naszej aplikacji
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section class="pricing" id="pricing-section">
-            <div class="container">
-                <div class="text-center" style="margin-bottom: 3rem;">
-                    <h2 class="section-title">Jeden prosty abonament. <br>Wszystko, czego potrzebuje Twoja firma.</h2>
-                    <p class="section-subtitle">
-                        Bez ukrytych kosztów, bez limitów, które Cię blokują. Płacisz za narzędzie, które na siebie zarabia.
+      <section class="how-it-works" id="features">
+        <div class="container">
+          <h2 class="section-title text-center">
+            Wszystko, czego potrzebujesz do prowadzenia budowy – w jednej,
+            prostej aplikacji.
+          </h2>
+
+          <div class="how-it-works__grid">
+            <div class="how-it-works__card">
+              <div class="card__header">
+                <h3 class="card__title">Dziennik Budowy w kieszeni</h3>
+                <div class="card__number">
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="var(--primary-orange)"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"
+                    ></path>
+                    <circle cx="12" cy="13" r="4"></circle>
+                  </svg>
+                </div>
+              </div>
+              <div class="card__description">
+                <p style="margin-bottom: 0.5rem">
+                  <strong style="color: var(--primary-orange)">Zaleta:</strong>
+                  Koniec z tysiącem zdjęć w galerii telefonu.
+                </p>
+                <p>
+                  <strong>Konkret:</strong> Wszystkie zdjęcia, notatki i
+                  ustalenia są przypisane do konkretnego projektu. Znajdziesz
+                  dowód na wykonaną pracę w 5 sekund, nawet rok po zakończeniu
+                  zlecenia.
+                </p>
+              </div>
+            </div>
+
+            <div class="how-it-works__card">
+              <div class="card__header">
+                <h3 class="card__title">Koszty pod kontrolą</h3>
+                <div class="card__number">
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="var(--primary-orange)"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect
+                      x="1"
+                      y="4"
+                      width="22"
+                      height="16"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                    <line x1="1" y1="10" x2="23" y2="10"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="card__description">
+                <p style="margin-bottom: 0.5rem">
+                  <strong style="color: var(--primary-orange)">Zaleta:</strong>
+                  Już nigdy nie zapomnisz doliczyć materiału do faktury.
+                </p>
+                <p>
+                  <strong>Konkret:</strong> Wpisujesz wydatki na bieżąco, na
+                  placu budowy lub w markecie budowlanym. Widzisz czarno na
+                  białym, czy na tym projekcie zarabiasz, czy tylko „kręcisz się
+                  wokół roboty”.
+                </p>
+              </div>
+            </div>
+
+            <div class="how-it-works__card">
+              <div class="card__header">
+                <h3 class="card__title">Ustalenia z Inwestorem</h3>
+                <div class="card__number">
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="var(--primary-orange)"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="card__description">
+                <p style="margin-bottom: 0.5rem">
+                  <strong style="color: var(--primary-orange)">Zaleta:</strong>
+                  Stop z „ja tego nie zamawiałem” i telefonami po 18:00.
+                </p>
+                <p>
+                  <strong>Konkret:</strong> Klient ma wgląd w postępy (widzi
+                  tylko to, co mu udostępnisz). Akceptuje zmiany i dodatkowe
+                  koszty jednym kliknięciem w swoim telefonie. Masz podkładkę na
+                  wszystko.
+                </p>
+              </div>
+            </div>
+
+            <div class="how-it-works__card">
+              <div class="card__header">
+                <h3 class="card__title">Twoja firma w wersji "Premium"</h3>
+                <div class="card__number">
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="var(--primary-orange)"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                    ></polygon>
+                  </svg>
+                </div>
+              </div>
+              <div class="card__description">
+                <p style="margin-bottom: 0.5rem">
+                  <strong style="color: var(--primary-orange)">Zaleta:</strong>
+                  Wygrywasz z konkurencją profesjonalizmem, a nie najniższą
+                  ceną.
+                </p>
+                <p>
+                  <strong>Konkret:</strong> Inwestor widzi, że współpracuje z
+                  nowoczesną firmą, co pozwala Ci budować markę godną zaufania i
+                  wyższych stawek.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center" style="margin-top: 3rem">
+            <p class="section-subtitle">
+              <strong
+                >Budoapka nie wymaga szkolenia. Jeśli potrafisz wysłać wiadomość
+                na WhatsAppie, potrafisz obsłużyć tę aplikację.</strong
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="management-center">
+        <div class="management-center__box">
+          <h2 class="management-center__title">
+            Twoja budowa pod kontrolą w mniej niż 2 minuty
+          </h2>
+
+          <div class="management-center__video-wrapper">
+            <video
+              autoplay
+              loop
+              muted
+              playsinline
+              preload="metadata"
+              poster="assets/video_poster.jpg"
+              class="management-center__video"
+              aria-label="Prezentacja aplikacji Budoapka"
+            >
+              <source src="assets/budoapka_film.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <p class="management-center__subtitle">
+            Obsługa tak prosta, że poradzisz sobie z nią na drabinie.
+          </p>
+
+          <div class="video-grid-text">
+            <div class="video-grid-item">
+              <h3>Wszystko z poziomu kciuka</h3>
+              <p>
+                Nie potrzebujesz komputera ani biura. Dokumentujesz postępy tam,
+                gdzie pracujesz.
+              </p>
+            </div>
+            <div class="video-grid-item">
+              <h3>Inwestor widzi postępy</h3>
+              <p>
+                Klient widzi raporty, kiedy Ty tego chcesz. Koniec z
+                dopytywaniem „a co zostało zrobione?”.
+              </p>
+            </div>
+            <div class="video-grid-item">
+              <h3>Dowód w 5 sekund</h3>
+              <p>
+                Każde zdjęcie i ustalenie ma datę i miejsce. Masz „czarno na
+                białym”, co i kiedy zostało wykonane.
+              </p>
+            </div>
+          </div>
+
+          <div class="management-center__cta">
+            <a href="https://app.budoapka.pl/register" class="btn btn--white"
+              >Załóż darmowe konto</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="problems" class="section-problems">
+        <div class="container">
+          <div class="text-center" style="margin-bottom: 4rem">
+            <h2 class="section-title">
+              Jeden błąd na budowie kosztuje więcej <br />
+              niż miesiąc używania BudoApki.
+            </h2>
+            <p class="section-subtitle">Na czym tracą wykonawcy?</p>
+          </div>
+
+          <div class="problems-grid">
+            <div class="problem-card">
+              <div class="problem-card__header">
+                <span class="problem-icon">⚠️</span>
+                <h3>„Zrobimy to przy okazji”</h3>
+              </div>
+              <div class="problem-card__content">
+                <p>
+                  <strong>Sytuacja:</strong> Inwestor prosi o dodatkową gładź
+                  „przy okazji”. Nie spisujesz tego w ferworze walki.
+                </p>
+                <p>
+                  <strong>Koszt:</strong> Przy rozliczeniu Inwestor mówi:
+                  „Myślałem, że to w cenie”. Tracisz materiał i 4 godziny pracy.
+                </p>
+                <div class="problem-loss">Twoja strata: ~600 PLN</div>
+              </div>
+            </div>
+
+            <div class="problem-card">
+              <div class="problem-card__header">
+                <span class="problem-icon">⚡</span>
+                <h3>„Gdzie był ten kabel?”</h3>
+              </div>
+              <div class="problem-card__content">
+                <p>
+                  <strong>Sytuacja:</strong> Brak zdjęcia instalacji. Montażysta
+                  wierci w ścianie i trafia w przewód.
+                </p>
+                <p>
+                  <strong>Koszt:</strong> Kucie, naprawa, stres, utrata
+                  reputacji i pretensje klienta.
+                </p>
+                <div class="problem-loss">Twoja strata: ~2 500 PLN</div>
+              </div>
+            </div>
+
+            <div class="problem-card">
+              <div class="problem-card__header">
+                <span class="problem-icon">💬</span>
+                <h3>„Przecież ja mówiłem...”</h3>
+              </div>
+              <div class="problem-card__content">
+                <p>
+                  <strong>Sytuacja:</strong> Wycena ginie na WhatsAppie. Klient
+                  twierdzi, że nie widział ceny.
+                </p>
+                <p>
+                  <strong>Koszt:</strong> Spór przy finalnej fakturze. Inwestor
+                  wstrzymuje ostatnią transzę.
+                </p>
+                <div class="problem-loss">Twoja strata: Płynność i nerwy</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="calculation-box">
+            <h3>Kalkulacja</h3>
+            <p>
+              Rachunek jest prosty: Budoapka kosztuje
+              <strong>6 zł dziennie</strong>. To mniej niż jeden litr paliwa.
+              Jeśli dzięki niej unikniesz choćby jednego z tych błędów,
+              aplikacja zarabia na siebie z nawiązką.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-professional">
+        <div class="container">
+          <div class="text-center" style="margin-bottom: 4rem">
+            <h2 class="section-title">
+              Profesjonalny sprzęt to nie tylko wiertarka. To wizerunek, za
+              który klient płaci więcej.
+            </h2>
+            <p class="section-subtitle">
+              Inwestujesz w najlepsze maszyny i materiały, bo wiesz, że jakość
+              kosztuje. Czas na narzędzie, które pokaże tę jakość Twojemu
+              klientowi. <br />
+              Większość ekip na rynku wciąż „dogaduje się” na gębę, gubi zdjęcia
+              i przesyła rozliczenia wymięte w kieszeni. Ty możesz grać w innej
+              lidze.
+            </p>
+          </div>
+
+          <div class="grid-3-cols">
+            <div class="calm-card">
+              <h3>ZYSKAJ PRZEWAGĘ NA STARCIE</h3>
+              <p>
+                Prowadzenie budowy w aplikacji to dla inwestora jasny sygnał:
+                <strong>„Tu nie ma fuszery, tu jest system”</strong>. To buduje
+                zaufanie, które pozwala Ci dyktować wyższe stawki.
+              </p>
+            </div>
+
+            <div class="calm-card">
+              <h3>ODRÓŻNIJ SIĘ OD „PRACY NA CZARNO”</h3>
+              <p>
+                Pokaż, że Twoja firma to profesjonalny biznes. Proste raporty i
+                poukładana dokumentacja to <strong>standard premium</strong>, za
+                który klienci chętnie dopłacą dla własnego świętego spokoju.
+              </p>
+            </div>
+
+            <div class="calm-card">
+              <h3>SPRZEDAWAJ BEZ WALKI O CENĘ</h3>
+              <p>
+                Kiedy klient widzi, że panujesz nad każdym detalem projektu,
+                przestaje porównywać Cię z najtańszą konkurencją. Wybierze
+                Ciebie, bo u Ciebie <strong>czuje się bezpiecznie</strong>.
+              </p>
+            </div>
+          </div>
+
+          <div class="client-focus-box">
+            <div class="client-focus-content">
+              <h3>Twój klient już tu jest</h3>
+              <p>
+                Dzisiejszy klient to 30-40 latek, który wszystko załatwia
+                telefonem. Klika paczkomaty w InPoście, płaci Revolutem i
+                zamawia jedzenie przez apkę.
+              </p>
+              <p>
+                Kiedy wchodzi w proces budowy domu za setki tysięcy złotych,
+                oczekuje tego samego standardu. Jeśli dasz mu dostęp do
+                BudoApki, poczuje, że kontroluje proces i jest w bezpiecznych
+                rękach.
+                <strong
+                  >Dostosuj się do standardów swojego klienta, zanim zrobi to
+                  Twoja konkurencja.</strong
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="video-section" class="video-section">
+        <div class="video-section__box">
+          <h2 class="video-section__title">
+            Zobacz, jak Budoapka odmieni Twój biznes!
+          </h2>
+          <p class="video-section__subtitle">
+            Zastępujemy Twoje stare, nieefektywne narzędzia jednym,
+            zintegrowanym systemem.
+          </p>
+
+          <a href="https://app.budoapka.pl/demo">
+            <div class="video-box">
+              <img
+                src="assets/budoapka-demo.png"
+                alt="Budoapka Demo"
+                class="video-box__image"
+                height="600px"
+              />
+            </div>
+          </a>
+
+          <div class="video-section__cta">
+            <a href="https://app.budoapka.pl/demo" class="btn btn--white"
+              >Załóż darmowe konto</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="comparison" id="comparison-section">
+        <div class="container">
+          <h2 class="section-title text-center">
+            "Ustalaliśmy przecież coś innego..." <br />Znasz to uczucie? Czas to
+            zmienić.
+          </h2>
+
+          <div class="comparison__headers">
+            <h3>BEZ BUDOAPKI</h3>
+            <h3 class="header-with-logo">
+              <span>z </span>
+              <img src="assets/logo.svg" alt="Budoapka Logo" />
+            </h3>
+          </div>
+
+          <div class="comparison__grid">
+            <div class="comparison-row">
+              <div class="comparison-card comparison-card--problem">
+                <img
+                  src="assets/icon-cross.png"
+                  alt="Problem"
+                  class="comparison-card__icon_cross"
+                />
+                <div class="comparison-card__content">
+                  <h4>ROBOTY DODATKOWE</h4>
+                  <p>
+                    „Dogadane” na budowie. Inwestor zapomina o nich przy
+                    płaceniu faktury.
+                  </p>
+                </div>
+              </div>
+              <div class="comparison-card comparison-card--solution">
+                <img
+                  src="assets/icon-check.svg"
+                  alt="Rozwiązanie"
+                  class="comparison-card__icon"
+                />
+                <div class="comparison-card__content">
+                  <h4>ROBOTY DODATKOWE</h4>
+                  <p>
+                    Zapisane w 10 sekund. Klient akceptuje koszt w swojej
+                    aplikacji. Masz podkładkę.
+                  </p>
+                  <img
+                    src="assets/icon-comparison-2.svg"
+                    alt=""
+                    class="comparison-card__corner-icon"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="comparison-row">
+              <div class="comparison-card comparison-card--problem">
+                <img
+                  src="assets/icon-cross.png"
+                  alt="Problem"
+                  class="comparison-card__icon_cross"
+                />
+                <div class="comparison-card__content">
+                  <h4>ZDJĘCIA INSTALACJI</h4>
+                  <p>
+                    Rozrzucone w galerii telefonu między zdjęciami z wakacji.
+                    Nie do znalezienia po miesiącu.
+                  </p>
+                </div>
+              </div>
+              <div class="comparison-card comparison-card--solution">
+                <img
+                  src="assets/icon-check.svg"
+                  alt="Rozwiązanie"
+                  class="comparison-card__icon"
+                />
+                <div class="comparison-card__content">
+                  <h4>ZDJĘCIA INSTALACJI</h4>
+                  <p>
+                    Automatycznie przypisane do projektu. Masz dowód, gdzie idą
+                    rury, zanim wejdzie tynkarz.
+                  </p>
+                  <img
+                    src="assets/icon-comparison-4.svg"
+                    alt=""
+                    class="comparison-card__corner-icon"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="comparison-row">
+              <div class="comparison-card comparison-card--problem">
+                <img
+                  src="assets/icon-cross.png"
+                  alt="Problem"
+                  class="comparison-card__icon_cross"
+                />
+                <div class="comparison-card__content">
+                  <h4>SPÓR O JAKOŚĆ</h4>
+                  <p>
+                    Twoje słowo przeciwko „wydawało mi się” klienta. Stres i
+                    groźba wstrzymania kasy.
+                  </p>
+                </div>
+              </div>
+              <div class="comparison-card comparison-card--solution">
+                <img
+                  src="assets/icon-check.svg"
+                  alt="Rozwiązanie"
+                  class="comparison-card__icon"
+                />
+                <div class="comparison-card__content">
+                  <h4>SPÓR O JAKOŚĆ</h4>
+                  <p>
+                    Niepodważalna historia postępów i raporty PDF. Zamykasz
+                    dyskusję w 30 sekund.
+                  </p>
+                  <img
+                    src="assets/icon-comparison-3.svg"
+                    alt=""
+                    class="comparison-card__corner-icon"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="comparison-row">
+              <div class="comparison-card comparison-card--problem">
+                <img
+                  src="assets/icon-cross.png"
+                  alt="Problem"
+                  class="comparison-card__icon_cross"
+                />
+                <div class="comparison-card__content">
+                  <h4>CZAS PO PRACY</h4>
+                  <p>
+                    Wieczorne telefony i odpisywanie na WhatsAppie: „Panie, a co
+                    tam dzisiaj zrobione?”.
+                  </p>
+                </div>
+              </div>
+              <div class="comparison-card comparison-card--solution">
+                <img
+                  src="assets/icon-check.svg"
+                  alt="Rozwiązanie"
+                  class="comparison-card__icon"
+                />
+                <div class="comparison-card__content">
+                  <h4>CZAS PO PRACY</h4>
+                  <p>
+                    Święty spokój. Klient sam zagląda do aplikacji i widzi
+                    postępy, które mu udostępniłeś.
+                  </p>
+                  <img
+                    src="assets/icon-comparison-1.svg"
+                    alt=""
+                    class="comparison-card__corner-icon"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="comparison-row">
+              <div class="comparison-card comparison-card--problem">
+                <img
+                  src="assets/icon-cross.png"
+                  alt="Problem"
+                  class="comparison-card__icon_cross"
+                />
+                <div class="comparison-card__content">
+                  <h4>ROZLICZENIE MATERIAŁÓW</h4>
+                  <p>
+                    Paragony wymięte w kieszeni lub zgubione. Kłótnie: „Czemu
+                    tyle tego poszło?”.
+                  </p>
+                </div>
+              </div>
+              <div class="comparison-card comparison-card--solution">
+                <img
+                  src="assets/icon-check.svg"
+                  alt="Rozwiązanie"
+                  class="comparison-card__icon"
+                />
+                <div class="comparison-card__content">
+                  <h4>ROZLICZENIE MATERIAŁÓW</h4>
+                  <p>
+                    Zdjęcie paragonu i dostawy od razu w apce, skanowanie za
+                    pomocą AI. Pełna jasność, zero pytań przy rozliczeniu.
+                  </p>
+                  <img
+                    src="assets/icon-scan.svg"
+                    alt="Skanowanie AI"
+                    class="comparison-card__corner-icon"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="worth-knowing-box">
+            <div class="worth-knowing-icon">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#EB590D"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2z"></path>
+                <path
+                  d="M18 13c0-3.3-2.7-6-6-6s-6 2.7-6 6c0 2.2 1.2 4.1 3 5.2V17c0 .6.4 1 1 1h4c.6 0 1-.4 1-1v-2.8c1.8-1.1 3-3 3-5.2z"
+                ></path>
+              </svg>
+            </div>
+            <div class="worth-knowing-content">
+              <h4>Warto wiedzieć:</h4>
+              <p>
+                90% sporów na budowie wynika z braku komunikacji.
+                <strong>Budoapka rozwiązuje ten problem za Ciebie,</strong>
+                zanim zdąży on uderzyć Cię po kieszeni.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="collaboration" id="collaboration-section">
+        <div class="container">
+          <div class="text-center" style="margin-bottom: 3rem">
+            <h2 class="section-title">
+              Niezależnie od tego, co budujesz – <br />robisz to u nas prościej.
+            </h2>
+          </div>
+
+          <div class="collaboration__grid">
+            <div class="collaboration-card" onclick="toggleCard(this)">
+              <div class="card-header-flex">
+                <h3>Ekipy wykończeniowe i remontowe</h3>
+                <div class="toggle-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#EB590D"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="card-hidden-content">
+                <p>
+                  Koniec z robieniem prezentów klientowi. W BudoApce każda
+                  zmiana koloru gładzi czy dodatkowa zabudowa jest od razu
+                  odnotowana i zaakceptowana. Ty skupiasz się na jakości, my
+                  pilnujemy, żebyś dostał zapłatę za każdy metr kwadratowy
+                  Twojej pracy.
+                </p>
+              </div>
+            </div>
+
+            <div class="collaboration-card" onclick="toggleCard(this)">
+              <div class="card-header-flex">
+                <h3>Stolarze i montażyści mebli</h3>
+                <div class="toggle-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#EB590D"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="card-hidden-content">
+                <p>
+                  Wszystkie rysunki, pomiary, ustalenia kolorystyczne i
+                  akceptacje materiałów masz w jednym folderze projektu. Klient
+                  zatwierdza wybór frontów w aplikacji, Ty masz pewność, że
+                  montujesz dokładnie to, co zostało zamówione. Zero pomyłek,
+                  zero strat materiału.
+                </p>
+              </div>
+            </div>
+
+            <div class="collaboration-card" onclick="toggleCard(this)">
+              <div class="card-header-flex">
+                <h3>Elektrycy, hydraulicy i inni specjaliści</h3>
+                <div class="toggle-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#EB590D"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="card-hidden-content">
+                <p>
+                  „Twoja najlepsza polisa ubezpieczeniowa. Robisz zdjęcia kabli
+                  i rur przed tynkowaniem, a apka przypisuje je do lokalizacji.
+                  Jeśli inna ekipa coś przewierci, Ty masz dowód, że Twoja
+                  robota była wykonana zgodnie ze sztuką. Szybkie raporty dla
+                  klienta budują Twój profesjonalizm”.
+                </p>
+              </div>
+            </div>
+
+            <div class="collaboration-card" onclick="toggleCard(this)">
+              <div class="card-header-flex">
+                <h3>Biura architektoniczne i generalni wykonawcy</h3>
+                <div class="toggle-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#EB590D"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="card-hidden-content">
+                <p>
+                  „Zarządzaj nadzorem bez tracenia czasu na dojazdy. Widzisz
+                  postępy prac w czasie rzeczywistym dzięki zdjęciom od
+                  wykonawców. Możesz błyskawicznie odpowiadać na pytania z placu
+                  budowy i akceptować etapy, zachowując pełną historię decyzji w
+                  jednym miejscu”.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-us" id="about-us">
+        <div class="container">
+          <div class="text-center" style="margin-bottom: 3rem">
+            <h2 class="section-title">
+              Stworzona przez praktyków. <br />Dla tych, którzy budują.
+            </h2>
+            <p class="section-subtitle">
+              Budoapka nie powstała w sterylnym biurze. Powstała z frustracji
+              chaosem, jaki towarzyszy każdej polskiej budowie.
+            </p>
+          </div>
+
+          <div class="founders-wrapper">
+            <div class="founders-avatars">
+              <div class="founder-avatar">
+                <img src="assets/authors/Micha%C5%82.webp" alt="Michał Kędzior" />
+              </div>
+              <div class="founder-avatar">
+                <img src="assets/authors/Bartek.webp" alt="Bartek Stokłosa" />
+              </div>
+              <div class="founder-avatar">
+                <img src="assets/authors/Konrad.webp" alt="Konrad Hopek" />
+              </div>
+            </div>
+
+            <div class="founders-grid">
+              <div class="founder-card">
+                <h3>Michał Kędzior</h3>
+                <p class="founder-role">Produkt & UX</p>
+                <p>
+                  Od lat buduje produkty cyfrowe, które mają jeden cel:
+                  upraszczać życie. W BudoApce dba o to, by system był tak
+                  prosty, byś mógł go obsługiwać jedną ręką, stojąc na drabinie.
+                  Żadnych zbędnych funkcji, tylko to, co faktycznie pomaga w
+                  robocie.
+                </p>
+              </div>
+
+              <div class="founder-card">
+                <h3>Bartek Stokłosa</h3>
+                <p class="founder-role">Branża & Wdrożenia</p>
+                <p>
+                  Projekt, realizacja i każdy trudny moment pomiędzy, Bartek zna
+                  branżę budowlaną od podszewki. Przeszedł przez setki
+                  inwestycji i tysiące trudnych rozmów z klientami. Budoapka to
+                  jego odpowiedź na pytanie: „Jak prowadzić budowę, żeby nie
+                  oszaleć i na tym zarobić?”.
+                </p>
+              </div>
+
+              <div class="founder-card">
+                <h3>Konrad Hopek</h3>
+                <p class="founder-role">Technologia & Kod</p>
+                <p>
+                  Mózg operacji. To on zamienia nasze pomysły w działający kod.
+                  Dba o to, żeby aplikacja działała błyskawicznie i stabilnie,
+                  nawet gdy masz słaby zasięg na budowie. Bezpieczeństwo Twoich
+                  danych to jego priorytet.
+                </p>
+              </div>
+            </div>
+
+            <div class="founders-quote">
+              <p>
+                „Mieliśmy dość patrzenia jak nasi fachowcy, którzy robią świetną
+                robotę, tracą pieniądze i nerwy przez brak jednego zdjęcia czy
+                zapomniane ustalenie. Postanowiliśmy to naprawić. Osobiście
+                dbamy o to, by Budoapka była Twoim najlepszym wsparciem.”
+              </p>
+            </div>
+
+            <p class="founders-note">
+              Zakładając konto, nie zostajesz sam z instrukcją obsługi. Jeden z
+              nas (lub naszych ekspertów) zadzwoni do Ciebie, żeby pomóc Ci
+              skonfigurować pierwszy projekt.
+              <strong>Pomagamy sobie po męsku.</strong>
+            </p>
+          </div>
+
+          <div class="process-section">
+            <div class="process-header-row">
+              <div class="col-step">Krok</div>
+              <div class="col-you" data-label="Co robisz Ty?">
+                Co robisz Ty?
+              </div>
+              <div class="col-app" data-label="Co robi Budoapka?">
+                Co robi Budoapka?
+              </div>
+              <div class="col-result" data-label="Wynik">Wynik</div>
+            </div>
+
+            <div class="process-row">
+              <div class="col-step">
+                <span class="step-badge">Start (30 sekund)</span>
+              </div>
+              <div class="col-you" data-label="TY:">
+                Zakładasz darmowe konto (tylko imię i telefon).
+              </div>
+              <div class="col-app" data-label="BUDOAPKA:">
+                Aktywujemy Twój dostęp do pełnej wersji trial.
+              </div>
+              <div class="col-result" data-label="WYNIK:">
+                <strong>Masz własne centrum dowodzenia.</strong>
+              </div>
+            </div>
+
+            <div class="process-row">
+              <div class="col-step">
+                <span class="step-badge">Wdrożenie i pomoc</span>
+              </div>
+              <div class="col-you" data-label="TY:">
+                Odbierasz telefon od Michała lub Bartka.
+              </div>
+              <div class="col-app" data-label="BUDOAPKA:">
+                Pomagamy Ci zaimportować dane i ustawić pierwszy, realny
+                projekt.
+              </div>
+              <div class="col-result" data-label="WYNIK:">
+                <strong>Twoja budowa jest już w systemie.</strong>
+              </div>
+            </div>
+
+            <div class="process-row process-row--highlight">
+              <div class="col-step"><span class="step-badge">Spokój</span></div>
+              <div class="col-you" data-label="TY:">
+                Pracujesz na budowie jak zwykle.
+              </div>
+              <div class="col-app" data-label="BUDOAPKA:">
+                Budoapka pilnuje Twoich pieniędzy, zdjęć i kontaktu z klientem.
+              </div>
+              <div class="col-result" data-label="WYNIK:">
+                <strong>Masz porządek i święty spokój po 17:00.</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center" style="margin-top: 4rem">
+            <a
+              href="https://app.budoapka.pl/register"
+              class="btn btn--dark-cta"
+            >
+              <span>Załóż darmowe konto</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <div class="container">
+          <h2 class="section-title">
+            Sprawdź, jak inni fachowcy odzyskali swoje wieczory.
+          </h2>
+          <p class="section-subtitle">
+            Nie musisz wierzyć nam na słowo. Zobacz, co o pracy z Budoapką mówią
+            właściciele firm, którzy jeszcze niedawno byli w tym samym miejscu
+            co Ty.
+          </p>
+          <div class="testimonial-slider__wrapper">
+            <div class="testimonial-slider">
+              <div class="testimonial-card">
+                <div>
+                  <div class="testimonial-card__stars">
+                    <img src="assets/icon-star.svg" alt="Gwiazdka" /><img
+                      src="assets/icon-star.svg"
+                      alt="Gwiazdka"
+                    /><img src="assets/icon-star.svg" alt="Gwiazdka" /><img
+                      src="assets/icon-star.svg"
+                      alt="Gwiazdka"
+                    /><img src="assets/icon-star.svg" alt="Gwiazdka" />
+                  </div>
+                  <p class="testimonial-card__text">
+                    "Klientka dzwoniła do mnie po 5 razy dziennie z pytaniami co
+                    tam u nas słychać. Teraz wchodzi sobie do tej aplikacji i
+                    sama wszystko widzi. Ja robię swoją robotę, ona nie dzwoni.
+                    Wszyscy zadowoleni. A myślałem że to będzie jakieś rocket
+                    science, a okazało się że łatwiej niż Facebooka obsłużyć."
+                  </p>
+                </div>
+                <div class="testimonial-card__author">
+                  <div class="author__info">
+                    <p class="author__name">Michał</p>
+                    <p class="author__title">
+                      Firma Wykończeniowa "BANO", Kraków
                     </p>
+                  </div>
                 </div>
+              </div>
 
-                <div class="pricing-single-wrapper">
-                    <div class="pricing-card pricing-card--featured">
-                        <div class="pricing-card__header text-center">
-                            <div class="price-box">
-                                <span class="amount">189</span>
-                                <div class="price-box__details">
-                                    <span class="currency">PLN</span>
-                                    <span class="period">/ mies.</span>
-                                </div>
-                            </div>
-                            <p class="vat-info">(Netto + VAT)</p>
-                        </div>
-
-                        <div class="pricing-card__body">
-                            <ul class="pricing-features-list">
-                                <li>
-                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                    <span><strong>Do 100 projektów</strong> jednocześnie</span>
-                                </li>
-                                <li>
-                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                    <span><strong>Do 100 kont</strong> dla pracowników i wykonawców</span>
-                                </li>
-                                <li>
-                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                    <span><strong>Skanowanie faktur z AI</strong></span>
-                                </li>
-                                <li>
-                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                    <span>Pełny dostęp z telefonu na budowie i komputera w domu</span>
-                                </li>
-                                <li>
-                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                    <span>Dziennik budowy i bezpieczne archiwum dokumentów</span>
-                                </li>
-                                <li>
-                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                    <span>Delegowanie zadań pracownikom i podwykonawcom</span>
-                                </li>
-                                <li>
-                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                    <span>Miejsce na tysiące zdjęć instalacji i postępów</span>
-                                </li>
-                                <li>
-                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                    <span>Rezygnujesz, kiedy chcesz</span>
-                                </li>
-                            </ul>
-
-                            <div class="pricing-bonuses">
-                                <div class="bonus-item">
-                                    <span class="bonus-tag">GRATIS!</span>
-                                    <p>Osobista pomoc we wdrożeniu pierwszego projektu!</p>
-                                </div>
-                                <div class="bonus-item">
-                                    <span class="bonus-tag">GRATIS!</span>
-                                    <p>Wszystkie funkcjonalności <strong>14 dni za darmo</strong>, nie musisz podpinać karty kredytowej!</p>
-                                </div>
-                            </div>
-
-                            <div class="text-center" style="margin-top: 2rem;">
-                                <a href="https://app.budoapka.pl/" class="btn btn--primary btn--large">
-                                    Załóż darmowe konto
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+              <div class="testimonial-card">
+                <div class="testimonial-card__stars">
+                  <img src="assets/icon-star.svg" alt="Gwiazdka" /><img
+                    src="assets/icon-star.svg"
+                    alt="Gwiazdka"
+                  /><img src="assets/icon-star.svg" alt="Gwiazdka" /><img
+                    src="assets/icon-star.svg"
+                    alt="Gwiazdka"
+                  /><img src="assets/icon-star.svg" alt="Gwiazdka" />
                 </div>
+                <p class="testimonial-card__text">
+                  "Koniec z tym Excelem co się zawiesza i WhatsAppem gdzie
+                  wszystko ginie. Mam wszystko w jednym miejscu - fotki,
+                  papiery, gadanie z klientem. Klient widzi że nie obiję się i
+                  nie ma już tych głupich przepychanek o to że czegoś nie
+                  zrobiłem."
+                </p>
+                <div class="testimonial-card__author">
+                  <div class="author__info">
+                    <p class="author__name">Szymon</p>
+                    <p class="author__title">
+                      Stolarnia "Akanat Wnętrza", Katowice
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonial-card">
+                <div class="testimonial-card__stars">
+                  <img src="assets/icon-star.svg" alt="Gwiazdka" /><img
+                    src="assets/icon-star.svg"
+                    alt="Gwiazdka"
+                  /><img src="assets/icon-star.svg" alt="Gwiazdka" /><img
+                    src="assets/icon-star.svg"
+                    alt="Gwiazdka"
+                  /><img src="assets/icon-star.svg" alt="Gwiazdka" />
+                </div>
+                <p class="testimonial-card__text">
+                  "Robię 4 domy naraz i wcześniej to był totalny chaos. Excel
+                  tu, WhatsApp tam, papiery gdzieś. Teraz każdy inwestor ma swój
+                  projekt online i przestali do mnie wydzwaniać co 5 minut. Czas
+                  na biurokrację spadł mi o połowę, mogę więcej zarabiać."
+                </p>
+                <div class="testimonial-card__author">
+                  <div class="author__info">
+                    <p class="author__name">Roman</p>
+                    <p class="author__title">
+                      Firma Stolarska "Stolarz w formie", Trójmiasto
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonial-card">
+                <div class="testimonial-card__stars">
+                  <img src="assets/icon-star.svg" alt="Gwiazdka" /><img
+                    src="assets/icon-star.svg"
+                    alt="Gwiazdka"
+                  /><img src="assets/icon-star.svg" alt="Gwiazdka" /><img
+                    src="assets/icon-star.svg"
+                    alt="Gwiazdka"
+                  /><img src="assets/icon-star.svg" alt="Gwiazdka" />
+                </div>
+                <p class="testimonial-card__text">
+                  "Wreszcie wiem ile wydaję w czasie rzeczywistym. Nie jak
+                  wcześniej że na koniec okazuje się że jestem 50 tysięcy na
+                  minusie. Ostatni dom skończyłem 30 koła poniżej budżetu -
+                  pierwszy raz w życiu! To samo w sobie się zwraca."
+                </p>
+                <div class="testimonial-card__author">
+                  <div class="author__info">
+                    <p class="author__name">Janek</p>
+                    <p class="author__title">
+                      Firma Wykończeniowa "Dąb Concept", Warszawa
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonial-card">
+                <div class="testimonial-card__stars">
+                  <img src="assets/icon-star.svg" alt="Gwiazdka" /><img
+                    src="assets/icon-star.svg"
+                    alt="Gwiazdka"
+                  /><img src="assets/icon-star.svg" alt="Gwiazdka" /><img
+                    src="assets/icon-star.svg"
+                    alt="Gwiazdka"
+                  /><img src="assets/icon-star.svg" alt="Gwiazdka" />
+                </div>
+                <p class="testimonial-card__text">
+                  "Wykonawca musi robić zdjęcia postępów więc widzę czy robi tak
+                  jak narysowałam. Wcześniej przyjeżdżałam a tam zonk - zrobione
+                  na odwal się. Teraz kontroluję na bieżąco a klientka też jest
+                  szczęśliwa że widzi co się dzieje."
+                </p>
+                <div class="testimonial-card__author">
+                  <div class="author__info">
+                    <p class="author__name">Kasia</p>
+                    <p class="author__title">
+                      Architekt Wnętrz "Azyl Studio", Wrocław
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonial-card">
+                <div class="testimonial-card__stars">
+                  <img src="assets/icon-star.svg" alt="Gwiazdka" /><img
+                    src="assets/icon-star.svg"
+                    alt="Gwiazdka"
+                  /><img src="assets/icon-star.svg" alt="Gwiazdka" /><img
+                    src="assets/icon-star.svg"
+                    alt="Gwiazdka"
+                  /><img src="assets/icon-star.svg" alt="Gwiazdka" />
+                </div>
+                <p class="testimonial-card__text">
+                  "Klienci są pod wrażeniem że nie muszą wszystkiego wyciągać ze
+                  mnie kleszczami. Wchodzą, patrzą, wiedzą co się dzieje. To
+                  podnosi wartość mojej roboty - mogę brać więcej kasy za lepszą
+                  obsługę niż janusze z OLX."
+                </p>
+                <div class="testimonial-card__author">
+                  <div class="author__info">
+                    <p class="author__name">Przemek</p>
+                    <p class="author__title">
+                      Firma Stolarska "HammerWood", Warszawa
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonial-card">
+                <div class="testimonial-card__stars">
+                  <img src="assets/icon-star.svg" alt="Gwiazdka" /><img
+                    src="assets/icon-star.svg"
+                    alt="Gwiazdka"
+                  /><img src="assets/icon-star.svg" alt="Gwiazdka" /><img
+                    src="assets/icon-star.svg"
+                    alt="Gwiazdka"
+                  /><img src="assets/icon-star.svg" alt="Gwiazdka" />
+                </div>
+                <p class="testimonial-card__text">
+                  "Nie ma już tego cyrku że elektryk nie wie kiedy skończę,
+                  malarz przychodzi za wcześnie. Wszyscy widzą kiedy co robię i
+                  mogą się przygotować. Budowa idzie sprawniej, każdy robi swoje
+                  bez wchodzenia sobie w drogę."
+                </p>
+                <div class="testimonial-card__author">
+                  <div class="author__info">
+                    <p class="author__name">Sebastian</p>
+                    <p class="author__title">Stolarnia "Gepetto", Bochnia</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonial-card">
+                <div class="testimonial-card__stars">
+                  <img src="assets/icon-star.svg" alt="Gwiazdka" /><img
+                    src="assets/icon-star.svg"
+                    alt="Gwiazdka"
+                  /><img src="assets/icon-star.svg" alt="Gwiazdka" /><img
+                    src="assets/icon-star.svg"
+                    alt="Gwiazdka"
+                  /><img src="assets/icon-star.svg" alt="Gwiazdka" />
+                </div>
+                <p class="testimonial-card__text">
+                  "Pierwszy raz buduję dom i bałem się że coś pójdzie nie tak. W
+                  Budoapce widzę każdy dzień roboty, każdy wydany grosz, mogę
+                  pisać uwagi jak mi się coś nie podoba. Czuję się bezpiecznie z
+                  moją największą inwestycją w życiu. Każdy kto buduje powinien
+                  tego wymagać od wykonawcy."
+                </p>
+                <div class="testimonial-card__author">
+                  <div class="author__info">
+                    <p class="author__name">Mariusz T.</p>
+                    <p class="author__title">inwestor budujący dom, Rzeszów</p>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
+            <button
+              class="slider-btn slider-btn--prev"
+              aria-label="Poprzednia opinia"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button
+              class="slider-btn slider-btn--next"
+              aria-label="Następna opinia"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
 
-        <section class="guarantee-section">
-            <div class="container guarantee-container">
-                <div class="guarantee-box">
-                    <div class="guarantee-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#EB590D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                            <path d="M9 12l2 2 4-4"></path>
-                        </svg>
-                    </div>
+      <section class="pricing" id="pricing-section">
+        <div class="container">
+          <div class="text-center" style="margin-bottom: 3rem">
+            <h2 class="section-title">
+              Jeden prosty abonament. <br />Wszystko, czego potrzebuje Twoja
+              firma.
+            </h2>
+            <p class="section-subtitle">
+              Bez ukrytych kosztów, bez limitów, które Cię blokują. Płacisz za
+              narzędzie, które na siebie zarabia.
+            </p>
+          </div>
 
-                    <div class="guarantee-content">
-                        <h2 class="guarantee-title">Testujesz na nasz koszt. <br>100% gwarancji albo zwrot każdej złotówki.</h2>
-                        
-                        <p class="guarantee-text">
-                            Jesteśmy praktykami i wiemy, że na budowie liczą się efekty, a nie obietnice. Dlatego nie chcemy Twoich pieniędzy, jeśli Budoapka nie ułatwi Ci życia.
-                        </p>
-
-                        <p class="guarantee-highlight">Masz 30 dni na sprawdzenie nas w boju.</p>
-
-                        <p class="guarantee-text">
-                            Jeśli po miesiącu stwierdzisz, że aplikacja nie oszczędza Twojego czasu, nie pomaga w kontakcie z klientem lub po prostu nie jest dla Ciebie – napisz do nas jeden e-mail lub zadzwoń.
-                        </p>
-
-                        <ul class="guarantee-list">
-                            <li>Bez zbędnych pytań.</li>
-                            <li>Bez ukrytych haczyków.</li>
-                            <li><strong>Zwracamy 100% wpłaconej kwoty.</strong></li>
-                        </ul>
-                    </div>
-
-                    <div class="guarantee-cta-wrapper">
-                        <a href="https://app.budoapka.pl/register" class="btn btn--dark-cta">
-                            Załóż darmowe konto
-                        </a>
-                    </div>
+          <div class="pricing-single-wrapper">
+            <div class="pricing-card pricing-card--featured">
+              <div class="pricing-card__header text-center">
+                <div class="price-box">
+                  <span class="amount">189</span>
+                  <div class="price-box__details">
+                    <span class="currency">PLN</span>
+                    <span class="period">/ mies.</span>
+                  </div>
                 </div>
-            </div>
-        </section>
+                <p class="vat-info">(Netto + VAT)</p>
+              </div>
 
-        <section class="faq" id="faq-section">
-            <div class="container">
-                <h2 class="section-title text-center">FAQ</h2>
-                
-                <div class="faq__accordion">
-                    <div class="faq__item">
-                        <button class="faq__question">
-                            <span>Czy mój klient musi instalować aplikację?</span>
-                            <span class="faq__icon"></span>
-                        </button>
-                        <div class="faq__answer">
-                            <p>Nie. To jeden z naszych największych atutów. Twoi klienci otrzymują od Ciebie unikalny link do podglądu swojego projektu. Otwierają go w przeglądarce na telefonie lub komputerze, bez zakładania kont, bez haseł i bez instalowania czegokolwiek.</p>
-                        </div>
-                    </div>
+              <div class="pricing-card__body">
+                <ul class="pricing-features-list">
+                  <li>
+                    <svg
+                      class="check-icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span><strong>Do 100 projektów</strong> jednocześnie</span>
+                  </li>
+                  <li>
+                    <svg
+                      class="check-icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span
+                      ><strong>Do 100 kont</strong> dla pracowników i
+                      wykonawców</span
+                    >
+                  </li>
+                  <li>
+                    <svg
+                      class="check-icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span><strong>Skanowanie faktur z AI</strong></span>
+                  </li>
+                  <li>
+                    <svg
+                      class="check-icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span
+                      >Pełny dostęp z telefonu na budowie i komputera w
+                      domu</span
+                    >
+                  </li>
+                  <li>
+                    <svg
+                      class="check-icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span
+                      >Dziennik budowy i bezpieczne archiwum dokumentów</span
+                    >
+                  </li>
+                  <li>
+                    <svg
+                      class="check-icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Delegowanie zadań pracownikom i podwykonawcom</span>
+                  </li>
+                  <li>
+                    <svg
+                      class="check-icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Miejsce na tysiące zdjęć instalacji i postępów</span>
+                  </li>
+                  <li>
+                    <svg
+                      class="check-icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Rezygnujesz, kiedy chcesz</span>
+                  </li>
+                </ul>
 
-                    <div class="faq__item">
-                        <button class="faq__question">
-                            <span>Nie mam czasu na "klikanie" w telefonie na budowie. Ile to zajmuje?</span>
-                            <span class="faq__icon"></span>
-                        </button>
-                        <div class="faq__answer">
-                            <p>Budoapka została zaprojektowana tak, byś mógł ją obsłużyć jedną ręką, mając na drugiej rękawicę. Dodanie zdjęcia i opisu zajmuje średnio 10-15 sekund. To znacznie szybciej niż szukanie zdjęcia w galerii wieczorem, żeby wysłać je klientowi na WhatsAppie.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq__item">
-                        <button class="faq__question">
-                            <span>Co jeśli na budowie (np. w piwnicy) nie mam zasięgu?</span>
-                            <span class="faq__icon"></span>
-                        </button>
-                        <div class="faq__answer">
-                            <p>Aplikacja działa w trybie offline. Możesz robić zdjęcia i dodawać wpisy bez internetu. Gdy tylko odzyskasz zasięg lub wrócisz do domu pod Wi-Fi, Budoapka automatycznie zsynchronizuje dane i zaktualizuje projekt.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq__item">
-                        <button class="faq__question">
-                            <span>Czy klient będzie widział wszystko?</span>
-                            <span class="faq__icon"></span>
-                        </button>
-                        <div class="faq__answer">
-                            <p>Tylko jeśli mu na to pozwolisz. Ty masz pełną kontrolę nad tym, co jest widoczne dla klienta, a co zostaje tylko dla Ciebie i Twoich pracowników (np. notatki o kosztach wewnętrznych czy marży). Budoapka to narzędzie, które pracuje dla Ciebie, a nie przeciwko Tobie.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq__item">
-                        <button class="faq__question">
-                            <span>Dlaczego mam płacić 189 zł, skoro WhatsApp jest darmowy?</span>
-                            <span class="faq__icon"></span>
-                        </button>
-                        <div class="faq__answer">
-                            <p>WhatsApp jest darmowy, dopóki nie stracisz przez niego pieniędzy. Darmowe narzędzia nie pilnują Twoich kosztorysów, nie generują raportów PDF i nie archiwizują zdjęć w sposób, który pozwoli Ci je znaleźć po roku. 189 zł to koszt jednego roboczogodziny dobrego fachowca. Budoapka oszczędza Ci tych godzin kilkanaście w miesiącu.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq__item">
-                        <button class="faq__question">
-                            <span>Co się stanie z moimi danymi, jeśli zrezygnuję?</span>
-                            <span class="faq__icon"></span>
-                        </button>
-                        <div class="faq__answer">
-                            <p>Twoje dane są bezpieczne i należą do Ciebie. Przed zakończeniem subskrypcji możesz wyeksportować całą dokumentację projektów do plików PDF. Nic nie ginie.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq__item">
-                        <button class="faq__question">
-                            <span>Czy mogę dodać do aplikacji swoich pracowników?</span>
-                            <span class="faq__icon"></span>
-                        </button>
-                        <div class="faq__answer">
-                            <p>Tak. W pakiecie możesz dodać do 100 osób. Twoi pracownicy mogą raportować postępy i dodawać zdjęcia bezpośrednio z budowy, na której ich nie ma, a Ty widzisz wszystko w swoim telefonie.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faq__cta">
+                <div class="pricing-bonuses">
+                  <div class="bonus-item">
+                    <span class="bonus-tag">GRATIS!</span>
+                    <p>Osobista pomoc we wdrożeniu pierwszego projektu!</p>
+                  </div>
+                  <div class="bonus-item">
+                    <span class="bonus-tag">GRATIS!</span>
                     <p>
-                        <strong>Masz inne pytanie? Nie szukaj odpowiedzi sam.</strong> <br>
-                        Załóż darmowy Trial, a zadzwonimy do Ciebie jutro. Odpowiemy na wszystko podczas wspólnego ustawiania Twojego pierwszego projektu.
+                      Wszystkie funkcjonalności
+                      <strong>30 dni za darmo</strong>, nie musisz podpinać
+                      karty kredytowej!
                     </p>
+                  </div>
                 </div>
-            </div>
-        </section>
 
-      
-        <button class="sticky-fab" onclick="openContactModal(); return false;">
-            <div class="fab-contact-container">
-                Masz pytania? Napisz!
+                <div class="text-center" style="margin-top: 2rem">
+                  <a
+                    href="https://app.budoapka.pl/"
+                    class="btn btn--primary btn--large"
+                  >
+                    Załóż darmowe konto
+                  </a>
+                </div>
+              </div>
             </div>
-            <div class="fab-main" >
-                <div class="fab-logo"></div>
-            </div>
-        </button>
+          </div>
+        </div>
+      </section>
 
+      <section class="guarantee-section">
+        <div class="container guarantee-container">
+          <div class="guarantee-box">
+            <div class="guarantee-icon">
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#EB590D"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="M9 12l2 2 4-4"></path>
+              </svg>
+            </div>
+
+            <div class="guarantee-content">
+              <h2 class="guarantee-title">
+                Testujesz na nasz koszt. <br />100% gwarancji albo zwrot każdej
+                złotówki.
+              </h2>
+
+              <p class="guarantee-text">
+                Jesteśmy praktykami i wiemy, że na budowie liczą się efekty, a
+                nie obietnice. Dlatego nie chcemy Twoich pieniędzy, jeśli
+                Budoapka nie ułatwi Ci życia.
+              </p>
+
+              <p class="guarantee-highlight">
+                Masz 30 dni na sprawdzenie nas w boju.
+              </p>
+
+              <p class="guarantee-text">
+                Jeśli po miesiącu stwierdzisz, że aplikacja nie oszczędza
+                Twojego czasu, nie pomaga w kontakcie z klientem lub po prostu
+                nie jest dla Ciebie – napisz do nas jeden e-mail lub zadzwoń.
+              </p>
+
+              <ul class="guarantee-list">
+                <li>Bez zbędnych pytań.</li>
+                <li>Bez ukrytych haczyków.</li>
+                <li><strong>Zwracamy 100% wpłaconej kwoty.</strong></li>
+              </ul>
+            </div>
+
+            <div class="guarantee-cta-wrapper">
+              <a
+                href="https://app.budoapka.pl/register"
+                class="btn btn--dark-cta"
+              >
+                Załóż darmowe konto
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq" id="faq-section">
+        <div class="container">
+          <h2 class="section-title text-center">FAQ</h2>
+
+          <div class="faq__accordion">
+            <div class="faq__item">
+              <button class="faq__question">
+                <span>Czy mój klient musi instalować aplikację?</span>
+                <span class="faq__icon"></span>
+              </button>
+              <div class="faq__answer">
+                <p>
+                  Nie. To jeden z naszych największych atutów. Twoi klienci
+                  otrzymują od Ciebie unikalny link do podglądu swojego
+                  projektu. Otwierają go w przeglądarce na telefonie lub
+                  komputerze, bez zakładania kont, bez haseł i bez instalowania
+                  czegokolwiek.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question">
+                <span
+                  >Nie mam czasu na "klikanie" w telefonie na budowie. Ile to
+                  zajmuje?</span
+                >
+                <span class="faq__icon"></span>
+              </button>
+              <div class="faq__answer">
+                <p>
+                  Budoapka została zaprojektowana tak, byś mógł ją obsłużyć
+                  jedną ręką, mając na drugiej rękawicę. Dodanie zdjęcia i opisu
+                  zajmuje średnio 10-15 sekund. To znacznie szybciej niż
+                  szukanie zdjęcia w galerii wieczorem, żeby wysłać je klientowi
+                  na WhatsAppie.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question">
+                <span
+                  >Co jeśli na budowie (np. w piwnicy) nie mam zasięgu?</span
+                >
+                <span class="faq__icon"></span>
+              </button>
+              <div class="faq__answer">
+                <p>
+                  Aplikacja działa w trybie offline. Możesz robić zdjęcia i
+                  dodawać wpisy bez internetu. Gdy tylko odzyskasz zasięg lub
+                  wrócisz do domu pod Wi-Fi, Budoapka automatycznie
+                  zsynchronizuje dane i zaktualizuje projekt.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question">
+                <span>Czy klient będzie widział wszystko?</span>
+                <span class="faq__icon"></span>
+              </button>
+              <div class="faq__answer">
+                <p>
+                  Tylko jeśli mu na to pozwolisz. Ty masz pełną kontrolę nad
+                  tym, co jest widoczne dla klienta, a co zostaje tylko dla
+                  Ciebie i Twoich pracowników (np. notatki o kosztach
+                  wewnętrznych czy marży). Budoapka to narzędzie, które pracuje
+                  dla Ciebie, a nie przeciwko Tobie.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question">
+                <span
+                  >Dlaczego mam płacić 189 zł, skoro WhatsApp jest
+                  darmowy?</span
+                >
+                <span class="faq__icon"></span>
+              </button>
+              <div class="faq__answer">
+                <p>
+                  WhatsApp jest darmowy, dopóki nie stracisz przez niego
+                  pieniędzy. Darmowe narzędzia nie pilnują Twoich kosztorysów,
+                  nie generują raportów PDF i nie archiwizują zdjęć w sposób,
+                  który pozwoli Ci je znaleźć po roku. 189 zł to koszt jednego
+                  roboczogodziny dobrego fachowca. Budoapka oszczędza Ci tych
+                  godzin kilkanaście w miesiącu.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question">
+                <span>Co się stanie z moimi danymi, jeśli zrezygnuję?</span>
+                <span class="faq__icon"></span>
+              </button>
+              <div class="faq__answer">
+                <p>
+                  Twoje dane są bezpieczne i należą do Ciebie. Przed
+                  zakończeniem subskrypcji możesz wyeksportować całą
+                  dokumentację projektów do plików PDF. Nic nie ginie.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question">
+                <span>Czy mogę dodać do aplikacji swoich pracowników?</span>
+                <span class="faq__icon"></span>
+              </button>
+              <div class="faq__answer">
+                <p>
+                  Tak. W pakiecie możesz dodać do 100 osób. Twoi pracownicy mogą
+                  raportować postępy i dodawać zdjęcia bezpośrednio z budowy, na
+                  której ich nie ma, a Ty widzisz wszystko w swoim telefonie.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__cta">
+            <p>
+              <strong>Masz inne pytanie? Nie szukaj odpowiedzi sam.</strong>
+              <br />
+              Załóż darmowy Trial, a zadzwonimy do Ciebie jutro. Odpowiemy na
+              wszystko podczas wspólnego ustawiania Twojego pierwszego projektu.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq faq--first-steps" id="first-steps-section">
+        <div class="container">
+          <h2 class="section-title text-center">Pierwsze kroki</h2>
+
+          <p class="section-subtitle first-steps__subtitle">
+            Zacznij od krótkich materiałów i wdrażaj Budoapkę krok po kroku.
+            Każdy punkt prowadzi do filmu na YouTube.
+          </p>
+
+          <div class="first-steps__intro">
+            <p>
+              Najszybsza ścieżka startu: konto → pierwszy projekt → zadania →
+              dokumentacja.
+            </p>
+            <a
+              href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="first-steps__playlist-link"
+              >Otwórz całą playlistę</a
+            >
+          </div>
+
+          <div class="faq__accordion">
+            <div class="faq__item">
+              <button class="faq__question">
+                <span class="first-steps__question-text"
+                  ><span class="first-steps__step">Krok 1</span
+                  ><span class="first-steps__title"
+                    >Jak założyć konto w Budoapce</span
+                  ></span
+                >
+                <span class="faq__icon"></span>
+              </button>
+              <div class="faq__answer">
+                <p>
+                  Załóż konto w kilka minut i uruchom aplikację.
+                </p>
+                <p>
+                  <a
+                    href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="first-steps__video-link"
+                    >Zobacz film na YouTube</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question">
+                <span class="first-steps__question-text"
+                  ><span class="first-steps__step">Krok 2</span
+                  ><span class="first-steps__title">Prowadzenie zadań</span></span
+                >
+                <span class="faq__icon"></span>
+              </button>
+              <div class="faq__answer">
+                <p>
+                  Naucz się planować i rozliczać zadania w projekcie.
+                </p>
+                <p>
+                  <a
+                    href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="first-steps__video-link"
+                    >Zobacz film na YouTube</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question">
+                <span class="first-steps__question-text"
+                  ><span class="first-steps__step">Krok 3</span
+                  ><span class="first-steps__title">Dziennik inwestycji</span></span
+                >
+                <span class="faq__icon"></span>
+              </button>
+              <div class="faq__answer">
+                <p>
+                  Sprawdź, jak prowadzić dziennik i zapisywać postępy prac.
+                </p>
+                <p>
+                  <a
+                    href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="first-steps__video-link"
+                    >Zobacz film na YouTube</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question">
+                <span class="first-steps__question-text"
+                  ><span class="first-steps__step">Krok 4</span
+                  ><span class="first-steps__title">Projekt pokazowy</span></span
+                >
+                <span class="faq__icon"></span>
+              </button>
+              <div class="faq__answer">
+                <p>
+                  Zobacz gotowy projekt i skopiuj najlepszy schemat startu.
+                </p>
+                <p>
+                  <a
+                    href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="first-steps__video-link"
+                    >Zobacz film na YouTube</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question">
+                <span class="first-steps__question-text"
+                  ><span class="first-steps__step">Krok 5</span
+                  ><span class="first-steps__title">Zakładka ustalenia</span></span
+                >
+                <span class="faq__icon"></span>
+              </button>
+              <div class="faq__answer">
+                <p>
+                  Zapisuj ustalenia z klientem w jednym, uporządkowanym miejscu.
+                </p>
+                <p>
+                  <a
+                    href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="first-steps__video-link"
+                    >Zobacz film na YouTube</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question">
+                <span class="first-steps__question-text"
+                  ><span class="first-steps__step">Krok 6</span
+                  ><span class="first-steps__title">Roboty dodatkowe</span></span
+                >
+                <span class="faq__icon"></span>
+              </button>
+              <div class="faq__answer">
+                <p>
+                  Dodawaj roboty dodatkowe i miej pełną historię uzgodnień.
+                </p>
+                <p>
+                  <a
+                    href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="first-steps__video-link"
+                    >Zobacz film na YouTube</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question">
+                <span class="first-steps__question-text"
+                  ><span class="first-steps__step">Krok 7</span
+                  ><span class="first-steps__title"
+                    >Skanowanie paragonów i faktur</span
+                  ></span
+                >
+                <span class="faq__icon"></span>
+              </button>
+              <div class="faq__answer">
+                <p>
+                  Skanuj paragony i faktury, by szybciej porządkować koszty.
+                </p>
+                <p>
+                  <a
+                    href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="first-steps__video-link"
+                    >Zobacz film na YouTube</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question">
+                <span class="first-steps__question-text"
+                  ><span class="first-steps__step">Krok 8</span
+                  ><span class="first-steps__title"
+                    >Prowadzenie dokumentacji</span
+                  ></span
+                >
+                <span class="faq__icon"></span>
+              </button>
+              <div class="faq__answer">
+                <p>
+                  Prowadź dokumentację projektu tak, by wszystko łatwo odnaleźć.
+                </p>
+                <p>
+                  <a
+                    href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="first-steps__video-link"
+                    >Zobacz film na YouTube</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question">
+                <span class="first-steps__question-text"
+                  ><span class="first-steps__step">Krok 9</span
+                  ><span class="first-steps__title"
+                    >Jak zaprosić użytkowników do projektu</span
+                  ></span
+                >
+                <span class="faq__icon"></span>
+              </button>
+              <div class="faq__answer">
+                <p>
+                  Zaproś ekipę do projektu i współpracujcie w jednym miejscu.
+                </p>
+                <p>
+                  <a
+                    href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="first-steps__video-link"
+                    >Zobacz film na YouTube</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question">
+                <span class="first-steps__question-text"
+                  ><span class="first-steps__step">Krok 10</span
+                  ><span class="first-steps__title"
+                    >Stwórz swój pierwszy projekt - zaczynamy</span
+                  ></span
+                >
+                <span class="faq__icon"></span>
+              </button>
+              <div class="faq__answer">
+                <p>
+                  Przejdź pełny onboarding i postaw pierwszy projekt od zera.
+                </p>
+                <p>
+                  <a
+                    href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="first-steps__video-link"
+                    >Zobacz film na YouTube</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <button
+        class="sticky-fab"
+        onclick="
+          openContactModal();
+          return false;
+        "
+      >
+        <div class="fab-contact-container">Masz pytania? Napisz!</div>
+        <div class="fab-main">
+          <div class="fab-logo"></div>
+        </div>
+      </button>
     </main>
 
     <footer class="footer">
-        <div class="container footer__container">
-            <div class="footer__col">
-                <h4>O BUDOAPCE</h4>
-                <p>Budoapka to polska aplikacja stworzona przez praktyków, która zamienia chaos na budowie w poukładany i zyskowny proces. 
-                    Pomagamy małym firmom dokumentować postępy prac, pilnować kosztów materiałów i budować wizerunek profesjonalisty w oczach klienta.</p>
-                <div class="footer__socials">
-                    <a href="https://www.facebook.com/people/Budoapka/61579771226202/" aria-label="Facebook"><svg viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" />
-                        </svg></a>
-                   
-                    <a href="https://www.instagram.com/budoapka/" aria-label="Instagram"><svg viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.217.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122s-.013 3.056-.06 4.122c-.05 1.065-.218 1.79-.465 2.428a4.908 4.908 0 0 1-1.153 1.772A4.908 4.908 0 0 1 5.45 2.525c.637-.247 1.363-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 0 0-2.5 0 1.25 1.25 0 0 0 2.5 0zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" />
-                        </svg></a>
+      <div class="container footer__container">
+        <div class="footer__col">
+          <h4>O BUDOAPCE</h4>
+          <p>
+            Budoapka to polska aplikacja stworzona przez praktyków, która
+            zamienia chaos na budowie w poukładany i zyskowny proces. Pomagamy
+            małym firmom dokumentować postępy prac, pilnować kosztów materiałów
+            i budować wizerunek profesjonalisty w oczach klienta.
+          </p>
+          <div class="footer__socials">
+            <a
+              href="https://www.facebook.com/people/Budoapka/61579771226202/"
+              aria-label="Facebook"
+              ><svg viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"
+                /></svg
+            ></a>
 
-                    <a href="https://www.youtube.com/@Budoapka" aria-label="YouTube"><svg viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
-                        </svg></a>
-                </div>
-            </div>
+            <a href="https://www.instagram.com/budoapka/" aria-label="Instagram"
+              ><svg viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.217.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122s-.013 3.056-.06 4.122c-.05 1.065-.218 1.79-.465 2.428a4.908 4.908 0 0 1-1.153 1.772A4.908 4.908 0 0 1 5.45 2.525c.637-.247 1.363-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 0 0-2.5 0 1.25 1.25 0 0 0 2.5 0zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"
+                /></svg
+            ></a>
 
-            <div class="footer__col">
-                <h4>PRODUKT</h4>
-                <ul>
-                    <li><a href="#comparison-section">Funkcje</a></li>
-                    <li><a href="#pricing-section">Cennik</a></li>
-                    <li><a href="wykonczeniowcy.html">Dla Firm Wykończeniowych</a></li>
-                    <li><a href="architekci.html">Dla Architektów</a></li>
-                    <li><a href="stolarze.html">Dla Stolarzy</a></li>
-                </ul>
-            </div>
-
-            <div class="footer__col">
-                <h4>WSPARCIE I REGULAMINY</h4>
-                <ul>
-                    <li><a href="#faq-section">Centrum Pomocy / FAQ</a></li>
-                    <li><a href="#" onclick="openContactModal(); return false;">Kontakt</a></li>
-                    <li><a href="terms.html">Regulamin</a></li>
-                    <li><a href="policy.html">Polityka Prywatności</a></li>
-                    <li><a href="https://forms.gle/u3DDMghzJsPLjxky5" target="_blank">Formularz zwrotu środków</a></li>
-                </ul>
-            </div>
-
-            <div class="footer__col">
-                <h4>KONTAKT</h4>
-                <address>
-                    BUDOAPKA<br>
-                    Kraków, Polska<br>
-                    <a href="mailto:kontakt@budoapka.pl">kontakt@budoapka.pl</a><br>
-                </address>
-            </div>
+            <a href="https://www.youtube.com/@Budoapka" aria-label="YouTube"
+              ><svg viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+                /></svg
+            ></a>
+          </div>
         </div>
-        <div class="footer__bottom">
-            <p>© 2025 BUDOAPKA. Wszelkie prawa zastrzeżone.</p>
+
+        <div class="footer__col">
+          <h4>PRODUKT</h4>
+          <ul>
+            <li><a href="#comparison-section">Funkcje</a></li>
+            <li><a href="#pricing-section">Cennik</a></li>
+            <li><a href="wykonczeniowcy.html">Dla Firm Wykończeniowych</a></li>
+            <li><a href="architekci.html">Dla Architektów</a></li>
+            <li><a href="stolarze.html">Dla Stolarzy</a></li>
+          </ul>
         </div>
+
+        <div class="footer__col">
+          <h4>WSPARCIE I REGULAMINY</h4>
+          <ul>
+            <li><a href="#faq-section">Centrum Pomocy / FAQ</a></li>
+            <li>
+              <a
+                href="#"
+                onclick="
+                  openContactModal();
+                  return false;
+                "
+                >Kontakt</a
+              >
+            </li>
+            <li><a href="terms.html">Regulamin</a></li>
+            <li><a href="policy.html">Polityka Prywatności</a></li>
+            <li>
+              <a href="https://forms.gle/u3DDMghzJsPLjxky5" target="_blank"
+                >Formularz zwrotu środków</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>KONTAKT</h4>
+          <address>
+            BUDOAPKA<br />
+            Kraków, Polska<br />
+            <a href="mailto:kontakt@budoapka.pl">kontakt@budoapka.pl</a><br />
+          </address>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 BUDOAPKA. Wszelkie prawa zastrzeżone.</p>
+      </div>
     </footer>
 
     <div id="contactModal" class="modal">
-        <div class="modal__overlay" onclick="closeContactModal()"></div>
-        <div class="modal__content">
-            <div class="modal__header">
-                <h3>Skontaktuj się z nami</h3>
-                <button class="modal__close" onclick="closeContactModal()">&times;</button>
-            </div>
-            <div class="modal__body">
-                <form id="contactForm" class="contact-form">
-                    <div class="form-group">
-                        <label for="contactTitle">Temat</label>
-                        <input type="text" id="contactTitle" name="title" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="contactEmail">Email</label>
-                        <input type="email" id="contactEmail" name="email" required>
-                        <div id="emailError" class="error-message" style="display: none;">Nieprawidłowy format email</div>
-                    </div>
-                    <div class="form-group">
-                        <label for="contactDescription">Opis</label>
-                        <textarea id="contactDescription" name="description" rows="4" required></textarea>
-                    </div>
-                    <div class="form-actions">
-                        <button type="button" class="btn btn--secondary" onclick="closeContactModal()">Anuluj</button>
-                        <button type="submit" class="btn btn--primary" id="submitBtn">
-                            <span class="btn-text">Wyślij</span>
-                            <span class="btn-spinner" style="display: none;">Wysyłanie...</span>
-                        </button>
-                    </div>
-                </form>
-                <div id="successMessage" class="success-message" style="display: none;">
-                    <p>Wiadomość została wysłana pomyślnie!</p>
-                </div>
-                <div id="errorMessage" class="error-message" style="display: none;">
-                    <p>Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie.</p>
-                </div>
-            </div>
+      <div class="modal__overlay" onclick="closeContactModal()"></div>
+      <div class="modal__content">
+        <div class="modal__header">
+          <h3>Skontaktuj się z nami</h3>
+          <button class="modal__close" onclick="closeContactModal()">
+            &times;
+          </button>
         </div>
+        <div class="modal__body">
+          <form id="contactForm" class="contact-form">
+            <div class="form-group">
+              <label for="contactTitle">Temat</label>
+              <input type="text" id="contactTitle" name="title" required />
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email</label>
+              <input type="email" id="contactEmail" name="email" required />
+              <div id="emailError" class="error-message" style="display: none">
+                Nieprawidłowy format email
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactDescription">Opis</label>
+              <textarea
+                id="contactDescription"
+                name="description"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+            <div class="form-actions">
+              <button
+                type="button"
+                class="btn btn--secondary"
+                onclick="closeContactModal()"
+              >
+                Anuluj
+              </button>
+              <button type="submit" class="btn btn--primary" id="submitBtn">
+                <span class="btn-text">Wyślij</span>
+                <span class="btn-spinner" style="display: none"
+                  >Wysyłanie...</span
+                >
+              </button>
+            </div>
+          </form>
+          <div
+            id="successMessage"
+            class="success-message"
+            style="display: none"
+          >
+            <p>Wiadomość została wysłana pomyślnie!</p>
+          </div>
+          <div id="errorMessage" class="error-message" style="display: none">
+            <p>Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie.</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div id="demoModal" class="modal">
-        <div class="modal__overlay" onclick="closeDemoModal()"></div>
-        <div class="modal__content">
-            <div class="modal__header">
-                <h3>Umów się na prezentację DEMO</h3>
-                <button class="modal__close" onclick="closeDemoModal()">&times;</button>
-            </div>
-            <div class="modal__body">
-                <form id="demoForm" class="contact-form">
-                    <div class="form-group">
-                        <label for="demoEmail">Email</label>
-                        <input type="email" id="demoEmail" name="email" required>
-                        <div id="demoEmailError" class="error-message" style="display: none;">Nieprawidłowy format email</div>
-                    </div>
-                    <div class="form-group">
-                        <label for="demoDescription">Opis (opcjonalnie)</label>
-                        <textarea id="demoDescription" name="description" rows="4" placeholder="Podaj nam swoją dostępność lub numer telefonu w celu kontaktu."></textarea>
-                    </div>
-                    <div class="form-actions">
-                        <button type="button" class="btn btn--secondary" onclick="closeDemoModal()">Anuluj</button>
-                        <button type="submit" class="btn btn--primary" id="demoSubmitBtn">
-                            <span class="btn-text">Umów prezentację</span>
-                            <span class="btn-spinner" style="display: none;">Wysyłanie...</span>
-                        </button>
-                    </div>
-                </form>
-                <div id="demoSuccessMessage" class="success-message" style="display: none;">
-                    <p>Zgłoszenie zostało wysłane pomyślnie! Skontaktujemy się z Tobą wkrótce.</p>
-                </div>
-                <div id="demoErrorMessage" class="error-message" style="display: none;">
-                    <p>Wystąpił błąd podczas wysyłania zgłoszenia. Spróbuj ponownie.</p>
-                </div>
-            </div>
+      <div class="modal__overlay" onclick="closeDemoModal()"></div>
+      <div class="modal__content">
+        <div class="modal__header">
+          <h3>Umów się na prezentację DEMO</h3>
+          <button class="modal__close" onclick="closeDemoModal()">
+            &times;
+          </button>
         </div>
+        <div class="modal__body">
+          <form id="demoForm" class="contact-form">
+            <div class="form-group">
+              <label for="demoEmail">Email</label>
+              <input type="email" id="demoEmail" name="email" required />
+              <div
+                id="demoEmailError"
+                class="error-message"
+                style="display: none"
+              >
+                Nieprawidłowy format email
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="demoDescription">Opis (opcjonalnie)</label>
+              <textarea
+                id="demoDescription"
+                name="description"
+                rows="4"
+                placeholder="Podaj nam swoją dostępność lub numer telefonu w celu kontaktu."
+              ></textarea>
+            </div>
+            <div class="form-actions">
+              <button
+                type="button"
+                class="btn btn--secondary"
+                onclick="closeDemoModal()"
+              >
+                Anuluj
+              </button>
+              <button type="submit" class="btn btn--primary" id="demoSubmitBtn">
+                <span class="btn-text">Umów prezentację</span>
+                <span class="btn-spinner" style="display: none"
+                  >Wysyłanie...</span
+                >
+              </button>
+            </div>
+          </form>
+          <div
+            id="demoSuccessMessage"
+            class="success-message"
+            style="display: none"
+          >
+            <p>
+              Zgłoszenie zostało wysłane pomyślnie! Skontaktujemy się z Tobą
+              wkrótce.
+            </p>
+          </div>
+          <div
+            id="demoErrorMessage"
+            class="error-message"
+            style="display: none"
+          >
+            <p>Wystąpił błąd podczas wysyłania zgłoszenia. Spróbuj ponownie.</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div id="cookieBanner" class="cookie-banner">
-        <div class="cookie-banner__content">
-            <div class="cookie-banner__text">
-                <h3>🍪 Pliki cookies i analityka</h3>
-                <p>Używamy plików cookies i narzędzi analitycznych, aby poprawić funkcjonalność naszej strony i lepiej zrozumieć, jak z niej korzystasz. Możesz zaakceptować wszystkie pliki cookies lub odrzucić je i zostać przekierowanym do Google.</p>
-            </div>
-            <div class="cookie-banner__buttons">
-                <button id="acceptCookies" class="cookie-btn cookie-btn--accept">Akceptuję</button>
-                <button id="rejectCookies" class="cookie-btn cookie-btn--reject">Odrzuć</button>
-            </div>
+      <div class="cookie-banner__content">
+        <div class="cookie-banner__text">
+          <h3>🍪 Pliki cookies i analityka</h3>
+          <p>
+            Używamy plików cookies i narzędzi analitycznych, aby poprawić
+            funkcjonalność naszej strony i lepiej zrozumieć, jak z niej
+            korzystasz. Możesz zaakceptować wszystkie pliki cookies lub odrzucić
+            je i zostać przekierowanym do Google.
+          </p>
         </div>
+        <div class="cookie-banner__buttons">
+          <button id="acceptCookies" class="cookie-btn cookie-btn--accept">
+            Akceptuję
+          </button>
+          <button id="rejectCookies" class="cookie-btn cookie-btn--reject">
+            Odrzuć
+          </button>
+        </div>
+      </div>
     </div>
 
     <script src="script.js" defer></script>
     <script>
-        function toggleCard(card) {
-            // Zamknij inne karty (efekt akordeonu)
-            const allCards = document.querySelectorAll('.collaboration-card');
-            allCards.forEach(c => {
-                if (c !== card) c.classList.remove('active');
-            });
-            // Przełącz klasę active na klikniętej karcie
-            card.classList.toggle('active');
-        }
+      function toggleCard(card) {
+        // Zamknij inne karty (efekt akordeonu)
+        const allCards = document.querySelectorAll(".collaboration-card");
+        allCards.forEach((c) => {
+          if (c !== card) c.classList.remove("active");
+        });
+        // Przełącz klasę active na klikniętej karcie
+        card.classList.toggle("active");
+      }
     </script>
-
-</body>
+  </body>
 </html>

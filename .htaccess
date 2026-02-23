@@ -1,14 +1,22 @@
 RewriteEngine On
 
-# Redirect .html URLs to non-.html URLs
+# Redirect .html URLs to non-.html URLs (except view.html)
 # This ensures that if someone accesses /stolarze.html, they get redirected to /stolarze
 RewriteCond %{THE_REQUEST} ^GET\ /[^?\s]+\.html
+RewriteCond %{REQUEST_URI} !^/view\.html
 RewriteRule ^(.*)\.html$ /$1 [R=301,L,NE]
 
-# Rewrite non-.html URLs to .html files
+# Handle /view/{slug} - Route to view.html with id parameter
+# Example: /view/my-company-slug becomes /view.html?id=my-company-slug
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^view/([a-zA-Z0-9_-]+)/?$ /view.html?id=$1 [L,QSA,NC]
+
+# Rewrite non-.html URLs to .html files (but not view)
 # This makes /stolarze actually load /stolarze.html
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/view$
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html [L]
 

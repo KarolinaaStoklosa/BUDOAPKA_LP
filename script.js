@@ -57,19 +57,23 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('resize', updateArrowState);
     }
 
-    // Obsługa akordeonu FAQ
-    const faqItems = document.querySelectorAll('.faq__item');
-    if (faqItems) {
-        faqItems.forEach(item => {
-            const question = item.querySelector('.faq__question');
-            question.addEventListener('click', () => {
-                const wasActive = item.classList.contains('active');
-                faqItems.forEach(otherItem => {
-                    otherItem.classList.remove('active');
+    // Obsługa akordeonu FAQ (każda sekcja niezależnie)
+    const faqAccordions = document.querySelectorAll('.faq__accordion');
+    if (faqAccordions.length) {
+        faqAccordions.forEach(accordion => {
+            const accordionItems = accordion.querySelectorAll('.faq__item');
+            accordionItems.forEach(item => {
+                const question = item.querySelector('.faq__question');
+                if (!question) return;
+                question.addEventListener('click', () => {
+                    const wasActive = item.classList.contains('active');
+                    accordionItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                    });
+                    if (!wasActive) {
+                        item.classList.add('active');
+                    }
                 });
-                if (!wasActive) {
-                    item.classList.add('active');
-                }
             });
         });
     }
