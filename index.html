@@ -1762,279 +1762,235 @@
         </div>
       </section>
 
-      <section class="faq faq--first-steps" id="first-steps-section">
+      <section class="first-steps-plan" id="first-steps-section">
         <div class="container">
           <h2 class="section-title text-center">Pierwsze kroki</h2>
 
-          <p class="section-subtitle first-steps__subtitle">
-            Zacznij od krótkich materiałów i wdrażaj Budoapkę krok po kroku.
-            Każdy punkt prowadzi do filmu na YouTube.
+          <p class="section-subtitle first-steps-plan__subtitle">
+            To nie onboarding do odklikania, tylko szybki przewodnik po
+            zakładkach i funkcjach. Zobacz, co możesz zrobić w każdej sekcji
+            aplikacji.
           </p>
 
-          <div class="first-steps__intro">
-            <p>
-              Najszybsza ścieżka startu: konto → pierwszy projekt → zadania →
-              dokumentacja.
-            </p>
+          <div class="first-steps-plan__head">
+            <p class="first-steps-plan__summary" id="firstStepsSummary">Obejrzano 0/10 kroków</p>
+            <div class="first-steps-plan__progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" aria-label="Postęp oglądania kroków Budoapki">
+              <span class="first-steps-plan__progress-fill" id="firstStepsProgress"></span>
+            </div>
             <a
               href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP"
               target="_blank"
               rel="noopener noreferrer"
-              class="first-steps__playlist-link"
-              >Otwórz całą playlistę</a
+              class="first-steps-plan__playlist-link"
+              >Otwórz pełną playlistę</a
             >
           </div>
 
-          <div class="faq__accordion">
-            <div class="faq__item">
-              <button class="faq__question">
-                <span class="first-steps__question-text"
-                  ><span class="first-steps__step">Krok 1</span
-                  ><span class="first-steps__title"
-                    >Jak założyć konto w Budoapce</span
-                  ></span
-                >
-                <span class="faq__icon"></span>
+          <div class="first-steps-plan__grid" id="firstStepsGrid">
+            <article class="first-step-card is-current" data-step="1">
+              <button class="first-step-card__toggle" aria-expanded="true" aria-controls="first-step-content-1">
+                <span class="first-step-card__meta">
+                  <span class="first-step-card__badge">Krok 1</span>
+                  <span class="first-step-card__time">1:22 min</span>
+                </span>
+                <span class="first-step-card__title">Jak założyć konto w Budoapce</span>
+                <span class="first-step-card__result">Poznaj start aplikacji i konfigurację konta.</span>
+                <span class="first-step-card__chevron" aria-hidden="true"></span>
               </button>
-              <div class="faq__answer">
-                <p>
-                  Załóż konto w kilka minut i uruchom aplikację.
-                </p>
-                <p>
-                  <a
-                    href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="first-steps__video-link"
-                    >Zobacz film na YouTube</a
-                  >
-                </p>
+              <div class="first-step-card__content is-open" id="first-step-content-1">
+                <p>Film pokazuje proces rejestracji i pierwsze uruchomienie aplikacji.</p>
+                <div class="first-step-card__actions">
+                  <a href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP" target="_blank" rel="noopener noreferrer" class="first-step-card__btn first-step-card__btn--video">Obejrzyj 1-min film</a>
+                  <a href="https://app.budoapka.pl" class="first-step-card__btn first-step-card__btn--app">Otwórz zakładkę w aplikacji</a>
+                </div>
+                <button class="first-step-card__done" type="button">Oznacz jako obejrzane</button>
               </div>
-            </div>
+            </article>
 
-            <div class="faq__item">
-              <button class="faq__question">
-                <span class="first-steps__question-text"
-                  ><span class="first-steps__step">Krok 2</span
-                  ><span class="first-steps__title">Prowadzenie zadań</span></span
-                >
-                <span class="faq__icon"></span>
+            <article class="first-step-card" data-step="2">
+              <button class="first-step-card__toggle" aria-expanded="false" aria-controls="first-step-content-2">
+                <span class="first-step-card__meta">
+                  <span class="first-step-card__badge">Krok 2</span>
+                  <span class="first-step-card__time">3:05 min</span>
+                </span>
+                <span class="first-step-card__title">Prowadzenie zadań</span>
+                <span class="first-step-card__result">Zobacz, jak planować i monitorować prace zespołu.</span>
+                <span class="first-step-card__chevron" aria-hidden="true"></span>
               </button>
-              <div class="faq__answer">
-                <p>
-                  Naucz się planować i rozliczać zadania w projekcie.
-                </p>
-                <p>
-                  <a
-                    href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="first-steps__video-link"
-                    >Zobacz film na YouTube</a
-                  >
-                </p>
+              <div class="first-step-card__content" id="first-step-content-2">
+                <p>Film pokazuje zarządzanie zadaniami, statusami i terminami.</p>
+                <div class="first-step-card__actions">
+                  <a href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP" target="_blank" rel="noopener noreferrer" class="first-step-card__btn first-step-card__btn--video">Obejrzyj 3-min film</a>
+                  <a href="https://app.budoapka.pl" class="first-step-card__btn first-step-card__btn--app">Otwórz zakładkę w aplikacji</a>
+                </div>
+                <button class="first-step-card__done" type="button">Oznacz jako obejrzane</button>
               </div>
-            </div>
+            </article>
 
-            <div class="faq__item">
-              <button class="faq__question">
-                <span class="first-steps__question-text"
-                  ><span class="first-steps__step">Krok 3</span
-                  ><span class="first-steps__title">Dziennik inwestycji</span></span
-                >
-                <span class="faq__icon"></span>
+            <article class="first-step-card" data-step="3">
+              <button class="first-step-card__toggle" aria-expanded="false" aria-controls="first-step-content-3">
+                <span class="first-step-card__meta">
+                  <span class="first-step-card__badge">Krok 3</span>
+                  <span class="first-step-card__time">2:36 min</span>
+                </span>
+                <span class="first-step-card__title">Dziennik inwestycji</span>
+                <span class="first-step-card__result">Poznaj dokumentowanie postępów i historii prac.</span>
+                <span class="first-step-card__chevron" aria-hidden="true"></span>
               </button>
-              <div class="faq__answer">
-                <p>
-                  Sprawdź, jak prowadzić dziennik i zapisywać postępy prac.
-                </p>
-                <p>
-                  <a
-                    href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="first-steps__video-link"
-                    >Zobacz film na YouTube</a
-                  >
-                </p>
+              <div class="first-step-card__content" id="first-step-content-3">
+                <p>Film prowadzi przez dodawanie wpisów i zdjęć z realizacji.</p>
+                <div class="first-step-card__actions">
+                  <a href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP" target="_blank" rel="noopener noreferrer" class="first-step-card__btn first-step-card__btn--video">Obejrzyj 3-min film</a>
+                  <a href="https://app.budoapka.pl" class="first-step-card__btn first-step-card__btn--app">Otwórz zakładkę w aplikacji</a>
+                </div>
+                <button class="first-step-card__done" type="button">Oznacz jako obejrzane</button>
               </div>
-            </div>
+            </article>
 
-            <div class="faq__item">
-              <button class="faq__question">
-                <span class="first-steps__question-text"
-                  ><span class="first-steps__step">Krok 4</span
-                  ><span class="first-steps__title">Projekt pokazowy</span></span
-                >
-                <span class="faq__icon"></span>
+            <article class="first-step-card" data-step="4">
+              <button class="first-step-card__toggle" aria-expanded="false" aria-controls="first-step-content-4">
+                <span class="first-step-card__meta">
+                  <span class="first-step-card__badge">Krok 4</span>
+                  <span class="first-step-card__time">2:46 min</span>
+                </span>
+                <span class="first-step-card__title">Projekt pokazowy</span>
+                <span class="first-step-card__result">Zobacz gotowy projekt i pełny obraz pracy w aplikacji.</span>
+                <span class="first-step-card__chevron" aria-hidden="true"></span>
               </button>
-              <div class="faq__answer">
-                <p>
-                  Zobacz gotowy projekt i skopiuj najlepszy schemat startu.
-                </p>
-                <p>
-                  <a
-                    href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="first-steps__video-link"
-                    >Zobacz film na YouTube</a
-                  >
-                </p>
+              <div class="first-step-card__content" id="first-step-content-4">
+                <p>Film pokazuje, jak wygląda wzorcowo prowadzona inwestycja.</p>
+                <div class="first-step-card__actions">
+                  <a href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP" target="_blank" rel="noopener noreferrer" class="first-step-card__btn first-step-card__btn--video">Obejrzyj 4-min film</a>
+                  <a href="https://app.budoapka.pl" class="first-step-card__btn first-step-card__btn--app">Otwórz zakładkę w aplikacji</a>
+                </div>
+                <button class="first-step-card__done" type="button">Oznacz jako obejrzane</button>
               </div>
-            </div>
+            </article>
 
-            <div class="faq__item">
-              <button class="faq__question">
-                <span class="first-steps__question-text"
-                  ><span class="first-steps__step">Krok 5</span
-                  ><span class="first-steps__title">Zakładka ustalenia</span></span
-                >
-                <span class="faq__icon"></span>
+            <article class="first-step-card" data-step="5">
+              <button class="first-step-card__toggle" aria-expanded="false" aria-controls="first-step-content-5">
+                <span class="first-step-card__meta">
+                  <span class="first-step-card__badge">Krok 5</span>
+                  <span class="first-step-card__time">2:50 min</span>
+                </span>
+                <span class="first-step-card__title">Zakładka ustalenia</span>
+                <span class="first-step-card__result">Poznaj miejsce do zapisywania decyzji i uzgodnień.</span>
+                <span class="first-step-card__chevron" aria-hidden="true"></span>
               </button>
-              <div class="faq__answer">
-                <p>
-                  Zapisuj ustalenia z klientem w jednym, uporządkowanym miejscu.
-                </p>
-                <p>
-                  <a
-                    href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="first-steps__video-link"
-                    >Zobacz film na YouTube</a
-                  >
-                </p>
+              <div class="first-step-card__content" id="first-step-content-5">
+                <p>Film pokazuje, jak utrzymać wszystkie ustalenia w jednym miejscu.</p>
+                <div class="first-step-card__actions">
+                  <a href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP" target="_blank" rel="noopener noreferrer" class="first-step-card__btn first-step-card__btn--video">Obejrzyj 3-min film</a>
+                  <a href="https://app.budoapka.pl" class="first-step-card__btn first-step-card__btn--app">Otwórz zakładkę w aplikacji</a>
+                </div>
+                <button class="first-step-card__done" type="button">Oznacz jako obejrzane</button>
               </div>
-            </div>
+            </article>
 
-            <div class="faq__item">
-              <button class="faq__question">
-                <span class="first-steps__question-text"
-                  ><span class="first-steps__step">Krok 6</span
-                  ><span class="first-steps__title">Roboty dodatkowe</span></span
-                >
-                <span class="faq__icon"></span>
+            <article class="first-step-card" data-step="6">
+              <button class="first-step-card__toggle" aria-expanded="false" aria-controls="first-step-content-6">
+                <span class="first-step-card__meta">
+                  <span class="first-step-card__badge">Krok 6</span>
+                  <span class="first-step-card__time">2:25 min</span>
+                </span>
+                <span class="first-step-card__title">Roboty dodatkowe</span>
+                <span class="first-step-card__result">Dowiedz się, jak ewidencjonować prace spoza podstawowego zakresu.</span>
+                <span class="first-step-card__chevron" aria-hidden="true"></span>
               </button>
-              <div class="faq__answer">
-                <p>
-                  Dodawaj roboty dodatkowe i miej pełną historię uzgodnień.
-                </p>
-                <p>
-                  <a
-                    href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="first-steps__video-link"
-                    >Zobacz film na YouTube</a
-                  >
-                </p>
+              <div class="first-step-card__content" id="first-step-content-6">
+                <p>Film pokazuje obsługę i porządkowanie robót dodatkowych.</p>
+                <div class="first-step-card__actions">
+                  <a href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP" target="_blank" rel="noopener noreferrer" class="first-step-card__btn first-step-card__btn--video">Obejrzyj 3-min film</a>
+                  <a href="https://app.budoapka.pl" class="first-step-card__btn first-step-card__btn--app">Otwórz zakładkę w aplikacji</a>
+                </div>
+                <button class="first-step-card__done" type="button">Oznacz jako obejrzane</button>
               </div>
-            </div>
+            </article>
 
-            <div class="faq__item">
-              <button class="faq__question">
-                <span class="first-steps__question-text"
-                  ><span class="first-steps__step">Krok 7</span
-                  ><span class="first-steps__title"
-                    >Skanowanie paragonów i faktur</span
-                  ></span
-                >
-                <span class="faq__icon"></span>
+            <article class="first-step-card" data-step="7">
+              <button class="first-step-card__toggle" aria-expanded="false" aria-controls="first-step-content-7">
+                <span class="first-step-card__meta">
+                  <span class="first-step-card__badge">Krok 7</span>
+                  <span class="first-step-card__time">2:28 min</span>
+                </span>
+                <span class="first-step-card__title">Skanowanie paragonów i faktur</span>
+                <span class="first-step-card__result">Poznaj szybkie dodawanie kosztów z dokumentów.</span>
+                <span class="first-step-card__chevron" aria-hidden="true"></span>
               </button>
-              <div class="faq__answer">
-                <p>
-                  Skanuj paragony i faktury, by szybciej porządkować koszty.
-                </p>
-                <p>
-                  <a
-                    href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="first-steps__video-link"
-                    >Zobacz film na YouTube</a
-                  >
-                </p>
+              <div class="first-step-card__content" id="first-step-content-7">
+                <p>Film pokazuje skanowanie i porządkowanie dokumentów kosztowych.</p>
+                <div class="first-step-card__actions">
+                  <a href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP" target="_blank" rel="noopener noreferrer" class="first-step-card__btn first-step-card__btn--video">Obejrzyj 3-min film</a>
+                  <a href="https://app.budoapka.pl" class="first-step-card__btn first-step-card__btn--app">Otwórz zakładkę w aplikacji</a>
+                </div>
+                <button class="first-step-card__done" type="button">Oznacz jako obejrzane</button>
               </div>
-            </div>
+            </article>
 
-            <div class="faq__item">
-              <button class="faq__question">
-                <span class="first-steps__question-text"
-                  ><span class="first-steps__step">Krok 8</span
-                  ><span class="first-steps__title"
-                    >Prowadzenie dokumentacji</span
-                  ></span
-                >
-                <span class="faq__icon"></span>
+            <article class="first-step-card" data-step="8">
+              <button class="first-step-card__toggle" aria-expanded="false" aria-controls="first-step-content-8">
+                <span class="first-step-card__meta">
+                  <span class="first-step-card__badge">Krok 8</span>
+                  <span class="first-step-card__time">2:36 min</span>
+                </span>
+                <span class="first-step-card__title">Prowadzenie dokumentacji</span>
+                <span class="first-step-card__result">Zobacz, jak utrzymać porządek dokumentów projektu.</span>
+                <span class="first-step-card__chevron" aria-hidden="true"></span>
               </button>
-              <div class="faq__answer">
-                <p>
-                  Prowadź dokumentację projektu tak, by wszystko łatwo odnaleźć.
-                </p>
-                <p>
-                  <a
-                    href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="first-steps__video-link"
-                    >Zobacz film na YouTube</a
-                  >
-                </p>
+              <div class="first-step-card__content" id="first-step-content-8">
+                <p>Film pokazuje układanie dokumentacji i szybki dostęp do plików.</p>
+                <div class="first-step-card__actions">
+                  <a href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP" target="_blank" rel="noopener noreferrer" class="first-step-card__btn first-step-card__btn--video">Obejrzyj 3-min film</a>
+                  <a href="https://app.budoapka.pl" class="first-step-card__btn first-step-card__btn--app">Otwórz zakładkę w aplikacji</a>
+                </div>
+                <button class="first-step-card__done" type="button">Oznacz jako obejrzane</button>
               </div>
-            </div>
+            </article>
 
-            <div class="faq__item">
-              <button class="faq__question">
-                <span class="first-steps__question-text"
-                  ><span class="first-steps__step">Krok 9</span
-                  ><span class="first-steps__title"
-                    >Jak zaprosić użytkowników do projektu</span
-                  ></span
-                >
-                <span class="faq__icon"></span>
+            <article class="first-step-card" data-step="9">
+              <button class="first-step-card__toggle" aria-expanded="false" aria-controls="first-step-content-9">
+                <span class="first-step-card__meta">
+                  <span class="first-step-card__badge">Krok 9</span>
+                  <span class="first-step-card__time">3:05 min</span>
+                </span>
+                <span class="first-step-card__title">Jak zaprosić użytkowników do projektu</span>
+                <span class="first-step-card__result">Poznaj dodawanie członków zespołu do inwestycji.</span>
+                <span class="first-step-card__chevron" aria-hidden="true"></span>
               </button>
-              <div class="faq__answer">
-                <p>
-                  Zaproś ekipę do projektu i współpracujcie w jednym miejscu.
-                </p>
-                <p>
-                  <a
-                    href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="first-steps__video-link"
-                    >Zobacz film na YouTube</a
-                  >
-                </p>
+              <div class="first-step-card__content" id="first-step-content-9">
+                <p>Film pokazuje zapraszanie użytkowników i współpracę w projekcie.</p>
+                <div class="first-step-card__actions">
+                  <a href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP" target="_blank" rel="noopener noreferrer" class="first-step-card__btn first-step-card__btn--video">Obejrzyj 3-min film</a>
+                  <a href="https://app.budoapka.pl" class="first-step-card__btn first-step-card__btn--app">Otwórz zakładkę w aplikacji</a>
+                </div>
+                <button class="first-step-card__done" type="button">Oznacz jako obejrzane</button>
               </div>
-            </div>
+            </article>
 
-            <div class="faq__item">
-              <button class="faq__question">
-                <span class="first-steps__question-text"
-                  ><span class="first-steps__step">Krok 10</span
-                  ><span class="first-steps__title"
-                    >Stwórz swój pierwszy projekt - zaczynamy</span
-                  ></span
-                >
-                <span class="faq__icon"></span>
+            <article class="first-step-card" data-step="10">
+              <button class="first-step-card__toggle" aria-expanded="false" aria-controls="first-step-content-10">
+                <span class="first-step-card__meta">
+                  <span class="first-step-card__badge">Krok 10</span>
+                  <span class="first-step-card__time">3:12 min</span>
+                </span>
+                <span class="first-step-card__title">Stwórz swój pierwszy projekt - zaczynamy</span>
+                <span class="first-step-card__result">Zobacz pełne przejście od zera do gotowego projektu.</span>
+                <span class="first-step-card__chevron" aria-hidden="true"></span>
               </button>
-              <div class="faq__answer">
-                <p>
-                  Przejdź pełny onboarding i postaw pierwszy projekt od zera.
-                </p>
-                <p>
-                  <a
-                    href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="first-steps__video-link"
-                    >Zobacz film na YouTube</a
-                  >
-                </p>
+              <div class="first-step-card__content" id="first-step-content-10">
+                <p>Film prowadzi przez cały proces tworzenia pierwszego projektu.</p>
+                <div class="first-step-card__actions">
+                  <a href="https://www.youtube.com/playlist?list=PLwcgiukv3viP_A6nQWDhBLb8Ul-pgR-CP" target="_blank" rel="noopener noreferrer" class="first-step-card__btn first-step-card__btn--video">Obejrzyj 4-min film</a>
+                  <a href="https://app.budoapka.pl" class="first-step-card__btn first-step-card__btn--app">Otwórz zakładkę w aplikacji</a>
+                </div>
+                <button class="first-step-card__done" type="button">Oznacz jako obejrzane</button>
               </div>
-            </div>
+            </article>
+          </div>
+
+          <div class="first-steps-plan__final-cta" id="firstStepsFinalCta">
+            <p>Masz komplet! Znasz już najważniejsze zakładki Budoapki.</p>
+            <a href="https://app.budoapka.pl/demo" class="btn btn--dark-cta">Zobacz pełny projekt pokazowy</a>
           </div>
         </div>
       </section>
