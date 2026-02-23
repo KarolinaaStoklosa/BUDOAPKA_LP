@@ -21,25 +21,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // ULEPSZONA OBSŁUGA SUWAKA OPINII
-    const slider = document.querySelector('.testimonial-slider');
-    const prevBtn = document.querySelector('.slider-btn--prev');
-    const nextBtn = document.querySelector('.slider-btn--next');
+    const setupHorizontalSlider = ({ sliderSelector, cardSelector, prevSelector, nextSelector, gap = 16 }) => {
+        const slider = document.querySelector(sliderSelector);
+        const prevBtn = document.querySelector(prevSelector);
+        const nextBtn = document.querySelector(nextSelector);
 
-    if (slider && prevBtn && nextBtn) {
+        if (!slider || !prevBtn || !nextBtn) return;
+
         const updateArrowState = () => {
-            if (!slider || !prevBtn || !nextBtn) return;
-            const tolerance = 1; 
-            prevBtn.classList.toggle('is-hidden', slider.scrollLeft <= tolerance);
+            const tolerance = 4;
             const maxScroll = slider.scrollWidth - slider.clientWidth;
-            nextBtn.classList.toggle('is-hidden', slider.scrollLeft >= maxScroll - tolerance);
+            const left = Math.max(0, Math.round(slider.scrollLeft));
+            prevBtn.classList.toggle('is-hidden', left <= tolerance);
+            nextBtn.classList.toggle('is-hidden', left >= maxScroll - tolerance);
         };
 
         const scrollSlider = (direction) => {
-            const card = slider.querySelector('.testimonial-card');
+            const card = slider.querySelector(cardSelector);
             if (!card) return;
             const cardWidth = card.offsetWidth;
-            const gap = 30; // Wartość 'gap' z CSS
             const scrollAmount = cardWidth + gap;
             slider.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
         };
@@ -50,12 +50,31 @@ document.addEventListener('DOMContentLoaded', () => {
         let scrollTimer;
         slider.addEventListener('scroll', () => {
             clearTimeout(scrollTimer);
-            scrollTimer = setTimeout(updateArrowState, 150);
+            scrollTimer = setTimeout(updateArrowState, 120);
         });
 
         window.addEventListener('load', updateArrowState);
         window.addEventListener('resize', updateArrowState);
-    }
+        updateArrowState();
+        requestAnimationFrame(updateArrowState);
+    };
+
+    // Obsługa suwaków
+    setupHorizontalSlider({
+        sliderSelector: '.testimonial-slider',
+        cardSelector: '.testimonial-card',
+        prevSelector: '.slider-btn--prev',
+        nextSelector: '.slider-btn--next',
+        gap: 30
+    });
+
+    setupHorizontalSlider({
+        sliderSelector: '#firstStepsCarousel',
+        cardSelector: '.first-step-video-card',
+        prevSelector: '.first-steps-slider-btn--prev',
+        nextSelector: '.first-steps-slider-btn--next',
+        gap: 16
+    });
 
     // Obsługa akordeonu FAQ (każda sekcja niezależnie)
     const faqAccordions = document.querySelectorAll('.faq__accordion');
@@ -76,122 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
         });
-    }
-
-    // Interaktywny Plan Startu
-    const firstStepsGrid = document.getElementById('firstStepsGrid');
-    if (firstStepsGrid) {
-        const stepCards = Array.from(firstStepsGrid.querySelectorAll('.first-step-card'));
-        const progressFill = document.getElementById('firstStepsProgress');
-        const progressSummary = document.getElementById('firstStepsSummary');
-        const finalCta = document.getElementById('firstStepsFinalCta');
-        const progressTrack = document.querySelector('.first-steps-plan__progress-track');
-        const storageKey = 'firstStepsWatchedSteps';
-
-        const savedSteps = (() => {
-            try {
-                const parsed = JSON.parse(localStorage.getItem(storageKey) || '[]');
-                return Array.isArray(parsed) ? parsed : [];
-            } catch {
-                return [];
-            }
-        })();
-
-        const openStep = (cardToOpen) => {
-            stepCards.forEach(card => {
-                const toggle = card.querySelector('.first-step-card__toggle');
-                const content = card.querySelector('.first-step-card__content');
-                const shouldOpen = card === cardToOpen;
-                card.classList.toggle('is-open', shouldOpen);
-                if (content) content.classList.toggle('is-open', shouldOpen);
-                if (toggle) toggle.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
-            });
-        };
-
-        const updateCurrentStep = () => {
-            stepCards.forEach(card => card.classList.remove('is-current'));
-            const nextCard = stepCards.find(card => !card.classList.contains('is-completed'));
-            if (nextCard) {
-                nextCard.classList.add('is-current');
-            }
-        };
-
-        const updateProgress = () => {
-            const completedCount = stepCards.filter(card => card.classList.contains('is-completed')).length;
-            const totalCount = stepCards.length;
-            const percentage = totalCount > 0 ? (completedCount / totalCount) * 100 : 0;
-
-            if (progressFill) {
-                progressFill.style.width = `${percentage}%`;
-            }
-
-            if (progressSummary) {
-                progressSummary.textContent = `Obejrzano ${completedCount}/${totalCount} kroków`;
-            }
-
-            if (progressTrack) {
-                progressTrack.setAttribute('aria-valuenow', String(completedCount));
-                progressTrack.setAttribute('aria-valuemax', String(totalCount));
-            }
-
-            if (finalCta) {
-                finalCta.classList.toggle('is-visible', completedCount === totalCount && totalCount > 0);
-            }
-
-            updateCurrentStep();
-        };
-
-        stepCards.forEach((card, index) => {
-            const stepNumber = index + 1;
-            const toggle = card.querySelector('.first-step-card__toggle');
-            const doneButton = card.querySelector('.first-step-card__done');
-
-            if (savedSteps.includes(stepNumber)) {
-                card.classList.add('is-completed');
-                if (doneButton) {
-                    doneButton.textContent = 'Krok obejrzany';
-                }
-            }
-
-            if (toggle) {
-                toggle.addEventListener('click', () => {
-                    const isOpen = card.classList.contains('is-open');
-                    if (isOpen) {
-                        stepCards.forEach(item => {
-                            item.classList.remove('is-open');
-                            const itemContent = item.querySelector('.first-step-card__content');
-                            const itemToggle = item.querySelector('.first-step-card__toggle');
-                            if (itemContent) itemContent.classList.remove('is-open');
-                            if (itemToggle) itemToggle.setAttribute('aria-expanded', 'false');
-                        });
-                        return;
-                    }
-                    openStep(card);
-                });
-            }
-
-            if (doneButton) {
-                doneButton.addEventListener('click', () => {
-                    const nowCompleted = !card.classList.contains('is-completed');
-                    card.classList.toggle('is-completed', nowCompleted);
-                    doneButton.textContent = nowCompleted ? 'Krok obejrzany' : 'Oznacz jako obejrzane';
-
-                    const completedSteps = stepCards
-                        .map((item, idx) => (item.classList.contains('is-completed') ? idx + 1 : null))
-                        .filter(Boolean);
-
-                    localStorage.setItem(storageKey, JSON.stringify(completedSteps));
-                    updateProgress();
-                });
-            }
-        });
-
-        updateProgress();
-
-        const openCurrentOrFirst = stepCards.find(card => card.classList.contains('is-current')) || stepCards[0];
-        if (openCurrentOrFirst) {
-            openStep(openCurrentOrFirst);
-        }
     }
 
     // Obsługa Banera Cookies
